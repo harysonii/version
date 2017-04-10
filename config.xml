@@ -28,11 +28,11 @@
     <splash src="res/screen/android/drawable-land-xxhdpi-screen.png" density="land-xxhdpi"/>
     <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png" density="land-xxxhdpi"/>
     <splash src="res/screen/android/drawable-port-ldpi-screen.png" density="port-ldpi"/>
-    <splash src="gothere-background-mdpi.png" density="port-mdpi"/>
-    <splash src="gothere-background-hdpi.png" density="port-hdpi"/>
-    <splash src="gothere-background-xhdpi.png" density="port-xhdpi"/>
-    <splash src="gothere-background-xxhdpi.png" density="port-xxhdpi"/>
-    <splash src="gothere-background-xxxhdpi.png" density="port-xxxhdpi"/>
+    <splash src="res/screen/android/gothere-background-mdpi.png" density="port-mdpi"/>
+    <splash src="res/screen/android/gothere-background-hdpi.png" density="port-hdpi"/>
+    <splash src="res/screen/android/gothere-background-xhdpi.png" density="port-xhdpi"/>
+    <splash src="res/screen/android/gothere-background-xxhdpi.png" density="port-xxhdpi"/>
+    <splash src="res/screen/android/gothere-background-xxxhdpi.png" density="port-xxxhdpi"/>
   </platform>
   <access origin="http://gothere.000webhostapp.com" subdomain="true"/>
     <!--<uses-permission android:name="android.permission.INTERNET" />-->
