@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+     
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="Semantic/semantic.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <title>gothere</title>
+</head>
+
+<body>
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+            
+          <div  class="page " data-page="index">
+              
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+              
+    <div class="navbar bar-color">
+        <div class="navbar-inner">
+            <div class="left"><a href="notification.html" class="external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
+            </div>
+            
+            <div class="center"><form><input type="search" placeholder="Search"/></form></div>
+                <div class="right">
+                    <!-- Right link contains only icon - additional "icon-only" class-->
+                    <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
+                </div>
+              </div>
+            </div>
+              
+              
+              <!-- Additional "tabbar-scrollable" class -->
+                      <div class="toolbar tabbar tabbar-scrollable toolbar-color">
+                        <div class="toolbar-inner " >
+                             <a style="text-transform:none;" href="#tab-1" class="tabs tab-link active" id="a">Today</a>
+                             <a style="text-transform:none;" href="#tab-2" class="tabs tab-link" id="b">In vogue</a>
+                             <a style="text-transform:none;" href="#tab-3" class="tabs tab-link" id="c">Music</a>
+                             <a style="text-transform:none;" href="#tab-4" class="tabs tab-link" id="d">Sports &amp Recreation</a>
+                             <a style="text-transform:none;" href="#tab-5" class="tabs tab-link" id="e">Fundraisers</a>
+                             <a style="text-transform:none;" href="#tab-6" class="tabs tab-link" id="f">Movies &amp Theaters</a>
+                             <a style="text-transform:none;" href="#tab-7" class="tabs tab-link" id="g">Rallies &amp Protests</a>
+                             <a style="text-transform:none;" href="#tab-8" class="tabs tab-link" id="h">Fashion &amp Gallery</a>
+                             <a style="text-transform:none;" href="#tab-9" class="tabs tab-link" id="i">Parties &amp Clubs</a>
+                             <a style="text-transform:none;" href="#tab-10" class="tabs tab-link" id="j">Comedy</a>
+                             <a style="text-transform:none;" href="#tab-11" class="tabs tab-link" id="k">Food</a>
+                             <a style="text-transform:none;" href="#tab-12" class="tabs tab-link" id="l">Conventions &amp Talks</a>
+                          </div>
+                      </div>
+        
+ 
+            <!-- Toolbar. In Material theme it should be inside of the page-->
+            <div class="toolbar toolbar-bottom bar-color">
+              <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="#" class="external link" style="margin-bottom:35px;"><i class="eye icon"></i></a>
+                <a href="#" class="external link" style="margin-bottom:35px;"><i class="calendar icon"></i></a>
+                <a href="create.html" class="external link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
+                <a href="profile.html" class="external link" style="margin-bottom:35px;"><i class="user icon"></i></a>
+                
+              </div>
+            </div>
+ 
+            <!-- Scrollable page content -->
+            <div class="page-content" >
+             <!-- Link to another page -->
+              <div class="tab-links">
+ <div class="tabs-swipeable-wrap">
+      <!-- Tabs, tabs wrapper -->
+      <div class="tabs">
+        <!-- Tab 1, active by default -->
+        <div id="tab-1" class="page-content tab active">
+          <div class="content-block">
+            ... Tab 1 content ...
+              <p id="clear" >clear</p>
+              
+               <div id="today"></div>
+          </div>
+        </div> 
+          <!-- Tab 2 -->
+        <div id="tab-2" class="page-content tab">
+          <div class="content-block">
+            ... Tab 2 content ...
+              <p id="clear" >clear</p>
+              
+               <div id="invogue"></div>
+          </div>
+        </div>
+        <!-- Tab 3 -->
+        <div id="tab-3" class="page-content tab">
+          <div class="content-block">
+            ... Tab 3 content ...
+              <div id="music"></div>
+          </div>
+        </div>
+        <!-- Tab 4 -->
+        <div id="tab-4" class="page-content tab">
+          <div class="content-block">
+            ... Tab 4 content ...
+               <div id="sports"></div>
+          </div>
+        </div>
+           <div id="tab-5" class="page-content tab">
+          <div class="content-block">
+            ... Tab 5 content ...
+               <div id="fundraiser"></div>
+          </div>
+        </div> <div id="tab-6" class="page-content tab">
+          <div class="content-block">
+            ... Tab 6 content ...
+               <div id="movies"></div>
+          </div>
+        </div> <div id="tab-7" class="page-content tab">
+          <div class="content-block">
+            ... Tab 7 content ...
+               <div id="rallies"></div>
+          </div>
+        </div>
+           <div id="tab-8" class="page-content tab">
+          <div class="content-block">
+            ... Tab 8 content ...
+               <div id="fashion"></div>
+          </div>
+        </div>
+           <div id="tab-9" class="page-content tab">
+          <div class="content-block">
+            ... Tab 9 content ...
+               <div id="parties"></div>
+          </div>
+        </div>
+           <div id="tab-10" class="page-content tab">
+          <div class="content-block">
+            ... Tab 10 content ...
+               <div id="comedy"></div>
+               </div>
+          </div>
+               <div id="tab-11" class="page-content tab">
+          <div class="content-block">
+            ... Tab 11 content ...
+               <div id="food"></div>
+          </div>
+        </div>
+           <div id="tab-12" class="page-content tab">
+          <div class="content-block">
+            ... Tab 12 content ...
+               <div id="talks"></div>
+            
+              
+          </div>
+        </div>
+      </div><!--end tab class-->
+    </div>
+  </div>
+                
+                
+            </div> <!--end page content-->
+              
+          </div> <!-- end index page-->
+            
+                   
+    
+            
+        </div>
+      </div>
+    </div>
+    
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <!--<script type="text/javascript" src="js/index.js"></script>-->
+    <script type="text/javascript">
+      
+            
+           $(window).load(function() {
+       
+	
+               // alert("All clear");
+  /// if(window.localStorage.getItem("login") != 1) {
+        
+    // window.location.href="pages/login.html";
+      // alert('All clear');
+  // }
+                });
+        
+              $("#a").click(function(){
+                   $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/gettoday.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#today').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+              
+        
+        $("#b").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/getin_vogue.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#invogue').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#c").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'get_music.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#music').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#d").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/getsports_rec.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#sports').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#e").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_fundraisers.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#fundraiser').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#f").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_movies.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#movies').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#g").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_rallies.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#rallies').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#h").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_fashion_gallery.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#fashion').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#i").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_parties_clubs.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#parties').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#j").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_comedy.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#comedy').html(response);
+                        
+                    }
+                   
+               });
+              }); 
+        
+        $("#k").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_conventions_talks.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#food').html(response);
+                        
+                    }
+                   
+               });
+              });
+        
+        $("#l").click(function(){
+               $.ajax({
+                
+                  type: 'get',
+                  url: 'scripts/get_conventions_talks.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#talks').html(response);
+                        
+                    }
+                   
+               });
+              });
+              
+                 
+           $(document).ready(function() {
+               $("#clear").click(function(){
+                 window.localStorage.removeItem("login");
+                   
+                   if(window.localStorage.getItem("login") != 1) {
+                   window.location.href="pages/login.html";
+                   }
+               });
+           });
+       
+    </script>
+    
+</body>
+
+</html>

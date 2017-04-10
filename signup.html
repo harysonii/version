@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+        <!-- Good default declaration:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+        * Create your own at http://cspisawesome.com
+        -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+        <title>gothere.io</title>
+        <!-- Path to Framework7 Library CSS, Material Theme -->
+        <link rel="stylesheet" href="css/framework7.material.min.css">
+        <link rel="stylesheet" href="css/my-app.css">
+        <link rel="stylesheet" href="Semantic/semantic.min.css">
+    
+    </head>
+    <body>
+    
+        <div style="height:90%; width:90%; background-color:; margin: auto; margin-top:10%; margin-bottom:10%;">
+        
+            <div style="height:20%; width:20%; background-color:; margin: auto; margin-top:3%; margin-bottom:3%;">
+            
+                <img src="icon.png" width="44px" height="44px"/>
+                
+            </div >
+            
+            <div style="height:40%; width:90%; background-color:; margin: auto; margin-top:3%; margin-bottom:3%;">
+                <form method="post">
+                <div class="ui one column middle aligned very relaxed stackable grid">
+                    <div class="column">
+                        <div class="ui form">
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <input type="text" placeholder="Full name" id="name">
+                                    <i class="user icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <input type="text" placeholder="Username" id="username">
+                                    <i class="spy icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <input type="email" placeholder="E-mail" id="unique">
+                                    <i class="mail icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <input type="password" placeholder="Password" id="secret">
+                                    <i class="lock icon"></i>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui left icon input">
+                                    <input type="text" placeholder="Gender" id="gender">
+                                    <i class="intergender icon"></i>
+                                </div>
+                            </div>
+                            <div class="ui teal submit fluid button" id="signup">Sign up</div>
+                        </div>
+                    </div>
+                </div>
+                 </form>
+            
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            
+            <div style="height:20%; width:90%; background-color:; margin: auto; margin-top:; margin-bottom:;">
+            
+                <div class="center aligned column">
+                    <p style="text-align:center;">Not your first time? <a href="login.html">Sign up</a></p>
+                </div>
+            </div>
+            
+            
+        </div>
+    
+        
+        
+        <script src="js/jquery-2.2.3.min.js"></script>
+        <script src="Semantic/semantic.min.js"></script>
+        <script>
+     
+            $(document).ready(function(){
+                
+               $("#signup").click(function(){
+                   
+                  var name = $("#name").val();
+                  var username = $("#username").val();
+                  var email = $("#unique").val();
+                  var password = $("#secret").val();
+                  var gender = $("#gender").val();
+                   
+                  if (name != "" && username != "" && email != "" && password != "" && gender != "") {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                         url: 'signup.php',
+                         data: {
+                             
+                             name: name,
+                             username: username,
+                             email: email,
+                             password: password,
+                             gender: gender
+                             
+                         },
+                          success:function(response) {
+                              
+                              if (response == "success") {
+                                  
+                                 //$('#test').html(response);
+                                  alert("Sign up successful log in to continue");
+                                      
+                                  window.location.href="login.html";
+        
+                              }
+                              else {
+                                  alert("Sign up unsuccessful");
+                              }
+                              
+                          }
+                          
+                      });
+                      
+                  }
+                   else {
+                       alert("Fill all fields");
+                   }
+                   
+               });
+                
+            });
+            
+        </script>
+    </body>
+
+</html>

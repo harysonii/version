@@ -1,0 +1,48 @@
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="io.gothere.app" version="1.0.0">
+  <name>gothere</name>
+  <description>Never get bored!!! Find all kind of events and places here</description>
+  <author href="http://gothere.io" email="support@gothere.io">Gothere Team</author>
+  <content src="index.html"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="14"/>
+  <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1"/>
+  <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
+  <icon src="icon.png"/>
+  <platform name="android">
+    <icon src="www/res/icon/android/gothere-appicon-hdpi.png" density="ldpi"/>
+    <icon src="www/res/icon/android/gothere-appicon-mdpi.png" density="mdpi"/>
+    <icon src="www/res/icon/android/gothere-appicon-hdpi.png" density="hdpi"/>
+    <icon src="www/res/icon/android/gothere-appicon-xhdpi.png" density="xhdpi"/>
+    <icon src="www/res/icon/android/gothere-appicon-xxhdpi.png" density="xxhdpi"/>
+    <icon src="www/res/icon/android/gothere-appicon-xxxhdpi.png" density="xxxhdpi"/>
+    <splash src="www/res/screen/android/drawable-land-ldpi-screen.png" density="land-ldpi"/>
+    <splash src="www/res/screen/android/drawable-land-mdpi-screen.png" density="land-mdpi"/>
+    <splash src="www/res/screen/android/drawable-land-hdpi-screen.png" density="land-hdpi"/>
+    <splash src="www/res/screen/android/drawable-land-xhdpi-screen.png" density="land-xhdpi"/>
+    <splash src="www/res/screen/android/drawable-land-xxhdpi-screen.png" density="land-xxhdpi"/>
+    <splash src="www/res/screen/android/drawable-land-xxxhdpi-screen.png" density="land-xxxhdpi"/>
+    <splash src="www/res/screen/android/drawable-port-ldpi-screen.png" density="port-ldpi"/>
+    <splash src="www/res/screen/android/gothere-background-mdpi.png" density="port-mdpi"/>
+    <splash src="www/res/screen/android/gothere-background-hdpi.png" density="port-hdpi"/>
+    <splash src="www/res/screen/android/gothere-background-xhdpi.png" density="port-xhdpi"/>
+    <splash src="www/res/screen/android/gothere-background-xxhdpi.png" density="port-xxhdpi"/>
+    <splash src="www/res/screen/android/gothere-background-xxxhdpi.png" density="port-xxxhdpi"/>
+  </platform>
+  <access origin="http://gothere.000webhostapp.com" subdomain="true"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <allow-navigation href="*" />
+<allow-intent href="*" />
+  <allow-intent href="http://*/*"/>
+  <allow-intent href="https://*/*"/>
+  <allow-intent href="tel:*"/>
+  <allow-intent href="sms:*"/>
+  <allow-intent href="mailto:*"/>
+  <allow-intent href="geo:*"/>
+  <platform name="android">
+    <allow-intent href="market:*"/>
+  </platform>
+  <platform name="ios">
+    <allow-intent href="itms:*"/>
+    <allow-intent href="itms-apps:*"/>
+  </platform>
+</widget>

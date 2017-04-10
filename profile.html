@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+     
+    <!-- Path to Framework7 Library CSS, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <!-- Path to Framework7 color related styles, Material Theme -->
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+    <link rel="stylesheet" href="Semantic/semantic.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
+    <title>gothere</title>
+</head>
+
+<body>
+    <!-- Views -->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+            
+          <div  class="page " data-page="profile">
+              
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+              
+    <div class="navbar bar-color">
+        <div class="navbar-inner">
+            <div class="left"><a href="notification.html" class="external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
+            </div>
+            
+            <div class="center"><form><input type="search" placeholder="Search"/></form></div>
+                <div class="right">
+                    <!-- Right link contains only icon - additional "icon-only" class-->
+                    <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
+                </div>
+              </div>
+            </div>
+              
+        
+ 
+            <!-- Toolbar. In Material theme it should be inside of the page-->
+            <div class="toolbar toolbar-bottom bar-color">
+              <div class="toolbar-inner">
+                <!-- Toolbar links -->
+                <a href="index.html" class="external link" style="margin-bottom:35px;"><i class="eye icon"></i></a>
+                <a href="#" class="external link" style="margin-bottom:35px;"><i class="calendar icon"></i></a>
+                <a href="create.html" class="external link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
+                <a href="#" class="external link" style="margin-bottom:35px;"><i class="user icon"></i></a>
+                
+              </div>
+            </div>
+              
+              <!-- Scrollable page content -->
+            <div class="page-content" >
+                <div id="profile" style="height:90%; width:90%;margin:auto;position:relative;top:20px;"></div>
+              </div>
+              
+              
+            </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="Semantic/semantic.min.js"></script>
+    <script>
+    
+        $(document).ready(function(){
+            
+            
+            $.ajax({
+                
+                type: 'get',
+                url: 'profile.php',
+                dataType: 'html',
+                success: function (response) {
+                        
+                        $('#profile').html(response);
+                        
+                    }
+                
+            });
+            
+        });
+    
+    </script>
+    </body>
+</html>
