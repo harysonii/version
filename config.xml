@@ -6,14 +6,15 @@
   <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
-    <preference name="SplashScreen" value="screen" />
-<preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreen" value="splash" />
+<preference name="SplashScreenDelay" value="0" />
     <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm"/>
    <!-- <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1"/>
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>-->
     
   <icon src="icon.png"/>
+  <splash src="splash.png"/>
   <platform name="android">
     <icon src="res/icon/android/gothere-appicon-hdpi.png" density="ldpi"/>
     <icon src="res/icon/android/gothere-appicon-mdpi.png" density="mdpi"/>

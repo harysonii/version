@@ -64,13 +64,13 @@
               
     <div class="navbar bar-color">
         <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
+            <div class="left"><a href="notification.html" class="disabled external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
             </div>
             
-            <div class="center"><form><input type="search" placeholder="Search"/></form></div>
+            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
                 <div class="right">
                     <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
+                    <a href="place.html" class="disabled external link " style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
                 </div>
               </div>
             </div>
@@ -117,8 +117,7 @@
         <!-- Tab 1, active by default -->
         <div id="tab-1" class="page-content tab active">
           <div class="content-block">
-            ... Tab 1 content ...
-              <p id="clear" >clear</p>
+           
               
                <div id="today"></div>
           </div>
@@ -126,69 +125,57 @@
           <!-- Tab 2 -->
         <div id="tab-2" class="page-content tab">
           <div class="content-block">
-            ... Tab 2 content ...
-              <p id="clear" >clear</p>
-              
+            
                <div id="invogue"></div>
           </div>
         </div>
         <!-- Tab 3 -->
         <div id="tab-3" class="page-content tab">
           <div class="content-block">
-            ... Tab 3 content ...
               <div id="music"></div>
           </div>
         </div>
         <!-- Tab 4 -->
         <div id="tab-4" class="page-content tab">
           <div class="content-block">
-            ... Tab 4 content ...
                <div id="sports"></div>
           </div>
         </div>
            <div id="tab-5" class="page-content tab">
           <div class="content-block">
-            ... Tab 5 content ...
                <div id="fundraiser"></div>
           </div>
         </div> <div id="tab-6" class="page-content tab">
           <div class="content-block">
-            ... Tab 6 content ...
                <div id="movies"></div>
           </div>
         </div> <div id="tab-7" class="page-content tab">
           <div class="content-block">
-            ... Tab 7 content ...
                <div id="rallies"></div>
           </div>
         </div>
            <div id="tab-8" class="page-content tab">
           <div class="content-block">
-            ... Tab 8 content ...
                <div id="fashion"></div>
           </div>
         </div>
            <div id="tab-9" class="page-content tab">
           <div class="content-block">
-            ... Tab 9 content ...
                <div id="parties"></div>
           </div>
         </div>
            <div id="tab-10" class="page-content tab">
           <div class="content-block">
-            ... Tab 10 content ...
                <div id="comedy"></div>
                </div>
           </div>
                <div id="tab-11" class="page-content tab">
           <div class="content-block">
-            ... Tab 11 content ...
                <div id="food"></div>
           </div>
         </div>
            <div id="tab-12" class="page-content tab">
           <div class="content-block">
-            ... Tab 12 content ...
                <div id="talks"></div>
             
               
@@ -222,13 +209,24 @@
             
            $(window).load(function() {
        
-	
-               // alert("All clear");
-  /// if(window.localStorage.getItem("login") != 1) {
-        
-    // window.location.href="pages/login.html";
-      // alert('All clear');
-  // }
+	           $.ajax({
+                
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                   
+               });
+            
+               
                 });
         
               $("#a").click(function(){
@@ -266,7 +264,7 @@
                $.ajax({
                 
                   type: 'get',
-                  url: 'get_music.php',
+                  url: 'http://gothere.000webhostapp.com/get_music.php',
                    dataType: 'html',
                   success: function (response) {
                         

@@ -67,7 +67,7 @@
             <div class="left"><a href="notification.html" class="external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
             </div>
             
-            <div class="center"><form><input type="search" placeholder="Search"/></form></div>
+            <div class="center"><form><input size="50px" type="search" placeholder="Search"/></form></div>
                 <div class="right">
                     <!-- Right link contains only icon - additional "icon-only" class-->
                     <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
@@ -91,7 +91,16 @@
               
               <!-- Scrollable page content -->
             <div class="page-content" >
-                <div id="profile" style="height:90%; width:90%;margin:auto;position:relative;top:20px;"></div>
+                <div id="profile" style="height:50%; width:90%;margin:auto;position:relative;top:20px;"></div>
+                
+                
+               
+                    <div class="ui icon menu" style="height:15%; width:90%;margin:auto;position:relative;top:20px;">
+                        <a class="" style="font-size:30px;"><i class="browser icon"></i></a>
+                        <a class="" style="font-size:30px;"><i class="user icon"></i></a>
+                        <a class="" style="font-size:30px;"><i class="ellipsis vertical icon"></i></a>
+                    </div>
+                
               </div>
               
               
@@ -110,7 +119,7 @@
             $.ajax({
                 
                 type: 'get',
-                url: 'profile.php',
+                url: 'http://gothere.000webhostapp.com/profile.php',
                 dataType: 'html',
                 success: function (response) {
                         
@@ -120,7 +129,33 @@
                 
             });
             
+            
+           
         });
+        
+        function logout() {
+                alert("User bye!");
+       $.ajax({
+                
+       type: 'get',
+                url: 'http://gothere.000webhostapp.com/logout.php',
+                success: function (response) {
+                        
+                      if (response == "success") {
+                            
+                           window.location.href="login.html";
+                            
+                     }else{
+                            
+                       alert("You were not logged out");
+                            
+                         }
+                        
+                    }
+                
+          });
+            
+        }
     
     </script>
     </body>
