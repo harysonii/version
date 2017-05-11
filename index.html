@@ -320,8 +320,13 @@
       
            
            $(window).load(function() {
+               
+               if(window.localStorage.getItem("login") == 1) {
+        
     
-	           $.ajax({
+                }else {
+    
+	           /*$.ajax({
                 
                   type: 'get',
                   url: 'http://gothere.000webhostapp.com/check_status.php',
@@ -337,8 +342,10 @@
                     }
                       
                    
-               });  
-            
+               });  */
+                    
+                    window.location.href="login.html";
+                }
                
                 });
         
