@@ -21,75 +21,42 @@
         <!-- Path to Framework7 Library CSS, Material Theme -->
         <link rel="stylesheet" href="css/framework7.material.min.css">
         <link rel="stylesheet" href="css/my-app.css">
-        <link rel="stylesheet" href="Semantic/semantic.min.css">
+        <!--<link rel="stylesheet" href="Semantic/semantic.min.css">-->
+        <link rel="stylesheet" href="css/ratchet.min.css">
     
     </head>
     <body>
     
-        <div style="height:90%; width:90%; background-color:; margin: auto; margin-top:10%; margin-bottom:10%;">
-        
-            <div style="height:20%; width:20%; background-color:; margin: auto; margin-top:3%; margin-bottom:3%;">
+        <div style="position:relative;margin:auto; top:30%; bottom:50%; width:90%;height:50%;">
             
-                <img src="icon.png" width="44px" height="44px"/>
+                <!--<img src="icon.png" width="44px" height="44px"/>-->
+                <p style="position:relative;bottom:30%;text-align:center;font-size:25px;">gothere</p>
                 
-            </div>
             
-            <div>
-            
-                <p>Welcome back!</p>
-                <p>Sign in to continue,</p>
-            
-            </div>
-            
-            <div style="height:40%; width:90%; background-color:; margin: auto; margin-top:15%; margin-bottom:15%;">
                 <form method="post">
-                <div class="ui one column middle aligned very relaxed stackable grid">
-                    <div class="column">
-                        <div class="ui form">
-                            <div class="field">
-                                <div class="ui left icon input">
-                                    <input type="text" placeholder="Username" id="unique">
-                                    <i class="mail icon"></i>
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="ui left icon input">
-                                    <input type="password" placeholder="Password" id="secret">
-                                    <i class="lock icon"></i>
-                                </div>
-                            </div>
-                            <div class="ui teal submit fluid button" id="login">Log in</div>
-                        </div>
-                    </div>
-                </div>
+                    <input type="email" placeholder="Email" id="unique"/>
+                    <input type="password" placeholder="Password" id="secret"/>
+                    <div class="btn btn-block"  id="login">Log in</div>
+                    
                  </form>
-                <div class="ui segment">
-                    <div class="field">
+                
                         <a href="#">forgot password?</a>
-                    </div>
-                </div>
-            
-            </div>
-            
-            <div style="height:10%; width:90%; background-color:; margin: auto; margin-top:4%; margin-bottom:4%;">
-            
-                <div class="center aligned column">
-                    <p style="text-align:center;">Your first time? <a href="signup.html">Sign up</a></p>
-                </div>
-            </div>
-            
+                   
+   
+                    <p style="text-align:center;position:relative;top:25%;">Your first time? <a href="signup.html">Sign up</a></p>  
             
         </div>
     
-        
+         
+    
         
         <script src="js/jquery-2.2.3.min.js"></script>
         <script>
         
             
             $(document).ready(function(){
-                
-               $("#login").click(function(){
+                 
+                $("#login").click(function(){
                    
                   var email = $("#unique").val();
                   var password = $("#secret").val();
@@ -99,7 +66,7 @@
                       $.ajax({
                           
                           type: 'post',
-                          url: 'http://gothere.000webhostapp.com/login.php',
+                          url: 'login.php',
                           data: {
                            
                             email: email,
@@ -111,7 +78,7 @@
                           if(response == "success"){
                               
                              alert("Your data is stored successfuly");
-                
+                             window.localStorage.setItem("login", 1);
                              window.location.href="index.html";
                           }
                           else {
@@ -129,6 +96,7 @@
                                  }
                    
                });
+                
                 
             });
         
