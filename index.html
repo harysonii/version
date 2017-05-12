@@ -544,7 +544,7 @@ $(window).load(function() {
             $.ajax({
                 
                 type: 'get',
-                url: 'profile.php',
+                url: 'http://gothere.000webhostapp.com/profile.php',
                 dataType: 'html',
                 success: function (response) {
                         
@@ -554,23 +554,21 @@ $(window).load(function() {
                 
             });
             
-                
-               $("#clear").click(function(){
-                 window.localStorage.removeItem("login");
-                   
-                   if(window.localStorage.getItem("login") != 1) {
-                   window.location.href="login.html";
-                   }
-               });
          
             
            
         });
         
         function logout() {
-                alert("User bye!");
+                
        $.ajax({
                 
+           window.localStorage.removeItem("login");
+                   
+                   if(window.localStorage.getItem("login") != 1) {
+                   window.location.href="login.html";
+                   }
+           
        type: 'get',
                 url: 'http://gothere.000webhostapp.com/logout.php',
                 success: function (response) {
