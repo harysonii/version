@@ -321,7 +321,7 @@
            
 $(window).load(function() {
                
-               if(window.localStorage.getItem("login") != 1) {
+               if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
                     window.location.href="login.html";
     
                 }else {

@@ -3,7 +3,7 @@
   <name>gothere</name>
   <description>Never get bored!!! Find all kind of events here</description>
   <author href="http://www.gothere.io" email="support@gothere.io">Gothere Team</author>
-  <content src="login.html"/>
+  <content src="index.html"/>
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
     <preference name="SplashScreen" value="splash" />
