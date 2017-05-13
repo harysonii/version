@@ -298,7 +298,7 @@
                 <div class="page-content">
                 
                 <div id="profile" style="height:50%; width:90%;margin:auto;position:relative;top:20px;"></div>
-                   <a href="#" id="clear">clear</a>
+                  
                 </div>
             
             </div>
@@ -531,20 +531,12 @@ $(window).load(function() {
               
                  
            $(document).ready(function() {
-               $("#clear").click(function(){
-                 window.localStorage.removeItem("login");
-                   
-                   if(window.localStorage.getItem("login") != 1) {
-                   window.location.href="pages/login.html";
-                   }
-               });
-               
-            
             
             $.ajax({
                 
                 type: 'get',
-                url: 'http://gothere.000webhostapp.com/profile.php',
+                url: 'http://gothere.000webhostapp.com/logout.phpprofile.php',
+                //url: 'profile.php',
                 dataType: 'html',
                 success: function (response) {
                         
@@ -560,14 +552,14 @@ $(window).load(function() {
         });
         
         function logout() {
-                
-       $.ajax({
-                
-           window.localStorage.removeItem("login");
+               
+             window.localStorage.removeItem("login");
                    
                    if(window.localStorage.getItem("login") != 1) {
                    window.location.href="login.html";
                    }
+            
+       $.ajax({
            
        type: 'get',
                 url: 'http://gothere.000webhostapp.com/logout.php',
