@@ -289,17 +289,74 @@
                 <!-- Toolbar links -->
                 <a href="#index" class="link" style="margin-bottom:35px;"><i class="eye icon"></i></a>
                 <a href="#schedule" class="link" style="margin-bottom:35px;"><i class="calendar icon"></i></a>
-                <a href="#create.html" class="link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
-                <a href="#profile.html" class="link" style="margin-bottom:35px;"><i class="user icon"></i></a>
+                <a href="#create" class="link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
+                <a href="#profile" class="link" style="margin-bottom:35px;"><i class="user icon"></i></a>
                 
               </div>
             </div>
                 
                 <div class="page-content">
                 
-                <div id="profile" style="height:50%; width:90%;margin:auto;position:relative;top:20px;"></div>
-                  
+                <div id="profile" style="height:; width:90%;margin:auto;position:relative;margin-top:20px;">
+                     <div class="ui fluid card" style="margin-bottom:40px;">
+                        <div class="extra content">
+                            <div class="left floated meta">
+                                <div href="#" class=" ui floating labeled icon dropdown ca " >
+                                    <i class="camera retro icon"></i>
+                                        <div class="left menu" tabindex="-1">
+                                            <div class="item" id = "cameraTakePicture">Take a picture</div>
+                                                <div class="divider"></div>
+                                                    <div class="item">upload a picture</div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="right floated meta">
+                                <div href="#" class=" ui floating labeled icon dropdowns" >
+                                    <i class="setting icon"></i>
+                                </div>
+                            </div>
+                         </div>
+                <div class="image">
+                    <img src="/images/avatar2/large/kristy.png">
                 </div>
+                <div class="content">
+                    <!--<a class="header"><i class="user icon"></i></a>
+                    <div class="meta">
+                        <span class="date">.$row['people_name'].</span>
+                            </div>
+                            <div class="description">'.$row['people_email']</div>-->
+                    <div class="ui list">
+                        <div class="item">
+                            <i class="user icon"></i>
+                            <div class="content"  id="fullname"></div>
+                        </div>
+                        <div class="item">
+                            <i class="marker icon"></i>
+                            <div class="content">New York, NY</div>
+                        </div>
+                        <div class="item">
+                            <i class="mail icon"></i>
+                            <div class="content">
+                                <a href="mailto:jack@semantic-ui.com">'.$row['people_email'].'</a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <i class="linkify icon"></i>
+                            <div class="content">
+                                <a href="http://www.semantic-ui.com/">'.$row['people_email'].'</a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                      <div class="right floated meta">
+                          <a onclick="logout()" id="logout" href="#"><i class="sign out icon"></i></a>
+                      </div>
+                 </div>
+            </div>
+        </div>
+                    
+                
             
             </div>
                    
@@ -309,13 +366,16 @@
       </div>
     </div>
     
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
-    <!-- Path to your app js-->
-    <script type="text/javascript" src="js/my-app.js"></script>
+</div>
+        
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="Semantic/semantic.min.js"></script>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
     <!--<script type="text/javascript" src="js/index.js"></script>-->
+     <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
     <script type="text/javascript">
       
            
@@ -531,25 +591,39 @@ $(window).load(function() {
               
                  
            $(document).ready(function() {
+               
+               
             
             $.ajax({
                 
                 type: 'get',
-                url: 'http://gothere.000webhostapp.com/profile.php',
-                //url: 'profile.php',
-                dataType: 'html',
+                //url: 'http://gothere.000webhostapp.com/profile.php',
+                url: 'profile.php',
+                dataType: 'json',
                 success: function (response) {
                         
-                        $('#profile').html(response);
+                        $('#fullname').html(response['add']);
                         
                     }
                 
             });
             
-         
+        $(".ca").click(function() {
+                   $('.ui.dropdown').dropdown('show');
+                   
+               
             
            
         });
+               
+               
+               document.getElementById("cameraTakePicture").addEventListener
+                    ("click", cameraTakePicture);
+               
+        });
+           
+        
+         
         
         function logout() {
                
@@ -580,6 +654,22 @@ $(window).load(function() {
           });
             
         }
+        
+        function cameraTakePicture() {
+   navigator.camera.getPicture(onSuccess, onFail, { 
+      quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL
+   });
+
+   function onSuccess(imageData) {
+      var image = document.getElementById('myImage');
+      image.src = "data:image/jpeg;base64," + imageData;
+   }
+
+   function onFail(message) {
+      alert('Failed because: ' + message);
+   }
+}
         
         
     
