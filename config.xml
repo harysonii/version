@@ -14,7 +14,7 @@
     <plugin name="cordova-plugin-camera" spec="2.4.1"  />
     <plugin name="cordova-plugin-file-transfer"  spec="1.6.3"   />
     <plugin name="cordova-plugin-dialogs"   />
-    <plugin name="cordova-plugin-globaization"   />
+    <plugin name="cordova-plugin-globalization"   />
     <plugin name="cordova-plugin-inappbrowser"   />
     <plugin name="cordova-plugin-network-information"   />
 
