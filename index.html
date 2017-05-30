@@ -42,9 +42,10 @@
     <link rel="stylesheet" href="css/framework7.material.min.css">
     <!-- Path to Framework7 color related styles, Material Theme -->
     <link rel="stylesheet" href="css/framework7.material.colors.min.css">
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/my-app.css">
     <link rel="stylesheet" href="Semantic/semantic.min.css">
+    <link rel="stylesheet" href="css/ratchet.min.css">
+     <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
     <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
     <title>gothere</title>
 </head>
@@ -64,13 +65,13 @@
               
     <div class="navbar bar-color">
         <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
+            <div class="left"><a href="notification.html" class="disabled external link" style="margin-bottom:;"><i class="bell icon"></i></a>
             </div>
             
             <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
                 <div class="right">
                     <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
+                    <a href="place.html" class="disabled external link " style="margin-bottom:;"> <i class="building outline icon"></i></a>
                 </div>
               </div>
             </div>
@@ -99,10 +100,10 @@
             <div class="toolbar toolbar-bottom bar-color">
               <div class="toolbar-inner">
                 <!-- Toolbar links -->
-                <a href="#index" class="link" style="margin-bottom:35px;"><i class="eye icon"></i></a>
-                <a href="#schedule" class="link" style="margin-bottom:35px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="margin-bottom:35px;"><i class="user icon"></i></a>
+                <a href="#index" class="link" style="margin-bottom:;"><i class="eye icon"></i></a>
+                <a href="#schedule" class="link" style="margin-bottom:;"><i class="calendar icon"></i></a>
+                <a href="#create" class="link" style="margin-bottom:;"><i class="plus icon"></i></a>
+                <a href="#profile" class="link" style="margin-bottom:;"><i class="user icon"></i></a>
                 
               </div>
             </div>
@@ -234,13 +235,13 @@
               
     <div class="navbar bar-color">
         <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
+            <div class="left"><a href="notification.html" class="disabled external link" style="margin-bottom:;"><i class="bell icon"></i></a>
             </div>
             
             <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
                 <div class="right">
                     <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
+                    <a href="place.html" class="disabled external link " style="margin-bottom:;"> <i class="building outline icon"></i></a>
                 </div>
               </div>
             </div>
@@ -249,17 +250,153 @@
             <div class="toolbar toolbar-bottom bar-color">
               <div class="toolbar-inner">
                 <!-- Toolbar links -->
-                <a href="#index" class="link" style="margin-bottom:35px;"><i class="eye icon"></i></a>
-                <a href="#schedule" class="link" style="margin-bottom:35px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="margin-bottom:35px;"><i class="user icon"></i></a>
+                <a href="#index" class="link" style="margin-bottom:;"><i class="eye icon"></i></a>
+                <a href="#schedule" class="link" style="margin-bottom:;"><i class="calendar icon"></i></a>
+                <a href="#create" class="link" style="margin-bottom:;"><i class="plus icon"></i></a>
+                <a href="#profile" class="link" style="margin-bottom:;"><i class="user icon"></i></a>
                 
               </div>
             </div>
                 
                 <div class="page-content">
                 
-                
+                <div class="content-block">
+                <div class="ui secondary pointing menu">
+                 <a href="#tab-1" class="tab-link active item">Create an event </a>
+              <a href="#tab-2" class="tab-link item">Add a place</a>
+                </div>
+                    
+               <div class="tab-links">
+                   <div class="tabs-swipeable-wrap">
+               <div class="tabs">
+        <!-- Tab 1, active by default -->
+        <div id="tab-1" class="tab active">
+            <div style="position:relative;margin:auto; top:30%; bottom:50%; width:90%;height:50%;">
+          <div class="content-block">
+            <div>
+  <div >
+    <div class="ui tiny form">
+      <div class="field">
+        <div class="ui left icon input">
+          <input type="text" placeholder="Title" id="title">
+          <i class="italic icon"></i>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <textarea type="text" placeholder="Description" id="description"></textarea>
+          <i class="write icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="num" placeholder="Phone" id="phone">
+          <i class="phone icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="email" placeholder="Email" id="email">
+          <i class="mail icon"></i>
+        </div>
+      </div>
+        <div class="field">
+    <select multiple="" class="ui dropdown g" id="type">
+      <option value="">Select Type</option>
+      <option value="AF">Afghanistan</option>
+      <option value="AX">Åland Islands</option>
+      <option value="AL">Albania</option>
+      <option value="DZ">Algeria</option>
+      <option value="AS">American Samoa</option>
+      <option value="AD">Andorra</option>
+      <option value="AO">Angola</option>
+      <option value="AI">Anguilla</option>
+      <option value="AQ">Antarctica</option>
+      <option value="AG">Antigua and Barbuda</option>
+      <option value="AR">Argentina</option>
+      <option value="AM">Armenia</option>
+      <option value="AW">Aruba</option>
+      <option value="AU">Australia</option>
+      <option value="AT">Austria</option>
+      <option value="AZ">Azerbaijan</option>
+            </select>
+  </div>
+        <div class="field" >
+        <div class="ui left icon input">
+          <input type="text" placeholder="Host(s)" id="host">
+          <i class="user icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="text" placeholder="Co-host(s)" id="cohost">
+          <i class="users icon"></i>
+        </div>
+      </div>
+      <div class="ui submit button button-color" id="create">Create event</div>
+    </div>
+  </div>
+  
+</div>
+          </div> 
+            
+            </div>
+            </div>
+                   <div id="tab-2" class=" tab">
+          <div class="content-block">
+              
+              <div class="ui one column middle aligned very relaxed stackable grid">
+  <div class="column">
+    <div class="ui tiny form">
+      <div class="field">
+        <div class="ui left icon input">
+          <input type="text" placeholder="Title">
+          <i class="italic icon"></i>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <textarea type="text" placeholder="Description"></textarea>
+          <i class="write icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="num" placeholder="Phone">
+          <i class="mail icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="email" placeholder="Email">
+          <i class="phone icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="text" placeholder="type">
+          <i class="arrow down icon"></i>
+        </div>
+      </div>
+        <div class="field">
+        <div class="ui left icon input">
+          <input type="text" placeholder="Host(s)">
+          <i class="user icon"></i>
+        </div>
+      </div>
+      <div class="ui submit button button-color">Add place</div>
+    </div>
+  </div>
+  
+</div>
+              
+          </div>
+                   </div>
+            </div>
+                    
+        </div>
+                    </div>
+                </div>
                 
                 </div>
             
@@ -338,13 +475,13 @@
                         <div class="item">
                             <i class="mail icon"></i>
                             <div class="content">
-                                <a href="mailto:jack@semantic-ui.com">'.$row['people_email'].'</a>
+                                <a href="mailto:jack@semantic-ui.com"></a>
                             </div>
                         </div>
                         <div class="item">
                             <i class="linkify icon"></i>
                             <div class="content">
-                                <a href="http://www.semantic-ui.com/">'.$row['people_email'].'</a>
+                                <a href="http://www.semantic-ui.com/"></a>
                             </div>
                         </div>
                     </div>
@@ -598,8 +735,8 @@ $(window).load(function() {
             $.ajax({
                 
                 type: 'get',
-                //url: 'http://gothere.000webhostapp.com/profile.php',
-                url: 'profile.php',
+                url: 'http://gothere.000webhostapp.com/profile.php',
+                //url: 'profile.php',
                 dataType: 'json',
                 success: function (response) {
                         
