@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <title>Hello World</title>
+    <style>
+        .nav-wrapper .input-field input[type=search]{
+            height: 67px;
+        }
+        .nav-wrapper input[type=search]:focus {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .input-field label {
+            max-height: 67px;
+        }
+        .nav-wrapper input[type=search]:focus .label-icon.active{
+            position: fixed;
+            left: 100%;
+        }.nav-wrapper input[type=search]:focus .closed{
+            position: fixed;
+            right: 10px;
+        }
+    </style>
+</head>
+<body id="profile">
+    <div class="navbar-fixed">
+    <nav class="nav-extended teal">
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Search</a>
+        <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
+      <!--<ul class="left "><a href="#"><i class="fa fa-search"></i></a></ul>-->
+                    <ul class="right "><a href="#"><i class="fa fa-bell"></i></a></ul>
+      
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab" id=""><a class="active" href="#test1">People</a></li>
+        <li class="tab" ><a id="a" href="#test2">Events</a></li>
+        <!--<li class="tab"><a href="#test3">Places</a></li>-->
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <div >
+        <div style="margin-top:20%;margin-bottom:25%;">
+  <div id="test1" class="col s12">
+      <div><form>
+            <div class="input-field">
+                <input type="search" name="searchPeople" id="searchPeople">
+                <label class="label-icon" for="search"><i class="fa fa-search"></i></label>
+            </div>
+        </form></div>
+      <div id="list"></div>
+</div>
+  <div id="test2" class="col s12">
+            <div><form>
+            <div class="input-field">
+                <input type="search" name="searchEvents" id="searchEvents">
+                <label class="label-icon" for="search"><i class="fa fa-search"></i></label>
+            </div>
+        </form></div>
+      <div id="list2"></div>
+            </div>
+  <div id="test3" class="col s12" ></div>
+  <div id="test4" class="col s12"></div>
+    </div>
+    </div>
+    
+    
+    <!--<footer class="footer">
+        
+            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
+            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
+            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
+            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
+            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
+        
+    </footer>-->
+     <script src="js/jquery-3.2.1.min.js"></script>
+     <script src="js/materialize.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            
+             // Initialize collapse button
+                $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+    }
+  );
+            
+            
+          
+        
+            
+             $("#searchPeople").keyup(function(){
+                    
+                   var txt = $(this).val();
+                 
+                 if(txt != "") {
+                     
+                    $.ajax({
+                        url: "search_people.php",
+                         method: "post",
+                         data: {search:txt},
+                         dataType: "html",
+                         success: function(data) {
+                             $('#list').html(data);
+                         }
+                     });
+                 }else {
+                     $('#list').html('');
+                      
+                 }
+                 
+                      
+            
+               });
+            
+            $("#searchEvents").keyup(function(){
+                    
+                   var txt = $(this).val();
+                 
+                 if(txt != "") {
+                     
+                    $.ajax({
+                        url: "search_events.php",
+                         method: "post",
+                         data: {search:txt},
+                         dataType: "html",
+                         success: function(data) {
+                             $('#list2').html(data);
+                         }
+                     });
+                 }else {
+                     $('#list2').html('');
+                      
+                 }
+                 
+                      
+            
+               });
+            
+            
+            
+                        
+        
+            
+            });
+        
+        function getprofile() {
+              var uname = $("#uname").val();
+           
+       $.ajax({
+              
+            method: "post",
+                //url: 'http://gothere.000webhostapp.com/logout.php',
+                url: 'viewprofile.php',
+                         data: {uname:uname},
+                         dataType: "html",
+                         success: function(data) {
+                             $('#profile').html(data);
+                         
+                 }
+                
+          });
+            
+        }
+        
+        function getevents() {
+              var ename = $("#ename").val();
+            $.ajax({
+              
+            method: "post",
+                //url: 'http://gothere.000webhostapp.com/logout.php',
+                url: 'viewevent.php',
+                         data: {ename:ename},
+                         dataType: "html",
+                         success: function(data) {
+                             $('#profile').html(data);
+                         
+                 }
+                
+          });
+        }
+        
+        function logout() {
+       $.ajax({
+                
+       type: 'get',
+                //url: 'http://gothere.000webhostapp.com/logout.php',
+                url: 'logout.php',
+                success: function (response) {
+                        
+                      if (response == "success") {
+                            
+                           window.location.href="login.html";
+                            
+                     }else{
+                            
+                       alert("You were not logged out");
+                            
+                         }
+                        
+                    }
+                
+          });
+            
+        }
+            
+    </script>
+</body>
+</html>

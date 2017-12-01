@@ -1,8 +1,7 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
-
     <head>
-        <meta charset="UTF-8"/>
+        <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
@@ -17,62 +16,93 @@
         * Create your own at http://cspisawesome.com
         -->
         <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-        <title>gothere.io</title>
-        <!-- Path to Framework7 Library CSS, Material Theme -->
-        <link rel="stylesheet" href="css/framework7.material.min.css">
-        <link rel="stylesheet" href="css/my-app.css">
-        <link rel="stylesheet" href="css/ratchet.min.css">
-    
+
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/signup.css"/>
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+        <title>Hello World</title>
     </head>
-    <body>
-    
-        <div  style="position:relative;margin:auto; top:10%; bottom:45%; width:90%;height:50%;">
-        
-            
-                <!--<img src="icon.png" width="44px" height="44px"/>-->
-                 <p style="position:relative;bottom:10%;text-align:center;font-size:25px;">gothere</p>
-                
-            
+    <body class="teal">
+        <div class="logo">
+            <div class="logo2">
+                 <h3 style="text-align:center;">gothere</h3>
+            </div>
+        </div>
+            <div class="ui form">
                 <form method="post">
-                
-                                    <input type="text" placeholder="Full name" id="name">
+                    <div class="form2">
+                                    <input type="text" placeholder="Full name" id="name" size="45"><br/>
                                    
-                                    <input type="text" placeholder="Username" id="username">
+                                    <input type="text" placeholder="Username" id="username" size="45"><br/>
                                     
-                                    <input type="email" placeholder="E-mail" id="unique">
+                                    <input type="email" placeholder="E-mail" id="unique" size="45"><br/>
                                     
-                                    <input type="password" placeholder="Password" id="secret">
+                                    <input type="password" placeholder="Password" id="secret" size="45"><br/>
                                    
-                                    <input type="text" placeholder="Gender" id="gender">
-                                    
-                            <div class="btn btn-block"  id="signup">Sign up</div>
-                     
-                 </form>
+                                    <div class="input-field col s12">
+                                        <select id="gender">
+                                            <option value="" disabled selected>Choose your gender</option>
+                                            <option value="male" >Male</option>
+                                            <option value="female" >Female</option>
+                                        </select>
+                                    </div><br/>
+                                    <input type="text" placeholder="Country" id="country" size="45"><br/>
             
+                    
+                                     <div class="ui checkbox">
+      <input type="checkbox" name="chk[]" id="test1">
+      <label for="test1">I agree to the Terms and Conditions</label>
+    </div>
+                        <input type="button" class="waves-effect btn" value="Sign up!" id="signup"/>
+                    </div>
+                 </form>
+
+            </div>
+        <div class="signup">
             
                     <p style="text-align:center;">Not your first time? <a href="login.html">Sign up</a></p>
                         
         </div>
-    
-        <script src="js/jquery-2.2.3.min.js"></script>
-        <script src="Semantic/semantic.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        
         <script>
-     
+        
             $(document).ready(function(){
+                $('select').material_select();
                 
-               $("#signup").click(function(){
+                $("#signup").click(function(){
                    
-                  var name = $("#name").val();
+                    var name = $("#name").val();
                   var username = $("#username").val();
                   var email = $("#unique").val();
                   var password = $("#secret").val();
                   var gender = $("#gender").val();
-                   
-                  if (name != "" && username != "" && email != "" && password != "" && gender != "") {
-                      
+                  var country = $("#country").val();
+                  var chk = $("#test1:checked").length > 0;
+                  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    if (name != "" && username != "" && email != "" && password != "" && gender != "" && country != "") {
+                  if (chk > 0) {
+                  if (email.match(re)) {
                       $.ajax({
                           
                          type: 'post',
+                         // url: 'http://gothere.000webhostapp.com/signup.php',
+                         url: 'check.php',
+                         data: {username: username},
+                          success:function(response) {
+                              if (response == "success"){ 
+                                $.ajax({
+                         type: 'post',
+                         // url: 'http://gothere.000webhostapp.com/signup.php',
+                         url: 'check_email.php',
+                         data: {email: email },
+                          success:function(response) {
+                              if (response == "email") {
+                                  $.ajax({
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/signup.php',
                          url: 'signup.php',
                          data: {
                              
@@ -80,37 +110,42 @@
                              username: username,
                              email: email,
                              password: password,
-                             gender: gender
+                             gender: gender,
+                             country: country
                              
                          },
                           success:function(response) {
                               
                               if (response == "success") {
-                                  
-                                 //$('#test').html(response);
-                                  alert("Sign up successful log in to continue");
                                       
-                                  window.location.href="login.html";
+                                  window.location.href="profile.html";
         
                               }
                               else {
-                                  alert("Sign up unsuccessful");
+                                  Materialize.toast('Sign up unsuccessful!', 4000);
                               }
                               
                           }
                           
                       });
+                                  
+                              }else {Materialize.toast('Email already exists!', 4000);}
+                              }
+                      });
+                              }else {Materialize.toast('Username already exists!', 4000);}
+                              }
+                      });
                       
-                  }
-                   else {
-                       alert("Fill all fields");
-                   }
-                   
-               });
+                      }else{Materialize.toast('Input a valid email address!', 4000); }
+                      }else{Materialize.toast('Agree to the Terms and conditions!', 4000); }
+                  }else {Materialize.toast('Fill all fields!', 4000);}
+                    
+                    
+                });
                 
-            });
-            
+                 });
+        
+        
         </script>
     </body>
-
 </html>

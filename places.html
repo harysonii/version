@@ -1,7 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-    <head>
-        <meta charset="utf-8" />
+
+<head>
+    <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
@@ -16,16 +37,15 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="css/profile.css"/>
-        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-        
-        <title>Hello World</title>
 
-    </head>
-    <body>
-        <!--<header class="headerCon">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <title>Hello World</title>
+</head>
+<body>
+    <!--<header class="headerCon">
     <div class="header">
         <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
         <a class="center-text">Discover</a>
@@ -33,83 +53,32 @@
     
     </div>
     </header>-->
-        
-    <div class="navbar-fixed">
-    <nav class="teal">
+    <div class="navbar-fixed blue-grey">
+    <nav class="">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Profile</a>
+      <a href="#" class="brand-logo">Places</a>
         <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
+      <!--<ul class="left "><a href="#"><i class="fa fa-search"></i></a></ul>-->
                     <ul class="right "><a href="#"><i class="fa fa-bell"></i></a></ul>
       
     </div>
   </nav>
     </div>
-   
-        <div style="width:100%;">
-        <div class="user-view">
-        <div class="background" style="width:auto;">
-        <img src="img/office.jpg" height="300px" width="100%">
-      </div>
-      <a href="#!user" style="position:relative; bottom:60px;left:10px;"><img class="circle" src="img/yuna.jpg" height="100px" width="auto"></a>
-    </div>
-            </div>
-        
-        <div style="position:relative; bottom:60px; height:6%; width:80%; margin:0 auto;">
-      <ul class="add-menu">
-        <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
-        <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
-        <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
-        <li class="waves-effect waves-light modal-trigger p"  href="#modal1"><i class="fa fa-cloud-upload">&#160&#160<span></span></i></li>
-        </ul>
-        </div>
-        <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab" id=""><a class="active" href="#test1">Create Event</a></li>
-        <li class="tab" ><a id="a" href="#test2">Create Place</a></li>
-      </ul>
-    </div>
     
-       <!--- 
-        <div class="protop">
-            <div class="econ" style="color:white;">
-                <span >
-                    <a class="active" style="color:white;" href="#" onclick="logout()"><i class="fa fa-power-off"></i></a>
-            <a class="active" href="settings.html"><i class="fa fa-gear"></i></a>
-                </span>
-            </div>
-            <div class="imgcon">
-                <div class="imgcir">
-                   <img alt="profile" width="50%" height="50%"/>
-                </div>
-            </div>
-            <div class="indentity"><h5 id="f"></h5><p id="u"></p></div>
-        </div>
-        <div class="about">
-             <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">About</span>
-              <p></p>
-            </div>
-            <div class="card-action">
-              <a href="#">following</a>
-              <a href="#">followers</a>
-              <a href="#">Events</a>
-            </div>
-          </div>
-        </div>
-        -->
-        
-        <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Upload pictures</h4>
-      <a class="waves-effect waves-light modal-trigger p"  href="uploadprofile.html"><i class="fa fa-image">&#160&#160<span>Profile picture</span></i></a><br><br>
-      <a class="waves-effect waves-light modal-trigger p"  href="#uploadcover.html"><i class="fa fa-image">&#160&#160<span>Cover picture</span></i></a>
-    </div>
-  </div>
-        
-        
-          <ul id="slide-out" class="side-nav">
+
+    
+    <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="images/yuna.jpg" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    </li>
+  </ul>
+    
+      <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
         <img src="images/office.jpg">
@@ -133,33 +102,26 @@
     <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
         
   </ul>
-        
-        
+    
+
+    <div class="aid"><a class="btn-floating btn-large swaves-effect waves-light red"><i class="fa fa-filter"></i></a></div>
     <!--<footer class="footer">
         
-        <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
+            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
             <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
             <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
             <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
             <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
         
     </footer>-->
+     <script src="js/jquery-3.2.1.min.js"></script>
+     <script src="js/materialize.min.js"></script>
+    <script>
         
-        <script src="js/jquery-2.2.3.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                
-                 $(document).ready(function(){
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-                     
-    $('.p').click(function(){
-    $('.modal').modal();
-  });
-  });
-                
+        $(document).ready(function(){
+           
             
-                // Initialize collapse button
+             // Initialize collapse button
                 $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 300
       edge: 'left', // Choose the horizontal origin
@@ -171,23 +133,22 @@
   );
             
             
-            $.ajax({
+          $.ajax({
                 
-                type: 'get',
-                //url: 'http://gothere.000webhostapp.com/profile.php.php',
-                url: 'profile.php',
-                dataType: 'json',
-                success: function (response) {
+                  type: 'get',
+                  url: 'schedule.php',
+                   dataType: 'html',
+                  success: function (response) {
                         
-                        $('#f').html(response.fname);
-                        $('#u').html(response.uname);
+                        $('.collection').html(response);
                         
                     }
+                   
+               });
                 
             });
-           
-        });
-function logout() {
+        
+        function logout() {
        $.ajax({
                 
        type: 'get',
@@ -210,6 +171,7 @@ function logout() {
           });
             
         }
-        </script>
-    </body>
+            
+    </script>
+</body>
 </html>
