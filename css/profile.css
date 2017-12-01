@@ -1,0 +1,80 @@
+.add-menu {
+    background-color: white;
+    color: cadetblue;
+    white-space: nowrap;
+    height: 5%;
+    width: 100%;
+} 
+
+.add-menu li {
+    
+    display: inline-block;
+    color: cadetblue;
+    text-align: ;
+    padding: 25px;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.protop {
+    background-color: cadetblue;
+    width: 100%;
+    height: 300px ;
+     margin-top: 13%;
+    overflow: auto;
+    
+}
+
+.protop a {
+    color: white;
+}
+.econ {
+    background-color: ;
+    width: 100%;
+    height: 15%;
+}
+
+.econ a {float: right;padding: 3%;}
+
+.imgcon {
+    background-color:;
+    width: 100%;
+    height: 55%;
+    padding: %;
+}
+
+.imgcir {
+    background-color: white;
+    width: 150px;
+    height:150px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 75px;
+    margin: auto;
+    
+}
+
+.indentity {
+    background-color: ;
+     width: 100%;
+    height: 30%;
+    text-align: center;
+    color: white;
+}
+
+.indentity p{
+    font-size: 20px;
+}
+
+.about {
+    width: 90%;
+    height: auto;
+    background-color: white;
+    margin: auto;
+     box-shadow: 1px 2px 4px 1px black;
+    transition: 0.3s;
+    border-radius: 7px;
+    position: relative;
+    bottom: 15px;
+}

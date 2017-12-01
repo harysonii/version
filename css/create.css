@@ -1,0 +1,40 @@
+.form-label {
+    color: #e65100;
+}
+
+input {
+    border: 2px solid #e65100;
+}
+/*ul.tabs {
+    margin: 0px;
+    padding: opx;
+    list-style: none;
+
+}
+
+ul.tabs li {
+    background: none;
+    color: cadetblue;
+    display: inline-block;
+    padding: 10px 15px;
+}
+
+ul.tabs li.current {
+    background: #ededed;
+    color: cadetblue;
+}
+
+.tab-content {
+    display: none;
+    background: white;
+    padding: 15px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+.formCon form {
+    font-size: 20px;
+    border: 0 0 1px 0;
+}*/
