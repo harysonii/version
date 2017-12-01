@@ -1,28 +1,7 @@
-<!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
+<!doctype>
 <html>
-
-<head>
-    <meta charset="utf-8" />
+    <head>
+        <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
@@ -37,259 +16,390 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-     
-    <!-- Path to Framework7 Library CSS, Material Theme -->
-    <link rel="stylesheet" href="css/framework7.material.min.css">
-    <!-- Path to Framework7 color related styles, Material Theme -->
-    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="Semantic/semantic.min.css">
-    <link rel="stylesheet" href="css/my-app.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-    <title>gothere</title>
-</head>
-
-<body>
-    <!-- Views -->
-    <div class="views">
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-fixed toolbar-fixed">
-          <!-- Page, "data-page" contains page name -->
-            
-          <div  class="page " data-page="index">
-              
-            <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar bar-color">
-        <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="external link" style="margin-bottom:35px;"><i class="bell icon"></i></a>
-            </div>
-            
-            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
-                </div>
-              </div>
-            </div>
-              
         
- 
-            <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom bar-color">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="index.html" class="external link" style="margin-bottom:35px;"><i class="eye icon"></i></a>
-                <a href="#" class="external link" style="margin-bottom:35px;"><i class="calendar icon"></i></a>
-                <a href="#" class="external link" style="margin-bottom:35px;"><i class="plus icon"></i></a>
-                <a href="profile.html" class="external link" style="margin-bottom:35px;"><i class="user icon"></i></a>
-                
-              </div>
-            </div>
-        
-              <!-- Scrollable page content -->
-            <div class="page-content" >
-                <div class="content-block">
-                <div class="ui secondary pointing menu">
-                 <a href="#tab-1" class="tab-link active item">Create an event </a>
-              <a href="#tab-2" class="tab-link item">Add a place</a>
-                </div>
-                    
-               <div class="tab-links">
-                   <div class="tabs-swipeable-wrap">
-               <div class="tabs">
-        <!-- Tab 1, active by default -->
-        <div id="tab-1" class="tab active">
-          <div class="content-block">
-            <div class="ui one column middle aligned very relaxed stackable grid">
-  <div class="column">
-    <div class="ui tiny form">
-      <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Title" id="title">
-          <i class="italic icon"></i>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui left icon input">
-          <textarea type="text" placeholder="Description" id="description"></textarea>
-          <i class="write icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="num" placeholder="Phone" id="phone">
-          <i class="phone icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="email" placeholder="Email" id="email">
-          <i class="mail icon"></i>
-        </div>
-      </div>
-        <div class="field">
-    <select multiple="" class="ui dropdown g" id="type">
-      <option value="">Select Type</option>
-      <option value="AF">Afghanistan</option>
-      <option value="AX">Åland Islands</option>
-      <option value="AL">Albania</option>
-      <option value="DZ">Algeria</option>
-      <option value="AS">American Samoa</option>
-      <option value="AD">Andorra</option>
-      <option value="AO">Angola</option>
-      <option value="AI">Anguilla</option>
-      <option value="AQ">Antarctica</option>
-      <option value="AG">Antigua and Barbuda</option>
-      <option value="AR">Argentina</option>
-      <option value="AM">Armenia</option>
-      <option value="AW">Aruba</option>
-      <option value="AU">Australia</option>
-      <option value="AT">Austria</option>
-      <option value="AZ">Azerbaijan</option>
-            </select>
-  </div>
-        <div class="field" >
-        <div class="ui left icon input">
-          <input type="text" placeholder="Host(s)" id="host">
-          <i class="user icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Co-host(s)" id="cohost">
-          <i class="users icon"></i>
-        </div>
-      </div>
-      <div class="ui submit button button-color" id="create">Create event</div>
-    </div>
-  </div>
-  
-</div>
-          </div> 
+        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+        <link rel="stylesheet" type="text/css" href="css/create.css"/>
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+        <style>
             
-            </div>
-                   <div id="tab-2" class=" tab">
-          <div class="content-block">
-              
-              <div class="ui one column middle aligned very relaxed stackable grid">
-  <div class="column">
-    <div class="ui tiny form">
-      <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Title">
-          <i class="italic icon"></i>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui left icon input">
-          <textarea type="text" placeholder="Description"></textarea>
-          <i class="write icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="num" placeholder="Phone">
-          <i class="mail icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="email" placeholder="Email">
-          <i class="phone icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="type">
-          <i class="arrow down icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Host(s)">
-          <i class="user icon"></i>
-        </div>
-      </div>
-      <div class="ui submit button button-color">Add place</div>
+input {
+    border: 2px solid #e65100;
+}
+        
+        </style>
+        <title>Hello World</title>
+    </head>
+    <body>
+        
+        
+     <div class="navbar-fixed">
+    <nav class="nav-extended teal">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Create</a>
+        <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
+                    <ul class="right" style="position:relative;top:20px;"><a href="#"><i class="fa fa-bell"></i></a></ul>
+      
     </div>
-  </div>
-  
-</div>
-              
-          </div>
-                   </div>
-            </div>
-                    
-        </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab" id=""><a class="active" href="#test1">Create Event</a></li>
+        <li class="tab" ><a id="a" href="#test2">Create Place</a></li>
+      </ul>
+    </div>
+  </nav>
+    </div>
+        
+        <div id="test1" class="col s12">
+         <div class="" style="width:90%;margin: 15% auto;">
+                <form method="POST" enctype="multipart/form-data">
+                    <label class="form-label">Image</label>
+                    <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your events image">
+                        </div>
                     </div>
-                </div>
-    </div>
+                    <label class="form-label">Name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Give your event a unique name:" id="ename" name="ename">
+                    </div>
+                    <label class="form-label">About: Tell your guests about your events, what you offer, what to bring or not bring. its your Chance to blow their minds!</label>
+                    <div class="input-field">
+                        <textarea  style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="materialize-textarea" placeholder="The event is about:" id="about" name="about"></textarea>
+                    </div>
+                    <label class="form-label">Location</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" id="location" name="location" placeholder="The location of the event is:">
+                    </div>
+                    <label class="form-label">State</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" id="state" name="state" placeholder="In which State, Lagos?">
+                    </div>
+                    <label class="form-label">Country</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" id="country" name="country" placeholder="In which Country, Nigeria?">
+                    </div>
+                    <label class="form-label">Date</label>
+                    <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker w" id="dateFrom" placeholder="Date: From" name="dateFrom">
+                            </div>
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker 2" id="dateTo" placeholder="Date: To" name="dateTo">
+                            </div>
+                        </div>
+                    </div>
+                    <label class="form-label">Time</label>
+                    <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="timepicker" id="timeFrom" placeholder="Time: From" name="timeFrom">
+                            </div>
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="timepicker" id="timeTo" placeholder="Time: To" name="timeTo">
+                            </div>
+                        </div>
+                    </div>
+                    <!--<label class="form-label">Fee</label>
+                    <div class="input-field">
+                        <input id="fee" style="border: 2px solid #e0e0e0;border-radius:5px;" type="number"  placeholder="How much? Free (0) 0r 2000" name="fee">
+                    </div>-->
+                    <label class="form-label">Phone Number</label>
+                    <div class="input-field">
+                        <input id="num" name="num" style="border: 2px solid #e0e0e0;border-radius:5px;" type="number"  placeholder="080********">
+                    </div>
+                    <label class="form-label">Type</label>
+                    <div class="input-field col s12">
+                                        <select id="type"  name="type" style="border:none;">
+                                            <option value="" disabled selected>Select your event's type</option>
+                                            <option value="Charity and Fundraiser" >Charity and Fundraiser</option>
+                                            <option value="Comedy" >Comedy</option>
+                                            <option value="Concert" >Concert</option>
+                                            <option value="Conference or Convention" >Conference or Convention</option>
+                                            <option value="Dinner or Gala" >Dinner or Gala</option>
+                                            <option value="Fashion show or Gallery" >Fashion show or Gallery</option>
+                                            <option value="Festival" >Festival</option>
+                                            <option value="Food" >Food</option>
+                                            <option value="Games or Competition" >Games or Competition</option>
+                                            <option value="Lauching" >launching</option>
+                                            <option value="Meetup" >Meetup</option>
+                                            <option value="Party or Club" >Party or Club</option>
+                                            <option value="Premiers or Theatre" >Premiers or Theatre</option>
+                                            <option value="Rally" >Rally</option>
+                                            <option value="Seminar or Talks" >Seminar or Talks</option>
+                                            <option value="Screening" >Screening</option>
+                                            <option value="Tour" >Tour</option>
+                                            <option value="Trade show or Expo" >Trade show or Expo</option>
+                                            <option value="Wedding" >Wedding</option>
+                                        </select>
+                                    </div>
+                    <label class="form-label">Tags</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" id="tag" name="type" type="text" placeholder="Tags">
+                    </div>
+                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Create</button>
+                    <div id="l"></div>
+                </form>
         </div>
-    </div>
         </div>
-    </div>
-    
-    <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/framework7.min.js"></script>
-    <script src="Semantic/semantic.min.js"></script>
-    <script src="js/my-app.js"></script>
-    <script>
-    $(document).ready(function(){
-    $('#type1').click(function(){
-    $('.g')
-  .dropdown()
-;
-    });
+  <div id="test2" class="col s12">
+        
+      <div class="" style="width:90%;margin: 15% auto;">
+                <form method="POST" >
+                   <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path Validate"  type="text" placeholder="Upload your events image">
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <input  type="text" placeholder="The name of the event is:" id="name">
+                    </div>
+                    <div class="input-field">
+                        <textarea  type="text" class="materialize-textarea" placeholder="The event is about:" id="description"></textarea>
+                    </div>
+                    <div class="input-field">
+                        <input  type="text" id="location" placeholder="The location of the event is:">
+                    </div>
+                    <div class="input-field">
+                        <input  type="text" id="state" placeholder="In which state, Lagos?">
+                    </div>
+                    <div class="input-field">
+                        <input  type="text" id="state" placeholder="In which country, Nigeria?">
+                    </div>
+                    <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="text" class="datepicker w" id="dateFrom" placeholder="Date: From">
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="datepicker 2" id="dateTo" placeholder="Date: To">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input type="text" class="timepicker" id="timeFrom" placeholder="Time: From">
+                            </div>
+                            <div class="input-field col s6">
+                                <input type="text" class="timepicker" id="timeTo" placeholder="Time: To">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <input id="fee" type="number"  placeholder="How much? Free (0) 0r 2000">
+                    </div>
+                    <div class="chips chips-autocomplete chips-placeholder">
+                        <!--<input id="type" class="chips chips-autocomplete" type="text" placeholder="Type">-->
+                    </div>
+                    <div class="input-field">
+                        <input id="tag" type="text" placeholder="Tags">
+                    </div>
+                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Create</button>
+                </form>
+        </div>
+        
+        </div>
+        
+        <div id="modal1" class="modal"><div class="modal-content"><p>ghghgh</p></div></div>
+        
+         <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.php"><i class="fa fa-search"></i>Search</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Menu</a></li>
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="places.html"><i class="fa fa-building"></i>places</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears"></i>Settings</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" href="#" onclick="logout()"><i class="fa fa-sign-out"></i>Log Out</a></li>
+        
+  </ul>
         
         
-        $("#create").click(function(){
-            
-           var title = $("title".val();
-           var description = $("#description").val();
-           var phone = $("#phone").val();
-            var email = $('#email").val();
-           var type = $("type").val();
-           var host = $("#host").val();
-           var cohost = $("#cohost").val();
-            
-            if (title != "" && description != "" && phone != "" && type != "" && host != "") {
+        
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="tinymce/tinymce.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function(){
                 
-            $.ajax ({
+                $('select').material_select();//dropdown
+                tinymce.init({selector:'textarea'});//show the html editor
                 
-               type: 'post',
-               url: 'create_event.php',
-               data: {
-                   title: title,
-                   description: description,
-                   phone: phone,
-                   email :email,
-                   type: type,
-                   host: host,
-                   cohost: cohost
-               },
-                success:function(response) {
-                    if (response == "success") {
-                        
-                        alert("Event Created");
-                        
-                    }else {
-                        
-                        alert("Event was not created");
-                    }
-                }
+                
+                $('.w').click(function(){
+                $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  }); 
             });
                 
-            }else {
+                 $('.timepicker').pickatime({
+    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
+    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+    twelvehour: false, // Use AM/PM or 24-hour format
+    donetext: 'OK', // text for done-button
+    cleartext: 'Clear', // text for clear-button
+    canceltext: 'Cancel', // Text for cancel-button
+    autoclose: false, // automatic close timepicker
+    ampmclickable: true, // make AM PM clickable
+    aftershow: function(){} //Function for after opening timepicker
+  });
+       
                 
-                alert("Fill all required fields");
-            }
-            
-        });
-        
+                
+                 // Initialize collapse button
+                $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
     });
-    </script>
+                
+                 $("#create").click(function(){
+                    
+                    
+                tinyMCE.triggerSave();// save the data to the assigned ID of the textarea field
+                   
+                 var image = $("#image").val();
+                 var ename = $("#ename").val();
+                 var about =$("#about").val();
+                var location = $("#location").val();
+                 var state = $("#state").val();
+                var country = $("#country").val();
+                var dateFrom = $("#dateFrom").val();
+                var dateTo = $("#dateTo").val();
+                var timeFrom = $("#timeFrom").val();
+                var timeTo = $("#timeTo").val();
+                var fee = $("#fee").val();
+                var num = $("#num").val();
+                var type = $("#type").val();
+                var tag = $("#tag").val();
+                    //formData.append('fee', $('#fee').val());
+                    
+                   var formData = new FormData();
+				   formData.append('image', document.getElementById("image").files[0]);
+				   formData.append('ename', $('#ename').val());
+				   formData.append('about', $('#about').val());
+				   formData.append('location', $('#location').val());
+				   formData.append('state', $('#state').val());
+				   formData.append('country', $('#country').val());
+				   formData.append('dateFrom', $('#dateFrom').val());
+				   formData.append('dateTo', $('#dateTo').val());
+				   formData.append('timeFrom', $('#timeFrom').val());
+				   formData.append('timeTo', $('#timeTo').val());
+				   formData.append('num', $('#num').val());
+				   formData.append('type', $('#type').val());
+				   formData.append('tag', $('#tag').val());
+               
+                    if (ename != "" && about != "" && location != "" && state != "" && country != "" && dateFrom != "" && timeFrom != "" && timeTo != "" && type != "" && tag != "") {
+                          
+                          $.ajax({
+                          
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/create.php',
+                         url: 'check-name.php',
+                         data: {
+                            ename: ename,
+                             
+                         },
+                          success:function(response) {
+                              if (response == "success") {
+                                  
+                                  $.ajax({
+                          
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/create.php',
+                         url: 'create.php',
+                         data: formData,
+                                  cache: false,
+                                  contentType: false,
+                          processData: false,
+                          success:function(response) {
+                              
+                              if (response == "success") {
+                                  var $toastContent = $('<span>Event created!</span>').add($('<button onclick="ticket()" class="btn-flat toast-action">Create ticket</button>'));
+                                Materialize.toast($toastContent, 10000);
+                                   //Materialize.toast('Event successfully created!', 4000);
+                              }else {  Materialize.toast('Event not created!', 4000);}
+                              
+                          }
+                          
+                      });
+                                  
+                                  }else {Materialize.toast('Select a new name!', 4000);}
+                          }
+                          
+                      });
+                          
+                        }else {Materialize.toast('Fill all required fields!', 4000);}
+                   
+                     
+            });
+            });
+            
+            
+            function ticket() {
+       
+                           window.location.href="ticket.html";
+                            
+            
+        }
+            function logout() {
+       $.ajax({
+                
+       type: 'get',
+                //url: 'http://gothere.000webhostapp.com/logout.php',
+                url: 'logout.php',
+                success: function (response) {
+                        
+                      if (response == "success") {
+                            
+                           window.location.href="login.html";
+                            
+                     }else{
+                            
+                       alert("You were not logged out");
+                            
+                         }
+                        
+                    }
+                
+          });
+            
+        }
+            
+            
+           // window.location.href="index.html";
+        </script>
     </body>
 </html>
