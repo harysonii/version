@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/tickets.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <title>Hello World</title>
+</head>
+<body>
+    <div class="navbar-fixed">
+    <nav class="teal">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">tickets</a>
+        <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
+      <!--<ul class="left "><a href="#"><i class="fa fa-search"></i></a></ul>-->
+                    <ul class="right "><a href="#"><i class="fa fa-bell"></i></a></ul>
+      
+    </div>
+  </nav>
+    </div>
+    
+    <div style="width:90%;margin: 5% auto;">
+        <p style="">With our ticketing services you are able to create a variety of tickek options based on your event's needs. From free tickets to paid ones( regular, VIP, VIP+, table for 4, 6 or 8) We cover your needs. Note that you can create more than one ticket type for your event.</p>
+        
+        
+        <ul class="collapsible popout" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">Free</div>
+      <div class="collapsible-body">
+          <span>
+              <form>
+                <label class="form-label"> Your event's name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Make sure its the same:" id="ename" name="ename">
+                    </div>
+                    <div class="col s6">
+                         <label class="form-label">Cost</label>
+                        <div class="row">
+                           
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="quan" placeholder="Ticket Quantity" name="">
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="cost" placeholder="Your ticket's cost">
+                            </div>
+                        </div>
+                    </div>
+                  <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Pay:<span id="as"></span></button>
+              </form>
+          </span>
+        </div>
+    </li>
+    <li>
+      <div class="collapsible-header">Regular</div>
+      <div class="collapsible-body"><span>
+           <form>
+                <label class="form-label"> Your event's name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Make sure its the same:" id="ename" name="ename">
+                    </div>
+                    <div class="col s6">
+                         <label class="form-label">Cost</label>
+                        <div class="row">
+                           
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="number" class="" id="quan2" placeholder="Ticket Quantity" name="dateFrom">
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="number" class="" id="cost2" placeholder="Date: To" name="dateTo">
+                            </div>
+                        </div>
+                    </div>
+                  <button type="button" value="create" class="btn waves-effect waves-light"  id="pay2">Pay:<span id="two"></span></button>
+              </form></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">VIP+</div>
+      <div class="collapsible-body"><span> <form>
+                <label class="form-label"> Your event's name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Make sure its the same:" id="ename" name="ename">
+                    </div>
+                    <div class="col s6">
+                         <label class="form-label">Cost</label>
+                        <div class="row">
+                           
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker w" id="dateFrom" placeholder="Ticket Quantity" name="dateFrom">
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker 2" id="dateTo" placeholder="Date: To" name="dateTo">
+                            </div>
+                        </div>
+                    </div>
+                  <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Pay:<span id=""></span></button>
+              </form></span></div>
+    </li>
+            <li>
+      <div class="collapsible-header">Table for 4</div>
+      <div class="collapsible-body"><span> <form>
+                <label class="form-label"> Your event's name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Make sure its the same:" id="ename" name="ename">
+                    </div>
+                    <div class="col s6">
+                         <label class="form-label">Cost</label>
+                        <div class="row">
+                           
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker w" id="dateFrom" placeholder="Ticket Quantity" name="dateFrom">
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker 2" id="dateTo" placeholder="Date: To" name="dateTo">
+                            </div>
+                        </div>
+                    </div>
+                  <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Pay:<span id=""></span></button>
+              </form></span></div>
+    </li>
+            <li>
+      <div class="collapsible-header">table for 6</div>
+      <div class="collapsible-body"><span> <form>
+                <label class="form-label"> Your event's name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Make sure its the same:" id="ename" name="ename">
+                    </div>
+                    <div class="col s6">
+                         <label class="form-label">Cost</label>
+                        <div class="row">
+                           
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker w" id="dateFrom" placeholder="Ticket Quantity" name="dateFrom">
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker 2" id="dateTo" placeholder="Date: To" name="dateTo">
+                            </div>
+                        </div>
+                    </div>
+                  <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Pay:<span id=""></span></button>
+              </form></span></div>
+    </li>
+            <li>
+      <div class="collapsible-header">table for 8</div>
+      <div class="collapsible-body"><span> <form>
+                <label class="form-label"> Your event's name</label>
+                    <div class="input-field">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Make sure its the same:" id="ename" name="ename">
+                    </div>
+                    <div class="col s6">
+                         <label class="form-label">Cost</label>
+                        <div class="row">
+                           
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="quan6" placeholder="Ticket Quantity" name="">
+                            </div>
+                            
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="cost6" placeholder="Your ticket's cost">
+                            </div>
+                        </div>
+                    </div>
+                  <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Pay:<span id="eight"></span></button>
+              </form></span></div>
+    </li>
+  </ul>
+    </div>
+    
+    <div id="k"></div>
+    
+    
+      <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.php"><i class="fa fa-search"></i>Search</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Menu</a></li>
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="places.html"><i class="fa fa-building"></i>places</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears"></i>Settings</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
+        
+  </ul>
+    
+
+    <!--<footer class="footer">
+        
+            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
+            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
+            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
+            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
+            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
+        
+    </footer>-->
+     <script src="js/jquery-3.2.1.min.js"></script>
+     <script src="js/materialize.min.js"></script>
+     <script src="js/jquery.soap.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            
+           
+            //free
+            $("#cost").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.5 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.5 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });$("#quan").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.5 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.5 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });//regular
+            $("#cost2").keyup(function(){
+                    
+                  
+                 var q = $("#quan2").val();
+            var cost = $("#cost2").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.6 * cost * q / 100);
+                $('#two').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.6 * cost * q / 100);
+                $('#two').html(amount);
+            }
+                      
+            
+               });$("#quan2").keyup(function(){
+                    
+                  
+                 var q = $("#quan2").val();
+            var cost = $("#cost2").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.6 * cost * q / 100);
+                $('#two').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.6 * cost * q / 100);
+                $('#two').html(amount);
+            }
+                      
+            
+               });//VIP+
+            $("#cost").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.7 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.7 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });$("#quan").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.7 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.7 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });//Table for 4
+            $("#cost").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.8 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.8 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });$("#quan").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.8 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.8 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });//6
+            $("#cost").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.9 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.9 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });$("#quan").keyup(function(){
+                    
+                  
+                 var q = $("#quan").val();
+            var cost = $("#cost").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.9 * cost * q / 100);
+                $('#as').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.9 * cost * q / 100);
+                $('#as').html(amount);
+            }
+                      
+            
+               });//8
+            $("#cost6").keyup(function(){
+                    
+                  
+                 var q = $("#quan6").val();
+            var cost = $("#cost6").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.5 * cost * q / 100);
+                $('#eight').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.5 * cost * q / 100);
+                $('#eight').html(amount);
+            }
+                      
+            
+               });$("#quan6").keyup(function(){
+                    
+                  
+                 var q = $("#quan6").val();
+            var cost = $("#cost6").val() ;
+            
+            
+            if (cost > 2499){
+               var total = (1.5 * q * cost / 100 + (100 * q)) + (1.5 * cost * q / 100);
+                $('#eight').html(total);
+            }else{
+                var amount = (1.5 * q * cost / 100) + (1.5 * cost * q / 100);
+                $('#eight').html(amount);
+            }
+                      
+            
+               });
+            
+            
+            $("#pay2").click(function(){
+                
+                //var username = "200208";
+                var username = "Staging Enterprise With Fraud Integration Store 1";
+           // var password = "g1kzk8GY";
+            var password = "xoV3PFor";
+            //var safekey = "{A580B3C7-3EF3-47F1-9B90-4047CEOEC54C}"
+            var safekey = ">{CF86C6D5-016C-4E98-9E4F-0F4FE3A0C1BA}"
+            var api = "";
+            var transType ="PAYMENT";
+            var cancel = "www.qa.payu.co.za/integration-qa/internal-tools/demos/developer/payu-redirect-payment-page/cancel-page.php";
+            var demomode = "false";
+            var merhref = "mercRef_1395758213";
+            var notification = "www.qa.payu.co.za/integration-qa/internal-tools/demos/developer/payu-redirectpayment-page/notification-page.php";
+            var redchannel = "web";
+            var returnurl = "'www.qa.payu.co.za/integration-qa/internal-tools/demos/developer/payu-redirect-paymentpage/send-getTransaction-via-soap.php";
+            var secure3d = "true";
+            var spm = "CREDITCARD";
+            var email = "haryson.onuoha@gmail.com";//$("#email").val();
+            var fn = "Harry";//$("#fn").val();
+            var ip = "108.69.76.89";//$("#ip").val();
+            var ln = "Onuoha";//$("#ln").val();
+            var meruserid = "merchantUserId_1395758213";
+            var phone = "08129228960";
+            var regionalid = "regionalId_1395758213";
+            var amtincents = 10000;//$("#two").val();
+            var curcode = "NGN";
+            var description = "PAYMENT FOR TICKET ENABLING";
+            
+            var xml =['<?xml version="1.0" encoding="UTF-8"?>',
+'<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://soap.api.controller.web.payjar.com/" xmlns:ns2="http://docs.oasisopen.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">',
+ '<SOAP-ENV:Header>',
+'<wsse:Security SOAP-ENV:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">',
+ '<wsse:UsernameToken wsu:Id="UsernameToken-9" xmlns:wsu="http://docs.oasisopen.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">',
+ '<wsse:Username>'+ username +'</wsse:Username>',
+ '<wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-tokenprofile-1.0#PasswordText">'+ password +'</wsse:Password>',
+ '</wsse:UsernameToken>',
+ '</wsse:Security>',
+ '</SOAP-ENV:Header>',
+ '<SOAP-ENV:Body>',
+ '<ns1:setTransaction>',
+ '<Api>'+ api +'</Api>',
+ '<Safekey>'+ safekey +'</Safekey>',
+ '<TransactionType>'+ transType +'</TransactionType>',
+ '<AdditionalInformation>',
+ '<cancelUrl>'+ cancel +'</cancelUrl>',
+ '<demoMode>'+ demomode +'</demoMode>',
+ '<merchantReference>'+ merhref +'</merchantReference>',
+ '<notificationUrl>'+ notification +'</notificationUrl>',
+ '<redirectChannel>'+ redchannel +'</redirectChannel>',
+ '<returnUrl>'+ returnurl +'</returnUrl>',
+ '<secure3d>'+ secure3d +'</secure3d>',
+ '<supportedPaymentMethods>'+ spm +'</supportedPaymentMethods>',
+ '</AdditionalInformation>',
+ '<Customer>',
+ '<email>'+ email +'</email>',
+ '<firstName>'+ fn +'</firstName>',
+ '<ip>'+ ip +'</ip>',
+ '<lastName>'+ ln +'</lastName>',
+ '<merchantUserId>'+ meruserid +'</merchantUserId>',
+ '<mobile>'+ phone +'</mobile>',
+ '<regionalId>'+ regionalid +'</regionalId>',
+ '</Customer>',
+ '<Basket>',
+ '<amountInCents>'+ amtincents +'</amountInCents>',
+ '<currencyCode>'+ curcode +'</currencyCode>',
+ '<description>'+ description +'</description>',
+ '</Basket>',
+ '</ns1:setTransaction>',
+ '</SOAP-ENV:Body>',
+'</SOAP-ENV:Envelope>'];
+            
+                
+               $.soap({
+	url: 'http://gothere.000webhostapp.com/payu-rpp-setTransaction-using-soap.php',
+                   type: "post",
+    dataType: "XML",
+	data: xml.join(''),
+
+
+
+	success: function (soapResponse) {
+		// do stuff with soapResponse
+		// if you want to have the response as JSON use soapResponse.toJSON();
+        //alert(soapResponse);
+		// or soapResponse.toString() to get XML string
+		// or soapResponse.toXML() to get XML DOM
+	},
+	error: function (SOAPResponse) {
+		// show error
+        //alert(SOAPResponse);
+	}
+}); 
+                
+            });
+            
+            
+            
+             // Initialize collapse button
+                $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+    }
+  );
+            
+            
+                
+            });
+            
+    </script>
+</body>
+</html>
