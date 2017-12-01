@@ -37,829 +37,249 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-    
-    
-    <!-- Path to Framework7 Library CSS, Material Theme -->
-    <link rel="stylesheet" href="css/framework7.material.min.css">
-    <!-- Path to Framework7 color related styles, Material Theme -->
-    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
-   <!-- <link rel="stylesheet" href="css/ratchet.min.css">-->
-    <link rel="stylesheet" href="Semantic/semantic.min.css">
-    <link rel="stylesheet" href="css/milligram.min.css">
-    <link rel="stylesheet" href="css/framework7.material.min.css">
-     <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/my-app.css">
-    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-    <title>gothere</title>
-</head>
 
-<body class="h">
-    <!-- Views -->
-    <div class="views">
-        <!-- Your main view, should have "view-main" class -->
-        <div class="view view-main">
-        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-fixed toolbar-fixed">
-          <!-- Page, "data-page" contains page name -->
-            
-          <div  class="page " data-page="index">
-              
-            <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar bar-color">
-        <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="bottom:15px;"><i class="bell icon"></i></a>
-            </div>
-            
-            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="bottom:15px;"> <i class="building outline icon"></i></a>
-                </div>
-              </div>
-            </div>
-              
-              
-              <!-- Additional "tabbar-scrollable" class -->
-                      <div class="toolbar tabbar tabbar-scrollable toolbar-color">
-                        <div class="toolbar-inner " >
-                             <a style="text-transform:none;" href="#tab-1" class="tabs tab-link active" id="a">Today</a>
-                             <a style="text-transform:none;" href="#tab-2" class="tabs tab-link" id="b">In vogue</a>
-                             <a style="text-transform:none;" href="#tab-3" class="tabs tab-link" id="c">Music</a>
-                             <a style="text-transform:none;" href="#tab-4" class="tabs tab-link" id="d">Sports &amp Recreation</a>
-                             <a style="text-transform:none;" href="#tab-5" class="tabs tab-link" id="e">Fundraisers</a>
-                             <a style="text-transform:none;" href="#tab-6" class="tabs tab-link" id="f">Movies &amp Theaters</a>
-                             <a style="text-transform:none;" href="#tab-7" class="tabs tab-link" id="g">Rallies &amp Protests</a>
-                             <a style="text-transform:none;" href="#tab-8" class="tabs tab-link" id="h">Fashion &amp Gallery</a>
-                             <a style="text-transform:none;" href="#tab-9" class="tabs tab-link" id="i">Parties &amp Clubs</a>
-                             <a style="text-transform:none;" href="#tab-10" class="tabs tab-link" id="j">Comedy</a>
-                             <a style="text-transform:none;" href="#tab-11" class="tabs tab-link" id="k">Food</a>
-                             <a style="text-transform:none;" href="#tab-12" class="tabs tab-link" id="l">Conventions &amp Talks</a>
-                          </div>
-                      </div>
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <title>Hello World</title>
+</head>
+<body>
+    <!--<header class="headerCon">
+    <div class="header">
+        <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
+        <a class="center-text">Discover</a>
+        <a class="active a-right" href="#"><i class="fa fa-map"></i></a>
+    
+    </div>
+    <div class="scrollmenu">
+        <a href="#" class=" tab-link current" id="a" data-tab="tab-1">Today</a>
+        <a href="#" class=" tab-link" id="b" data-tab="tab-2">In vogue</a>
+        <a href="#" class="tabs tab-link" id="c" data-tab="tab-3">Music</a>
+        <a href="#" class="tabs tab-link" id="d" data-tab="tab-4">Sports &amp Recreation</a>
+        <a href="#" class="tabs tab-link" id="e" data-tab="tab-5">Fundraisers</a>
+        <a href="#tab-6" class="tabs tab-link" id="f" data-tab="tab-6">Movies &amp Theaters</a>
+        <a href="#tab-7" class="tabs tab-link" id="g" data-tab="tab-7">Rallies &amp Protests</a>
+        <a href="#tab-8" class="tabs tab-link" id="h" data-tab="tab-8">Fashion &amp Gallery</a>
+        <a href="#tab-9" class="tabs tab-link" id="i" data-tab="tab-9">Parties &amp Clubs</a>
+        <a href="#tab-10" class="tabs tab-link" id="j" data-tab="tab-10">Comedy</a>
+        <a href="#tab-11" class="tabs tab-link" id="k" data-tab="tab-11">Food</a>
+        <a href="#tab-12" class="tabs tab-link" id="l" data-tab="tab-12">Conventions &amp Talks</a>
         
- 
-            <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom bar-color">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="#index" class="link" style="bottom:17px;"><i class="eye icon"></i></a>
-                <a href="#schedule" class="link" style="bottom:17px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="bottom:17px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="bottom:17px;"><i class="user icon"></i></a>
-                
-              </div>
-            </div>
- 
-            <!-- Scrollable page content -->
-            <div class="page-content" >
-             <!-- Link to another page -->
-              <div class="tab-links">
- <div class="tabs-swipeable-wrap">
-      <!-- Tabs, tabs wrapper -->
-      <div class="tabs">
-        <!-- Tab 1, active by default -->
-        <div id="tab-1" class="page-content tab active">
-          <div class="content-block">
-           
-              
-               <div id="today"></div>
-          </div>
-        </div> 
-          <!-- Tab 2 -->
-        <div id="tab-2" class="page-content tab">
-          <div class="content-block">
-            
-               <div id="invogue"></div>
-          </div>
-        </div>
-        <!-- Tab 3 -->
-        <div id="tab-3" class="page-content tab">
-          <div class="content-block">
-              <div id="music"></div>
-          </div>
-        </div>
-        <!-- Tab 4 -->
-        <div id="tab-4" class="page-content tab">
-          <div class="content-block">
-               <div id="sports"></div>
-          </div>
-        </div>
-           <div id="tab-5" class="page-content tab">
-          <div class="content-block">
-               <div id="fundraiser"></div>
-          </div>
-        </div> <div id="tab-6" class="page-content tab">
-          <div class="content-block">
-               <div id="movies"></div>
-          </div>
-        </div> <div id="tab-7" class="page-content tab">
-          <div class="content-block">
-               <div id="rallies"></div>
-          </div>
-        </div>
-           <div id="tab-8" class="page-content tab">
-          <div class="content-block">
-               <div id="fashion"></div>
-          </div>
-        </div>
-           <div id="tab-9" class="page-content tab">
-          <div class="content-block">
-               <div id="parties"></div>
-          </div>
-        </div>
-           <div id="tab-10" class="page-content tab">
-          <div class="content-block">
-               <div id="comedy"></div>
-               </div>
-          </div>
-               <div id="tab-11" class="page-content tab">
-          <div class="content-block">
-               <div id="food"></div>
-          </div>
-        </div>
-           <div id="tab-12" class="page-content tab">
-          <div class="content-block">
-               <div id="talks"><a href="#schedule" class="link">here</a></div>
-            
-              
-          </div>
-        </div>
-      </div><!--end tab class-->
     </div>
-  </div>
-                
-                
-            </div> <!--end page content-->
-              
-          </div> <!-- end index page-->
-            
-            <div class="page cached" data-page="schedule">
-                
-                <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar bar-color">
-        <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="bottom:15px;"><i class="bell icon"></i></a>
-            </div>
-            
-            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="bottom:15px;"> <i class="building outline icon"></i></a>
-                </div>
-              </div>
-            </div>
-                
-                <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom bar-color">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="#index" class="link" style="bottom:17px;"><i class="eye icon"></i></a>
-                <a href="#" class="link" style="bottom:17px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="bottom:17px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="bottom:17px;"><i class="user icon"></i></a>
-                
-              </div>
-            </div>
-                
-                <div class="page-content">
-                
-                
-                
-                </div>
-            
-            </div>
-            
-            
-            <div class="page cached" data-page="create">
-                
-                <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar bar-color">
-        <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="bottom:15px;"><i class="bell icon"></i></a>
-            </div>
-            
-            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="bottom:15px;"> <i class="building outline icon"></i></a>
-                </div>
-              </div>
-            </div>
-                
-                <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom bar-color">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="#index" class="link" style="bottom:17px;"><i class="eye icon"></i></a>
-                <a href="#schedule" class="link" style="bottom:17px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="bottom:17px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="bottom:17px;"><i class="user icon"></i></a>
-                
-              </div>
-            </div>
-                
-                <div class="page-content">
-                <div class="ui secondary pointing menu">
-                 <a href="#tab-1" class="tab-link active item">Create an event </a>
-              <a href="#tab-2" class="tab-link item">Add a place</a>
-                </div>
-                    
-               <div class="tab-links">
-                   <div class="tabs-swipeable-wrap">
-               <div class="tabs">
-        <!-- Tab 1, active by default -->
-        <div id="tab-1" class="tab active">
-            <div style="position:relative;margin:auto; top:30%; bottom:50%; width:90%;height:50%;">
-          <div class="content-block">
-            <div>
-  <div >
-    <div class="ui tiny form">
-      <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Title" id="title">
-          <i class="italic icon"></i>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui left icon input">
-          <textarea type="text" placeholder="Description" id="description"></textarea>
-          <i class="write icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="num" placeholder="Phone" id="phone">
-          <i class="phone icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="email" placeholder="Email" id="email">
-          <i class="mail icon"></i>
-        </div>
-      </div>
-        <div class="field">
-    <select multiple="" class="ui dropdown g" id="type">
-      <option value="">Select Type</option>
-      <option value="AF">Afghanistan</option>
-      <option value="AX">Åland Islands</option>
-      <option value="AL">Albania</option>
-      <option value="DZ">Algeria</option>
-      <option value="AS">American Samoa</option>
-      <option value="AD">Andorra</option>
-      <option value="AO">Angola</option>
-      <option value="AI">Anguilla</option>
-      <option value="AQ">Antarctica</option>
-      <option value="AG">Antigua and Barbuda</option>
-      <option value="AR">Argentina</option>
-      <option value="AM">Armenia</option>
-      <option value="AW">Aruba</option>
-      <option value="AU">Australia</option>
-      <option value="AT">Austria</option>
-      <option value="AZ">Azerbaijan</option>
-            </select>
-  </div>
-        <div class="field" >
-        <div class="ui left icon input">
-          <input type="text" placeholder="Host(s)" id="host">
-          <i class="user icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Co-host(s)" id="cohost">
-          <i class="users icon"></i>
-        </div>
-      </div>
-      <div class="ui submit button button-color" id="create">Create event</div>
-    </div>
-  </div>
-  
-</div>
-          </div> 
-            
-            </div>
-            </div>
-                   <div id="tab-2" class=" tab">
-              
-              <div class="ui one column middle aligned very relaxed stackable grid">
-  <div class="column">
-    <div class="ui tiny form">
-      <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Title">
-          <i class="italic icon"></i>
-        </div>
-      </div>
-      <div class="field">
-        <div class="ui left icon input">
-          <textarea type="text" placeholder="Description"></textarea>
-          <i class="write icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="num" placeholder="Phone">
-          <i class="mail icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="email" placeholder="Email">
-          <i class="phone icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="type">
-          <i class="arrow down icon"></i>
-        </div>
-      </div>
-        <div class="field">
-        <div class="ui left icon input">
-          <input type="text" placeholder="Host(s)">
-          <i class="user icon"></i>
-        </div>
-      </div>
-      <div class="ui submit button button-color">Add place</div>
-    </div>
-  </div>
-  
-</div>
-              
-          
-                   </div>
-            </div>
-                    
-        </div>
-                    </div>
-                </div>
-                
-                
-            
-            </div>
-            
-            
-            <div class="page cached" data-page="profile">
-                
-                <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar bar-color">
-        <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="bottom:15px;"><i class="bell icon"></i></a>
-            </div>
-            
-            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="bottom:15px;"> <i class="building outline icon"></i></a>
-                </div>
-              </div>
-            </div>
-                
-                <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom bar-color">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="#index" class="link" style="bottom:17px;"><i class="eye icon"></i></a>
-                <a href="#schedule" class="link" style="bottom:17px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="bottom:17px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="bottom:17px;"><i class="user icon"></i></a>
-                
-              </div>
-            </div>
-                
-                <div class="page-content">
-                
-                <div id="profile" style="height:; width:90%;margin:auto;position:relative;margin-top:20px;">
-                     
-                    
-                    <div class="ui fluid card" style="margin-bottom:40px;">
-                        
-                        <div class="extra content">
-                            <div class="left floated meta">
-                                <div href="#" class=" ui floating labeled icon dropdown ca " >
-                                    <i class="camera retro icon"></i>
-                                        <div class="left menu" tabindex="-1">
-                                            <div class="item" onclick="getPhoto(pictureSource.CAMERA );">Take a picture</div>
-                                                <div class="divider"></div>
-                                                    <div class="item" onClick="getPhoto(pictureSource.SAVEDPHOTOALBUM );">upload a picture</div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div class="right floated meta">
-                                <div href="#" class=" ui floating labeled icon dropdowns" >
-                                    <a style="position:relative;right:20px;"><i class="write icon"></i></a>
-                                    <a href="#settings" class="link" style="bottom:17px;"><i class="setting icon"></i></a>
-                                </div>
-                            </div>
-                         </div>
-                        
-                        <div class="image">
-                    <img id="myImage" src=""/>
-                </div>
-                <div class="content">
-                    <!--<a class="header"><i class="user icon"></i></a>
-                    <div class="meta">
-                        <span class="date">.$row['people_name'].</span>
-                            </div>
-                            <div class="description">'.$row['people_email']</div>-->
-                    <div class="ui list">
-                        <div class="item">
-                            <i class="user icon"></i>
-                            <div class="content"  id="fullname"></div>
-                        </div>
-                        <div class="item">
-                            <i class="marker icon"></i>
-                            <div class="content">New York, NY</div>
-                        </div>
-                        <div class="item">
-                            <i class="mail icon"></i>
-                            <div class="content">
-                            </div>
-                        </div>
-                        <div class="item">
-                            <i class="linkify icon"></i>
-                            <div class="content">
-                            </div>
-                        </div>
-                    </div>
-                  </div>
-                  <div class="extra content">
-                      <div class="right floated meta">
-                          <a onclick="logout()" id="logout" href="#"><i class="sign out icon"></i></a>
-                      </div>
-                 </div>
-                        
-                    </div>
-                    
-                </div>
-                    
-                
-            
-            </div>
-                   
-    
-            
-        </div>
-            
-            
-           <div class="page cached" data-page="settings">
-                
-                <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar bar-color">
-        <div class="navbar-inner">
-            <div class="left"><a href="notification.html" class="disabled external link" style="bottom:15px;"><i class="bell icon"></i></a>
-            </div>
-            
-            <div class="center"><form><input type="search" size="50px" placeholder="Search"/></form></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="disabled external link " style="bottom:15px;"> <i class="building outline icon"></i></a>
-                </div>
-              </div>
-            </div>
-                
-                <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom bar-color">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="#index" class="link" style="bottom:17px;"><i class="eye icon"></i></a>
-                <a href="#schedule" class="link" style="bottom:17px;"><i class="calendar icon"></i></a>
-                <a href="#create" class="link" style="bottom:17px;"><i class="plus icon"></i></a>
-                <a href="#profile" class="link" style="bottom:17px;"><i class="user icon"></i></a>
-                
-              </div>
-            </div>
-                
-                <div class="page-content">
-                
-                <div id="#" style="height:; width:90%;margin:auto;position:relative;margin-top:20px;">
-                     
-                    
-                    <div class="ui fluid card" style="margin-bottom:;">
-                        
-                         <div class="extra content">
-                      <div class="right floated meta">
-                          <form class="ui form">
-  
-  
-  <div class=" field">
-    <div class="ui toggle checkbox">
-      <input type="checkbox" tabindex="0" class="hidden">
-    </div>
-  </div>
-</form>
-                      </div>
-                 </div>
-                         <div class="extra content">
-                      <div class="right floated meta">
-                          <a onclick="" id="logout" href="#"><i class="sign out icon"></i></a>
-                      </div>
-                 </div>
-                        <div class="extra content">
-                      <div class="right floated meta">
-                          <a onclick="" id="logout" href="#"><i class="sign out icon"></i></a>
-                      </div>
-                 </div>
-                      
-                 
-                    </div>
-                    
-                    <div class="ui fluid card" style="margin-bottom:40px;">
-                        
-                        
-               
-                      
-                 
-                    </div>
-                    
-                </div>
-                    
-                
-            
-            </div>
-                   
-    
-            
-        </div> <!--end of settings-->
-            
-            
-      </div>
-    </div>
-    
-</div>
-        
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="Semantic/semantic.min.js"></script>
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
-    <!--<script type="text/javascript" src="js/index.js"></script>-->
-     <!-- Path to your app js-->
-    <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript">
+    </header>-->
+    <div class="navbar-fixed">
+    <nav class="nav-extended teal">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Discover</a>
+        <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
+      <!--<ul class="left "><a href="#"><i class="fa fa-search"></i></a></ul>-->
+                    <ul class="right "><a href="#"><i class="fa fa-bell"></i></a></ul>
       
-           
-$(window).load(function() {
-               
-               if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
-                    window.location.href="login.html";
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab" id=""><a class="active" href="#test1">Today</a></li>
+        <li class="tab" ><a id="a" href="#test2">In vogue</a></li>
+        <li class="tab"><a href="#test3">All</a></li>
+        <!--<li class="tab"><a href="#test3">Music</a></li>
+        <li class="tab"><a href="#test4">Sports &amp Recreation</a></li>
+        <li class="tab"><a href="#test5">Fundraisers</a></li>
+        <li class="tab"><a href="#test6">Movies &amp Theaters</a></li>
+        <li class="tab"><a href="#test7">Rallies &amp Protests</a></li>
+        <li class="tab"><a href="#test8">Fashion &amp Gallery</a></li>
+        <li class="tab"><a href="#test9">Parties &amp Clubs</a></li>
+        <li class="tab"><a href="#test10">Comedy</a></li>
+        <li class="tab"><a href="#test11">Food</a></li>
+        <li class="tab"><a href="#test12">Conventions &amp Talks</a></li>-->
+      </ul>
+    </div>
+  </nav>
+    </div>
+    <div style="margin-top:20%;margin-bottom:25%;">
+  <div id="test1" class="col s12"></div>
+  <div id="test2" class="col s12"></div>
+  <div id="test3" class="col s12" ></div>
+  <!--<div id="test4" class="col s12"></div>
+  <div id="test5" class="col s12"></div>
+  <div id="test6" class="col s12"></div>
+  <div id="test7" class="col s12"></div>
+  <div id="test8" class="col s12"></div>
+  <div id="test9" class="col s12"></div>
+  <div id="test10" class="col s12"></div>
+  <div id="test11" class="col s12"></div>
+  <div id="test12" class="col s12"></div>-->
+    </div>
     
-                }else {
-    
-	           /*$.ajax({
-                
-                  type: 'get',
-                  url: 'http://gothere.000webhostapp.com/check_status.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        if (response == "ok") {
-                            
-                        }else {
-                            window.location.href="login.html";
-                        }
-                        
-                    }
-                      
-                   
-               });  */
-                    
-                }
-               
-                });
+   <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+      <a href="#!name"><span class="white-text name">John Doe</span></a>
+      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+    </div></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.html"><i class="fa fa-search"></i>Search</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Menu</a></li>
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="places.html"><i class="fa fa-building"></i>places</a></li>
+    <li><a class="waves-effect" href="tickets.html"><i class="fa fa-building"></i>tickets</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears"></i>Settings</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
         
-              $("#a").click(function(){
+  </ul>
+    
+   <!-- <div id="tab-1" class="tab-content current" style="margin-top:25%;margin-bottom:25%;">
+        <div class="con">
+            <div class="preinfo">
+                <span class="imgs"><img width="30" height="30"/></span>
+                <span>name of promoter</span>
+                <span>3</span>
+            </div>
+            <div class="con2">
+             
+            </div>
+            <div class="info">
+                <span>Name of event</span>
+                <span>Tags</span><br/>
+                <span class="infoC">
+                <a class="active" href="index.html"><i class="fa fa-clock-o">hhhh</i></a>
+                <a class="active" href="index.html"><i class="fa fa-ticket"></i>jjj</a>
+                <a class="active" href="index.html"><i class="fa fa-map-marker">jjj</i></a></span>
+            </div>
+        </div>
+    </div>
+    <div id="tab-2" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        b
+    </div>
+    <div id="tab-3" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        3
+    </div>
+    <div id="tab-4" class="tab-content" style="margin-top:25%;margin-bottom:25%;">
+        4
+    </div>
+    <div id="tab-5" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        5
+    </div>
+    <div id="tab-6" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        6
+    </div>
+    <div id="tab-7" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        7
+    </div>
+    <div id="tab-8" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        8
+    </div>
+    <div id="tab-9" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        9
+    </div>
+    <div id="tab-10" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        10
+    </div>
+    <div id="tab-11" class="tab-content" style="margin-top:25%;margin-bottom:25%;">
+        11
+    </div>
+    <div id="tab-12" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
+        12
+    </div>-->
+    <div class="aid"><a class="btn-floating btn-large swaves-effect waves-light teal"><i class="fa fa-filter"></i></a></div>
+    <!--<footer class="footer">
+        
+            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
+            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
+            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
+            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
+            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
+        
+    </footer>-->
+     <script src="js/jquery-3.2.1.min.js"></script>
+     <script src="js/materialize.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $('div.scrollmenu a').click(function(){
+                var tab_id = $(this).attr('data-tab');
+                $('div.scrollmenu a').removeClass('current');
+                $('.tab-content').removeClass('current');
+                $('this').addClass('current');
+                $("#"+tab_id).addClass('current');
+            });
+            
+             // Initialize collapse button
+                $('.button-collapse').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true, // Choose whether you can drag to open on touch screens,
+      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
+      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
+    }
+  );
+            
+            
+           // $("#a").click(function(){
                    $.ajax({
                 
                   type: 'get',
-                  url: 'scripts/gettoday.php',
+                  url: 'today.php',
                    dataType: 'html',
                   success: function (response) {
                         
-                        $('#today').html(response);
+                        $('#test1').html(response);
                         
                     }
                    
                });
-              }); 
+            //}); 
               
         
-        $("#b").click(function(){
+       // $("#b").click(function(){
                $.ajax({
                 
                   type: 'get',
-                  url: 'scripts/getin_vogue.php',
+                  url: 'inVogue.php',
                    dataType: 'html',
                   success: function (response) {
                         
-                        $('#invogue').html(response);
+                        $('#test2').html(response);
                         
                     }
                    
                });
-              }); 
+              //}); 
         
-        $("#c").click(function(){
+       // $("#c").click(function(){
                $.ajax({
                 
                   type: 'get',
-                  url: 'get_music.php',
+                  url: 'get-all.php',
                    dataType: 'html',
                   success: function (response) {
                         
-                        $('#music').html(response);
+                      $('#test3').html(response);
                         
                     }
                    
                });
-              }); 
+           //   }); 
         
-        $("#d").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/getsports_rec.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#sports').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#e").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_fundraisers.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#fundraiser').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#f").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_movies.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#movies').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#g").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_rallies.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#rallies').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#h").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_fashion_gallery.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#fashion').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#i").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_parties_clubs.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#parties').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#j").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_comedy.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#comedy').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#k").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_conventions_talks.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#food').html(response);
-                        
-                    }
-                   
-               });
-              });
-        
-        $("#l").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_conventions_talks.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#talks').html(response);
-                        
-                    }
-                   
-               });
-              });
-              
-                 
-           $(document).ready(function() {
-               
-               
             
-            $.ajax({
-                
-                type: 'get',
-                url: 'http://gothere.000webhostapp.com/profile.php',
-                //url: 'profile.php',
-                dataType: 'json',
-                success: function (response) {
-                        
-                        $('#fullname').html(response['add']);
-                        
-                    }
-                
             });
-            
-        $(".ca").click(function() {
-                   $('.ui.dropdown').dropdown();
-                   
-               
-            
-           
-        });
-               
-               
-        });
-           
-        
-         
         
         function logout() {
-               
-             window.localStorage.removeItem("login");
-                   
-                   if(window.localStorage.getItem("login") != 1) {
-                   window.location.href="login.html";
-                   }
-            
        $.ajax({
-           
+                
        type: 'get',
-                url: 'http://gothere.000webhostapp.com/logout.php',
+                //url: 'http://gothere.000webhostapp.com/logout.php',
+                url: 'logout.php',
                 success: function (response) {
                         
                       if (response == "success") {
@@ -877,85 +297,7 @@ $(window).load(function() {
           });
             
         }
-        
-        
-        var pictureSource; // picture source
-        var destinationType; // sets the format of returned value
-
-        // Wait for Cordova to connect with the device
-        document.addEventListener("deviceready", onDeviceReady, false);
-
-        // Cordova is ready to be used!
-        function onDeviceReady()
-            {
-
-                pictureSource=navigator.camera.PictureSourceType; destinationType=navigator.camera.DestinationType;
-            }
-        
-        // Called when a photo is successfully retrieved
-        function onPhotoURISuccess(imageURI) {
-            options = new FileUploadOptions();
-
-            // parameter name of file:
-
-            options.fileKey = "my_image";
-
-            // name of the file:
-
-            options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
-
-            // mime type:
-
-            options.mimeType = "text/plain";
-
-            params = { val1: "some value", val2: "some other value" };
-
-            options.params = params;
-
-            ft = new FileTransfer();
-
-ft.upload(imageURI, "http://gothere.000webhostapp.com/uploadprofile.php", success, fail, options);
-
-}
-
-function success(message) {
-alert('Your photo uploaded successfully.');
-}
-
-function fail(message) {
-alert('Failed because: ' + message);
-}
-
-function getPhoto(source) {
-
-// Retrieve image file location from specified source 
-    navigator.camera.getPicture(onPhotoURISuccess, onFail, {
-
-quality: 50, 
-    destinationType: destinationType.FILE_URI, 
-        sourceType: source 
-});
-
-}
-function onFail(message) {
-
-alert('Failed because: ' + message);
-
-}
-
-/*To get the picture from gallery call the getPhoto function like this
-
-getPhoto(pictureSource.SAVEDPHOTOALBUM );
-
-To take a new picture by using camera call the getPhoto function like this
-
-getPhoto(pictureSource.CAMERA );*/
-    
-           
-        
-       
+            
     </script>
-    
 </body>
-
 </html>
