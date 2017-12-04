@@ -74,59 +74,71 @@
             </div>
             <div class="card content">
                 <span>
-            &#160&#160&#160&#160<a href="#!user" style=""><img class="circle" src="img/yuna.jpg" height="70px" width="auto"></a>
+            &#160&#160&#160&#160<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/yuna.jpg" height="70px" width="auto"></a>
                 <p>Onuoha Harry</p></span>
             </div>
         
         </div>
         
-        <div class="card-panel teal lighten-3">
-        <h5>About</h5>
-            <hr>
-        
+            <ul class="collection">
+                <li class="collection-item modal-trigger p"  href="#modal1"><div>Upload profile picture<a href="#" class="secondary-content"><i class="fa fa-image"></i></a></div></li>
+                <li class="collection-item modal-trigger c"  href="#modal2"><div>Upload cover picture<a href="#" class="secondary-content"><i class="fa fa-image"></i></a></div></li>
+            </ul>
+            
+        <div class="card-panel ">
+        <span>About</span><span class="right modal-trigger w"  href="#modal3"><i class="fa fa-image"></i></span>
+        <p>v</p>
         </div>
             
-            <div class="card-panel teal lighten-3">
-                <span><i class="fa fa-users"></i>&#160&#160</span><span>3000</span><p>friends</p>
+            <div class="card-panel" style="width:100%;margin:auto;">
+                <span style="font-size:20px;display:inline;" class=""><i class="fa fa-users"></i>&#160&#160</span><span style="font-size:20px;" class="">3000</span><p style="font-size:20px;" class="">friends</p>
         
         </div>
         </div>
-       <!--- 
-        <div class="protop">
-            <div class="econ" style="color:white;">
-                <span >
-                    <a class="active" style="color:white;" href="#" onclick="logout()"><i class="fa fa-power-off"></i></a>
-            <a class="active" href="settings.html"><i class="fa fa-gear"></i></a>
-                </span>
-            </div>
-            <div class="imgcon">
-                <div class="imgcir">
-                   <img alt="profile" width="50%" height="50%"/>
-                </div>
-            </div>
-            <div class="indentity"><h5 id="f"></h5><p id="u"></p></div>
-        </div>
-        <div class="about">
-             <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">About</span>
-              <p></p>
-            </div>
-            <div class="card-action">
-              <a href="#">following</a>
-              <a href="#">followers</a>
-              <a href="#">Events</a>
-            </div>
-          </div>
-        </div>
-        -->
+       
         
         <!-- Modal Structure -->
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4>Upload pictures</h4>
-      <a class="waves-effect waves-light modal-trigger p"  href="uploadprofile.html"><i class="fa fa-image">&#160&#160<span>Profile picture</span></i></a><br><br>
-      <a class="waves-effect waves-light modal-trigger p"  href="#uploadcover.html"><i class="fa fa-image">&#160&#160<span>Cover picture</span></i></a>
+      <h4>Upload picture</h4>
+       <form method="post">
+        <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your events image">
+                        </div>
+                    </div><br>
+            <button type="button" value="create" class="btn waves-effect waves-light"  id="cover">Upload</button>
+        </form>
+    </div>
+  </div>
+        <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h4>Upload cover photo</h4>
+        <form method="post">
+        <div class="file-field input-field">
+                        <div class="btn">
+                            <span>File</span>
+                            <input type="file" id="image" name="image">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your events image">
+                        </div>
+                    </div><br>
+            <button type="button" value="create" class="btn waves-effect waves-light"  id="cover">Upload</button>
+        </form>
+    </div>
+  </div>
+        <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>About you</h4>
+      <form method="post">
+        <textarea class="" ></textarea><br>
+          <button type="button" value="create" class="btn waves-effect waves-light"  id="abt">Send</button>
+        </form>
     </div>
   </div>
         
@@ -148,7 +160,6 @@
     <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil"></i>create</a></li>
     <li><a class="waves-effect" href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
     <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass"></i>Nearby</a></li>
-    <li><a class="waves-effect" href="places.html"><i class="fa fa-building"></i>places</a></li>
     <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar"></i>Schedule</a></li>
     <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears"></i>Settings</a></li>
     <li><div class="divider"></div></li>
@@ -169,13 +180,19 @@
         
         <script src="js/jquery-2.2.3.min.js"></script>
         <script src="js/materialize.min.js"></script>
+        <script src="tinymce/tinymce.min.js"></script>
         <script>
             $(document).ready(function(){
-                
+                tinymce.init({selector:'textarea'});//show the html editor
                 
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
                      
     $('.p').click(function(){
+    $('.modal').modal();
+  });
+    $('.c').click(function(){
+    $('.modal').modal();
+  });$('.w').click(function(){
     $('.modal').modal();
   });
                 
