@@ -22,9 +22,14 @@
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
         
         <title>Hello World</title>
+        
+        <style>
+            .card {box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+            .card-panel{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+        </style>
 
     </head>
-    <body>
+    <body class="teal lighten-5">
         <!--<header class="headerCon">
     <div class="header">
         <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
@@ -45,7 +50,7 @@
   </nav>
     </div>
    
-        <div style="width:100%;">
+       <!-- <div style="width:100%;">
         <div class="user-view">
         <div class="background" style="width:auto;">
         <img src="img/office.jpg" height="300px" width="100%">
@@ -61,14 +66,31 @@
         <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
         <li class="waves-effect waves-light modal-trigger p"  href="#modal1"><i class="fa fa-cloud-upload">&#160&#160<span></span></i></li>
         </ul>
+        </div>-->
+        <div style="width:90%; height:auto;margin:auto;">
+        <div class="card">
+        <div class="card-image">
+            <img src="img/office.jpg" height="250px" width="100%">
+            </div>
+            <div class="card content">
+                <span>
+            &#160&#160&#160&#160<a href="#!user" style=""><img class="circle" src="img/yuna.jpg" height="70px" width="auto"></a>
+                <p>Onuoha Harry</p></span>
+            </div>
+        
         </div>
-        <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab" id=""><a class="active" href="#test1">Create Event</a></li>
-        <li class="tab" ><a id="a" href="#test2">Create Place</a></li>
-      </ul>
-    </div>
-    
+        
+        <div class="card-panel teal lighten-3">
+        <h5>About</h5>
+            <hr>
+        
+        </div>
+            
+            <div class="card-panel teal lighten-3">
+                <span><i class="fa fa-users"></i>&#160&#160</span><span>3000</span><p>friends</p>
+        
+        </div>
+        </div>
        <!--- 
         <div class="protop">
             <div class="econ" style="color:white;">
@@ -150,12 +172,11 @@
         <script>
             $(document).ready(function(){
                 
-                 $(document).ready(function(){
+                
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
                      
     $('.p').click(function(){
     $('.modal').modal();
-  });
   });
                 
             
