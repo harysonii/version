@@ -43,31 +43,13 @@
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
     <title>Hello World</title>
-</head>
-<body>
-    <!--<header class="headerCon">
-    <div class="header">
-        <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
-        <a class="center-text">Discover</a>
-        <a class="active a-right" href="#"><i class="fa fa-map"></i></a>
+    <style>
     
-    </div>
-    <div class="scrollmenu">
-        <a href="#" class=" tab-link current" id="a" data-tab="tab-1">Today</a>
-        <a href="#" class=" tab-link" id="b" data-tab="tab-2">In vogue</a>
-        <a href="#" class="tabs tab-link" id="c" data-tab="tab-3">Music</a>
-        <a href="#" class="tabs tab-link" id="d" data-tab="tab-4">Sports &amp Recreation</a>
-        <a href="#" class="tabs tab-link" id="e" data-tab="tab-5">Fundraisers</a>
-        <a href="#tab-6" class="tabs tab-link" id="f" data-tab="tab-6">Movies &amp Theaters</a>
-        <a href="#tab-7" class="tabs tab-link" id="g" data-tab="tab-7">Rallies &amp Protests</a>
-        <a href="#tab-8" class="tabs tab-link" id="h" data-tab="tab-8">Fashion &amp Gallery</a>
-        <a href="#tab-9" class="tabs tab-link" id="i" data-tab="tab-9">Parties &amp Clubs</a>
-        <a href="#tab-10" class="tabs tab-link" id="j" data-tab="tab-10">Comedy</a>
-        <a href="#tab-11" class="tabs tab-link" id="k" data-tab="tab-11">Food</a>
-        <a href="#tab-12" class="tabs tab-link" id="l" data-tab="tab-12">Conventions &amp Talks</a>
         
-    </div>
-    </header>-->
+    
+    </style>
+</head>
+<body class="teal lighten-5">
     <div class="navbar-fixed">
     <nav class="nav-extended teal">
     <div class="nav-wrapper">
@@ -79,37 +61,29 @@
     </div>
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab" id=""><a class="active" href="#test1">Today</a></li>
-        <li class="tab" ><a id="a" href="#test2">In vogue</a></li>
-        <li class="tab"><a href="#test3">All</a></li>
-        <!--<li class="tab"><a href="#test3">Music</a></li>
-        <li class="tab"><a href="#test4">Sports &amp Recreation</a></li>
-        <li class="tab"><a href="#test5">Fundraisers</a></li>
-        <li class="tab"><a href="#test6">Movies &amp Theaters</a></li>
-        <li class="tab"><a href="#test7">Rallies &amp Protests</a></li>
-        <li class="tab"><a href="#test8">Fashion &amp Gallery</a></li>
-        <li class="tab"><a href="#test9">Parties &amp Clubs</a></li>
-        <li class="tab"><a href="#test10">Comedy</a></li>
-        <li class="tab"><a href="#test11">Food</a></li>
-        <li class="tab"><a href="#test12">Conventions &amp Talks</a></li>-->
+        <li class="tab" id=""><a class="active" href="#test1">Events</a></li>
+        <li class="tab" ><a id="a" href="#test2">Places</a></li>
       </ul>
     </div>
   </nav>
     </div>
-    <div style="margin-top:20%;margin-bottom:25%;">
+    <br/><br/><br/><br/>
+    <div style="margin-top:20%;margin-bottom:25%; width:90%; margin:auto;">
   <div id="test1" class="col s12"></div>
   <div id="test2" class="col s12"></div>
-  <div id="test3" class="col s12" ></div>
-  <!--<div id="test4" class="col s12"></div>
-  <div id="test5" class="col s12"></div>
-  <div id="test6" class="col s12"></div>
-  <div id="test7" class="col s12"></div>
-  <div id="test8" class="col s12"></div>
-  <div id="test9" class="col s12"></div>
-  <div id="test10" class="col s12"></div>
-  <div id="test11" class="col s12"></div>
-  <div id="test12" class="col s12"></div>-->
     </div>
+    
+    <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h5>Filter</h5>
+      <form method="post">
+        
+        
+          
+      </form>
+    </div>
+  </div>
     
    <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
@@ -136,71 +110,11 @@
     <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
         
   </ul>
+     
     
-   <!-- <div id="tab-1" class="tab-content current" style="margin-top:25%;margin-bottom:25%;">
-        <div class="con">
-            <div class="preinfo">
-                <span class="imgs"><img width="30" height="30"/></span>
-                <span>name of promoter</span>
-                <span>3</span>
-            </div>
-            <div class="con2">
-             
-            </div>
-            <div class="info">
-                <span>Name of event</span>
-                <span>Tags</span><br/>
-                <span class="infoC">
-                <a class="active" href="index.html"><i class="fa fa-clock-o">hhhh</i></a>
-                <a class="active" href="index.html"><i class="fa fa-ticket"></i>jjj</a>
-                <a class="active" href="index.html"><i class="fa fa-map-marker">jjj</i></a></span>
-            </div>
-        </div>
-    </div>
-    <div id="tab-2" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        b
-    </div>
-    <div id="tab-3" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        3
-    </div>
-    <div id="tab-4" class="tab-content" style="margin-top:25%;margin-bottom:25%;">
-        4
-    </div>
-    <div id="tab-5" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        5
-    </div>
-    <div id="tab-6" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        6
-    </div>
-    <div id="tab-7" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        7
-    </div>
-    <div id="tab-8" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        8
-    </div>
-    <div id="tab-9" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        9
-    </div>
-    <div id="tab-10" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        10
-    </div>
-    <div id="tab-11" class="tab-content" style="margin-top:25%;margin-bottom:25%;">
-        11
-    </div>
-    <div id="tab-12" class="tab-content " style="margin-top:25%;margin-bottom:25%;">
-        12
-    </div>-->
-    <div class="aid"><a class="btn-floating btn-large swaves-effect waves-light teal"><i class="fa fa-filter"></i></a></div>
-    <!--<footer class="footer">
-        
-            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
-            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
-            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
-            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
-            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
-        
-    </footer>-->
-     <script src="js/jquery-3.2.1.min.js"></script>
+    <div class="aid" ><a class="btn-floating btn-large swaves-effect waves-light teal modal-trigger filter" href="#modal1"><i class="fa fa-filter"></i></a></div>
+    
+     <script src="js/jquery-2.2.3.min.js"></script>
      <script src="js/materialize.min.js"></script>
     <script>
         
@@ -225,11 +139,16 @@
   );
             
             
+            $('.filter').click(function(){
+    $('.modal').modal();
+  });
+            
+            
            // $("#a").click(function(){
                    $.ajax({
                 
                   type: 'get',
-                  url: 'today.php',
+                  url: 'get-all.php',
                    dataType: 'html',
                   success: function (response) {
                         
@@ -241,21 +160,6 @@
             //}); 
               
         
-       // $("#b").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'inVogue.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#test2').html(response);
-                        
-                    }
-                   
-               });
-              //}); 
-        
        // $("#c").click(function(){
                $.ajax({
                 
@@ -264,7 +168,7 @@
                    dataType: 'html',
                   success: function (response) {
                         
-                      $('#test3').html(response);
+                      $('#test2').html(response);
                         
                     }
                    
