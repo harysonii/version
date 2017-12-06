@@ -29,7 +29,7 @@
         </style>
 
     </head>
-    <body class="teal lighten-5">
+    <body class="green lighten-5">
         <!--<header class="headerCon">
     <div class="header">
         <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
@@ -40,7 +40,7 @@
     </header>-->
         
     <div class="navbar-fixed">
-    <nav class="teal">
+    <nav class="teal darken-2">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Profile</a>
         <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
@@ -53,9 +53,9 @@
        <!-- <div style="width:100%;">
         <div class="user-view">
         <div class="background" style="width:auto;">
-        <img src="img/images(5).jpg" height="300px" width="100%">
+        <img src="img/office.jpg" height="300px" width="100%">
       </div>
-      <a href="#!user" style="position:relative; bottom:60px;left:10px;"><img class="circle" src="img/images(7).jpg" height="100px" width="auto"></a>
+      <a href="#!user" style="position:relative; bottom:60px;left:10px;"><img class="circle" src="img/yuna.jpg" height="100px" width="auto"></a>
     </div>
             </div>
         
@@ -70,35 +70,59 @@
         <div style="width:90%; height:auto;margin:auto;">
         <div class="card">
         <div class="card-image">
-            <img src="img/office.jpg" height="250px" width="100%">
+            <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<img src="img/avatar/images%20(6).jpg" height="260px" width="100%">');
+                }else{
+                    document.write('<img src="img/avatar/images%20(5).jpg" height="260px" width="100%">');
+                }
+            </script>
             </div>
             <div class="card content">
-               <div style="position:relative;right:50px;"> <span>
-            &#160&#160&#160&#160<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/yuna.jpg" height="70px" width="auto"></a>
-                <p>Onuoha Harry</p></span>
-            </div><\div>
+                <div style="position:;left:;width:40%;margin:auto;"><span>
+            &#160&#160&#160&#160<script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto"></a>');
+                }else{
+                    document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto"></a>');
+                }
+            </script>
+                    </span></div>
+                <div style="position:relative;left:;width:40%;margin:auto;font-size:20px;bottom:30px;">
+                <p>Onuoha Harry</p>
+                </div>
+                <div style="position:relative;left:;width:45%;margin:auto;font-size:15px;bottom:20px;" >
+                <i class="fa fa-user"></i>&#160&#160<span id="u">&#160&#160Username</span>&#160&#160<i class="fa fa-map-pin"></i>&#160&#160<span id="c">country</span>
+                    
+            </div>
+            </div>
         
         </div>
         
             <ul class="collection">
-                <li class="collection-item modal-trigger p"  href="#modal1"><div>Upload profile picture<a href="#" class="secondary-content"><i class="fa fa-image"></i></a></div></li>
-                <li class="collection-item modal-trigger c"  href="#modal2"><div>Upload cover picture<a href="#" class="secondary-content"><i class="fa fa-image"></i></a></div></li>
+                <li class="collection-item modal-trigger p"  href="#modal1"><div>Upload profile picture<a href="#" class="secondary-content"><i class="fa fa-camera"></i></a></div></li>
+                <li class="collection-item modal-trigger c"  href="#modal2"><div>Upload cover picture<a href="#" class="secondary-content"><i class="fa fa-camera-retro"></i></a></div></li>
+                <li class="collection-item"  href="#"><div id="g"><a href="#" class="secondary-content"><i class="fa fa-user"></i></a></div></li>
+                <li class="collection-item"  href="settings.html"><div>Settings<a href="#" class="secondary-content"><i class="fa fa-gears"></i></a></div></li>
             </ul>
             
         <div class="card-panel ">
-        <span>About</span><span class="right modal-trigger w"  href="#modal3"><i class="fa fa-pencil"></i></span>
-        <p>v</p>
+        <span style="font-size:20px;" class="teal-text">About</span><span class="right modal-trigger w teal-text"  href="#modal3"><i class="fa fa-pencil"></i></span>
+        <p>Write something nice about your self. you are restricted to 500 words</p>
         </div>
             
-            <div class="card-panel" style="width:100%;margin:auto;">
-                <span style="font-size:20px;display:inline;" class=""><i class="fa fa-users"></i>&#160&#160</span><span style="font-size:20px;" class="">3000</span><p style="font-size:20px;" class="">friends</p>
-        
+            <div class="card-panel" style="width:100%;">
+            <div style="width:50%;margin-left:25%;margin-right:25%;">
+               &#160&#160&#160 <span style="font-size:20px;" class="teal-text"><i class="fa fa-users"></i></span>&#160<span style="font-size:20px;" class="teal-text">3</span>
+        </div>
         </div>
         </div>
        
         
         <!-- Modal Structure -->
-  <div id="modal1" class="modal">
+  <div id="modal1" class="modal" style="width:90%;">
     <div class="modal-content">
       <h4>Upload picture</h4>
        <form method="post">
@@ -115,7 +139,7 @@
         </form>
     </div>
   </div>
-        <div id="modal2" class="modal">
+        <div id="modal2" class="modal" style="width:90%;">
     <div class="modal-content">
       <h4>Upload cover photo</h4>
         <form method="post">
@@ -132,7 +156,7 @@
         </form>
     </div>
   </div>
-        <div id="modal3" class="modal">
+        <div id="modal3" class="modal" style="width:90%;">
     <div class="modal-content">
       <h4>About you</h4>
       <form method="post">
@@ -166,6 +190,7 @@
     <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
         
   </ul>
+        
         
         
     <!--<footer class="footer">
@@ -219,6 +244,8 @@
                         
                         $('#f').html(response.fname);
                         $('#u').html(response.uname);
+                        $('#g').html(response.gender);
+                        $('#c').html(response.country);
                         
                     }
                 
