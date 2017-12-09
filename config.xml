@@ -51,6 +51,8 @@
   <access origin="*"/>
  <!--<uses-permission android:name="android.permission.INTERNET" />-->
     <allow-navigation href="*" />
+  <allow-navigation href="https://*.imgur.com/" />
+<allow-navigation href="https://*.twitter.com/" />
 <allow-intent href="*" />
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
