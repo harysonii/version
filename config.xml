@@ -47,7 +47,8 @@
   </platform>
   <access origin="http://gothere.000webhostapp.com" subdomain="true"/>
     
-  <access origin="http://www.google.com" subdomain="true"/>
+  <access origin="http://*.google.com"/>
+  <access origin="*"
   !--<uses-permission android:name="android.permission.INTERNET" />-->
     <allow-navigation href="*" />
 <allow-intent href="*" />
