@@ -46,7 +46,9 @@
     <splash src="res/screen/android/gothere-background-xxxhdpi.png" density="port-xxxhdpi"/>
   </platform>
   <access origin="http://gothere.000webhostapp.com" subdomain="true"/>
-    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    
+  <access origin="http://www.google.com" subdomain="true"/>
+  !--<uses-permission android:name="android.permission.INTERNET" />-->
     <allow-navigation href="*" />
 <allow-intent href="*" />
   <allow-intent href="http://*/*"/>
