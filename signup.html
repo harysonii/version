@@ -26,28 +26,45 @@
     <body class="teal">
         <div class="logo">
             <div class="logo2">
-                 <h3 style="text-align:center;">gothere</h3>
+                 <img src="icon.png" width="80px" height="80px"/>
             </div>
         </div>
             <div class="ui form">
                 <form method="post">
                     <div class="form2">
-                                    <input type="text" placeholder="Full name" id="name" size="45"><br/>
-                                   
+                                   <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="fname" placeholder="Firstname" name="">
+                            </div>
+                            <div class="input-field col s6">
+                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="sname" placeholder="Surname" name="">
+                            </div>
+                        </div>
+                    </div>
                                     <input type="text" placeholder="Username" id="username" size="45"><br/>
                                     
                                     <input type="email" placeholder="E-mail" id="unique" size="45"><br/>
                                     
                                     <input type="password" placeholder="Password" id="secret" size="45"><br/>
                                    
-                                    <div class="input-field col s12">
+                        <div class="col s6">
+                        <div class="row">
+                            <div class="input-field col s6">
                                         <select id="gender">
                                             <option value="" disabled selected>Choose your gender</option>
                                             <option value="male" >Male</option>
                                             <option value="female" >Female</option>
                                         </select>
-                                    </div><br/>
-                                    <input type="text" placeholder="Country" id="country" size="45"><br/>
+                                    </div><div class="input-field col s6">
+                                        <select id="country">
+                                            <option value="" disabled selected>Choose your gender</option>
+                                            <option value="Nigeria" >Nigeria</option>
+                                        </select>
+                                    </div>
+
+                        </div>
+                    </div>
             
                     
                                      <div class="ui checkbox">
@@ -74,7 +91,8 @@
                 
                 $("#signup").click(function(){
                    
-                    var name = $("#name").val();
+                    var fname = $("#fname").val();
+                    var sname = $("#sname").val();
                   var username = $("#username").val();
                   var email = $("#unique").val();
                   var password = $("#secret").val();
@@ -82,31 +100,33 @@
                   var country = $("#country").val();
                   var chk = $("#test1:checked").length > 0;
                   var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                    if (name != "" && username != "" && email != "" && password != "" && gender != "" && country != "") {
+                    if (fname != "" && sname != "" && username != "" && email != "" && password != "" && gender != "" && country != "") {
                   if (chk > 0) {
                   if (email.match(re)) {
                       $.ajax({
                           
                          type: 'post',
-                         // url: 'http://gothere.000webhostapp.com/signup.php',
-                         url: 'check.php',
+                          url: 'http://gothere.000webhostapp.com/check.php',
+                        // url: 'check.php',
                          data: {username: username},
                           success:function(response) {
                               if (response == "success"){ 
                                 $.ajax({
                          type: 'post',
-                         // url: 'http://gothere.000webhostapp.com/signup.php',
-                         url: 'check_email.php',
+                          url: 'http://gothere.000webhostapp.com/check_email.php',
+                        // url: 'check_email.php',
                          data: {email: email },
                           success:function(response) {
                               if (response == "email") {
                                   $.ajax({
                          type: 'post',
-                          //url: 'http://gothere.000webhostapp.com/signup.php',
+                          url: 'http://gothere.000webhostapp.com/signup.php',
+                         //url: 'signup.php',
                          url: 'signup.php',
                          data: {
                              
-                             name: name,
+                             fname: fname,
+                             sname: sname,
                              username: username,
                              email: email,
                              password: password,

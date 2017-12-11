@@ -76,7 +76,7 @@
                 <div style="position:relative;left:;width:40%;margin:auto;font-size:20px;bottom:30px;text-align:center;">
                 <span id="sn"></span>&#160&#160<span id="fn"></span>
                 </div>
-                <div style="position:relative;left:;width:42%;margin:auto;font-size:13px;bottom:20px;text-align:center;">
+                <div style="position:relative;left:;width:60%;margin:auto;font-size:13px;bottom:20px;text-align:center;">
                 <i class="fa fa-user"></i>&#160&#160<span id="u">&#160&#160Username</span>&#160&#160<i class="fa fa-map-marker"></i>&#160&#160<span id="c">country</span>
                     
             </div>
@@ -97,7 +97,7 @@
             
             <div class="card-panel" style="width:100%;">
             <div style="width:50%;margin-left:25%;margin-right:25%;text-align:center;">
-               &#160&#160&#160 <span style="font-size:20px;" class="teal-text"><i class="fa fa-users"></i></span>&#160<span style="font-size:20px;" class="teal-text">3</span>
+               <span style="font-size:20px;" class="teal-text"><i class="fa fa-users"></i></span>&#160<span style="font-size:20px;" class="teal-text">3</span>
         </div>
         </div>
         </div>
@@ -107,7 +107,7 @@
   <div id="modal1" class="modal" style="width:95%;">
     <div class="modal-content">
       <h4>Upload picture</h4>
-       <form method="post">
+       <form method="POST" enctype="multipart/form-data">
         <div class="file-field input-field">
                         <div class="btn">
                             <span>File</span>
@@ -247,9 +247,10 @@
                 
                  $("#profile").click(function(){
                  var image = $("#image").val();
-                   var formData = new FormData();
-				   formData.append('image', document.getElementById("image").files[0]);
-                  if (image != "" ) {
+                   //var formData = new FormData();
+				   //formData.append('image', document.getElementById("image").files[0]);
+                  var formData = new FormData($('form')[0]);
+                     if (image != "" ) {
                       
                       $.ajax({
                           
@@ -260,13 +261,49 @@
                           contentType: false,
                           processData: false,
                           success:function(response) {
-                              
-                              if (response == "success") {
+                              $('.modal').modal("close");
+                              Materialize.toast("Picture uploaded", 10000);
+                            /*  if (response == "success") {
                                   Materialize.toast("Picture uploaded", 10000);
                               }
                               else {
                                    Materialize.toast("Picture not uploaded", 10000);
+                              }*/
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Select a picture", 10000);
+                   }
+                     });
+                     
+                    $("#cover").click(function(){
+                 var photo = $("#photo").val();
+                   //var formData = new FormData();
+				   //formData.append('image', document.getElementById("image").files[0]);
+                  var formData = new FormData($('form')[0]);
+                     if (photo != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/create.php',
+                         url: 'uploadcover.php',
+                         data: formData,
+                          contentType: false,
+                          processData: false,
+                          success:function(response) {
+                              $('.modal').modal("close");
+                              Materialize.toast("Picture uploaded", 10000);
+                            /*  if (response == "success") {
+                                  Materialize.toast("Picture uploaded", 10000);
                               }
+                              else {
+                                   Materialize.toast("Picture not uploaded", 10000);
+                              }*/
                               
                           }
                           
