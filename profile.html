@@ -50,51 +50,34 @@
   </nav>
     </div>
    
-       <!-- <div style="width:100%;">
-        <div class="user-view">
-        <div class="background" style="width:auto;">
-        <img src="img/office.jpg" height="300px" width="100%">
-      </div>
-      <a href="#!user" style="position:relative; bottom:60px;left:10px;"><img class="circle" src="img/yuna.jpg" height="100px" width="auto"></a>
-    </div>
-            </div>
-        
-        <div style="position:relative; bottom:60px; height:6%; width:80%; margin:0 auto;">
-      <ul class="add-menu">
-        <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
-        <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
-        <li><i class="fa fa-user">&#160&#160<span>53</span></i></li>
-        <li class="waves-effect waves-light modal-trigger p"  href="#modal1"><i class="fa fa-cloud-upload">&#160&#160<span></span></i></li>
-        </ul>
-        </div>-->
         <div style="width:90%; height:auto;margin:auto;">
         <div class="card">
         <div class="card-image">
             <script>
                 var gender = document.getElementById('g');
                 if (gender == "male"){
-            document.write('<img src="img/avatar/images%20(6).jpg" height="260px" width="100%">');
+            document.write('<img src="img/avatar/images%20(6).jpg" height="260px" width="100%" id="pc">');
                 }else{
-                    document.write('<img src="img/avatar/images%20(5).jpg" height="260px" width="100%">');
+                    document.write('<img src="img/avatar/images%20(5).jpg" height="260px" width="100%" id="pc">');
                 }
             </script>
             </div>
             <div class="card content">
-                <div style="position:;left:;width:40%;margin:auto;"><span>
+                <div style="position:;left:;width:30%;margin:auto;"><span>
             &#160&#160&#160&#160<script>
                 var gender = document.getElementById('g');
                 if (gender == "male"){
-            document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto"></a>');
+            document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
                 }else{
-                    document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto"></a>');
+                    document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
                 }
             </script>
                     </span></div>
-                <div style="position:relative;left:;width:40%;margin:auto;font-size:20px;bottom:30px;">
-                <p>Onuoha Harry</p>
+                <div style="position:relative;left:;width:40%;margin:auto;font-size:20px;bottom:30px;text-align:center;">
+                <span id="sn"></span>&#160&#160<span id="fn"></span>
                 </div>
-                <div style="position:relative;left:;width:45%;margin:auto;font-size:15px;bottom:20px;" >
-                <i class="fa fa-user"></i>&#160&#160<span id="u">&#160&#160Username</span>&#160&#160<i class="fa fa-map-pin"></i>&#160&#160<span id="c">country</span>
+                <div style="position:relative;left:;width:60%;margin:auto;font-size:13px;bottom:20px;text-align:center;">
+                <i class="fa fa-user"></i>&#160&#160<span id="u">&#160&#160Username</span>&#160&#160<i class="fa fa-map-marker"></i>&#160&#160<span id="c">country</span>
                     
             </div>
             </div>
@@ -104,104 +87,107 @@
             <ul class="collection">
                 <li class="collection-item modal-trigger p"  href="#modal1"><div>Upload profile picture<a href="#" class="secondary-content"><i class="fa fa-camera"></i></a></div></li>
                 <li class="collection-item modal-trigger c"  href="#modal2"><div>Upload cover picture<a href="#" class="secondary-content"><i class="fa fa-camera-retro"></i></a></div></li>
-                <li class="collection-item"  href="#"><div id="g"><a href="#" class="secondary-content"><i class="fa fa-user"></i></a></div></li>
-                <li class="collection-item"  href="settings.html"><div>Settings<a href="#" class="secondary-content"><i class="fa fa-gears"></i></a></div></li>
+               <!-- <a  href="settings.html"><li class="collection-item"><div class="black-text">Settings<a href="settings.html" class="secondary-content"><i class="fa fa-gears"></i></a></div></li></a>-->
             </ul>
             
         <div class="card-panel ">
-        <span style="font-size:20px;" class="teal-text">About</span><span class="right modal-trigger w teal-text"  href="#modal3"><i class="fa fa-pencil"></i></span>
-        <p>Write something nice about your self. you are restricted to 500 words</p>
+        <span style="font-size:20px;" class="teal-text">About</span><span class="right modal-trigger w teal-text"  href="#modal3"><i class="fa fa-pencil"></i></span><br>
+        <span id="abt">Write something nice about your self. you are restricted to 500 words</span>
         </div>
             
             <div class="card-panel" style="width:100%;">
-            <div style="width:50%;margin-left:25%;margin-right:25%;">
-               &#160&#160&#160 <span style="font-size:20px;" class="teal-text"><i class="fa fa-users"></i></span>&#160<span style="font-size:20px;" class="teal-text">3</span>
+            <div style="width:50%;margin-left:25%;margin-right:25%;text-align:center;">
+               <span style="font-size:20px;" class="teal-text"><i class="fa fa-users"></i></span>&#160<span style="font-size:20px;" class="teal-text">3</span>
         </div>
         </div>
         </div>
        
         
         <!-- Modal Structure -->
-  <div id="modal1" class="modal" style="width:90%;">
+  <div id="modal1" class="modal" style="width:95%;">
     <div class="modal-content">
       <h4>Upload picture</h4>
-       <form method="post">
+       <form method="POST" enctype="multipart/form-data">
         <div class="file-field input-field">
                         <div class="btn">
                             <span>File</span>
                             <input type="file" id="image" name="image">
                         </div>
                         <div class="file-path-wrapper">
-                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your events image">
+                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your profile picture">
                         </div>
                     </div><br>
-            <button type="button" value="create" class="btn waves-effect waves-light"  id="cover">Upload</button>
+            <button type="button" value="create" class="btn waves-effect waves-light"  id="profile">Upload</button>
         </form>
     </div>
   </div>
-        <div id="modal2" class="modal" style="width:90%;">
+        <div id="modal2" class="modal" style="width:95%;">
     <div class="modal-content">
       <h4>Upload cover photo</h4>
         <form method="post">
         <div class="file-field input-field">
                         <div class="btn">
                             <span>File</span>
-                            <input type="file" id="image" name="image">
+                            <input type="file" id="photo" name="photo">
                         </div>
                         <div class="file-path-wrapper">
-                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your events image">
+                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your cover photo">
                         </div>
                     </div><br>
             <button type="button" value="create" class="btn waves-effect waves-light"  id="cover">Upload</button>
         </form>
     </div>
   </div>
-        <div id="modal3" class="modal" style="width:90%;">
+        <div id="modal3" class="modal" style="width:95%;">
     <div class="modal-content">
       <h4>About you</h4>
       <form method="post">
-        <textarea class="" ></textarea><br>
-          <button type="button" value="create" class="btn waves-effect waves-light"  id="abt">Send</button>
+        <textarea class="a" ></textarea><br>
+          <button type="button" value="create" class="btn waves-effect waves-light"  id="about">Send</button>
         </form>
     </div>
   </div>
         
+        <!--hide retrieved gender-->
+        <div id="g"></div>
         
           <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
-        <img src="images/office.jpg">
+        <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<img src="img/avatar/images%20(6).jpg" height="200px" width="100%" id="pc">');
+                }else{
+                    document.write('<img src="img/avatar/images%20(5).jpg" height="200px" width="100%" id="pc">');
+                }
+            </script>
       </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
+                }else{
+                document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
+                }
+            </script>
+      <a href="#!name"><span class="white-text name" id="u">username</span></a>
+      <a href="#!email"><span class="white-text email" id="e">email@email.com</span></a>
     </div></li>
-    <li><a class="waves-effect" href="index.html"><i class="fa fa-home"></i>Home</a></li>
-    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user"></i>Account</a></li>
-    <li><a class="waves-effect" href="search.php"><i class="fa fa-search"></i>Search</a></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home teal-text"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user teal-text"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.html"><i class="fa fa-search teal-text"></i>Search</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Menu</a></li>
-    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil"></i>create</a></li>
-    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
-    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass"></i>Nearby</a></li>
-    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar"></i>Schedule</a></li>
-    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears"></i>Settings</a></li>
+    <!--<li><a class="subheader">Menu</a></li>-->
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil teal-text"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users teal-text"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass teal-text"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar teal-text"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears teal-text"></i>Settings</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
+    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out teal-text"></i>Log Out</a></li>
         
   </ul>
-        
-        
-        
-    <!--<footer class="footer">
-        
-        <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
-            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
-            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
-            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
-            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
-        
-    </footer>-->
         
         <script src="js/jquery-2.2.3.min.js"></script>
         <script src="js/materialize.min.js"></script>
@@ -209,6 +195,7 @@
         <script>
             $(document).ready(function(){
                 tinymce.init({selector:'textarea'});//show the html editor
+                $("#g").hide();
                 
     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
                      
@@ -242,22 +229,134 @@
                 dataType: 'json',
                 success: function (response) {
                         
-                        $('#f').html(response.fname);
+                        $('#fn').html(response.fname);
+                        $('#sn').html(response.sname);
                         $('#u').html(response.uname);
                         $('#g').html(response.gender);
                         $('#c').html(response.country);
+                        $('#pc').html(response.cover);
+                        $('#e').html(response.email);
+                        $('#pp').html(response.pic);
+                        $('#abt').html(response.about);
                         
                     }
                 
             });
+                
+                
+                
+                 $("#profile").click(function(){
+                 var image = $("#image").val();
+                   //var formData = new FormData();
+				   //formData.append('image', document.getElementById("image").files[0]);
+                  var formData = new FormData($('form')[0]);
+                     if (image != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/create.php',
+                         url: 'uploadprofile.php',
+                         data: formData,
+                          contentType: false,
+                          processData: false,
+                          success:function(response) {
+                              $('.modal').modal("close");
+                              Materialize.toast("Picture uploaded", 10000);
+                            /*  if (response == "success") {
+                                  Materialize.toast("Picture uploaded", 10000);
+                              }
+                              else {
+                                   Materialize.toast("Picture not uploaded", 10000);
+                              }*/
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Select a picture", 10000);
+                   }
+                     });
+                     
+                    $("#cover").click(function(){
+                 var photo = $("#photo").val();
+                   //var formData = new FormData();
+				   //formData.append('image', document.getElementById("image").files[0]);
+                  var formData = new FormData($('form')[0]);
+                     if (photo != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/create.php',
+                         url: 'uploadcover.php',
+                         data: formData,
+                          contentType: false,
+                          processData: false,
+                          success:function(response) {
+                              $('.modal').modal("close");
+                              Materialize.toast("Picture uploaded", 10000);
+                            /*  if (response == "success") {
+                                  Materialize.toast("Picture uploaded", 10000);
+                              }
+                              else {
+                                   Materialize.toast("Picture not uploaded", 10000);
+                              }*/
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Select a picture", 10000);
+                   }
+                   
+               }); $("#about").click(function(){
+                     tinyMCE.triggerSave();// save the data to the assigned ID of the textarea field
+                 var about = $(".a").val();
+                  if (about != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/create.php',
+                         url: 'about.php',
+                         data: {about:about},
+                          success:function(response) {
+                              
+                              if (response == "success") {
+                                  Materialize.toast("Profile updated", 10000);
+                              }
+                              else {
+                                   Materialize.toast("Profile not updated", 10000);
+                              }
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Write about yourself", 10000);
+                   }
+                   
+               });
+                
+                
+                
            
         });
+            
+            
 function logout() {
        $.ajax({
                 
        type: 'get',
-                //url: 'http://gothere.000webhostapp.com/logout.php',
-                url: 'logout.php',
+                url: 'http://gothere.000webhostapp.com/logout.php',
+                //url: 'logout.php',
                 success: function (response) {
                         
                       if (response == "success") {
