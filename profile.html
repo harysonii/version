@@ -1,7 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-    <head>
-        <meta charset="utf-8" />
+
+<head>
+    <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
@@ -16,31 +37,25 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="css/profile.css"/>
-        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-        
-        <title>Hello World</title>
-        
-        <style>
-            .card {box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
-            .card-panel{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
-        </style>
-
-    </head>
-    <body class="green lighten-5">
-        <!--<header class="headerCon">
-    <div class="header">
-        <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
-        <a class="center-text">Discover</a>
-        <a class="active a-right" href="#"><i class="fa fa-map"></i></a>
+     
+    <!-- Path to Materialize Library CSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- Path to Font Awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to * Custon CSS-->
+    <link rel="stylesheet" href="css/main.css">
     
-    </div>
-    </header>-->
-        
+    <title>gothere</title>
+    <style>
+       .card {box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+            .card-panel{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+    </style>
+</head>
+
+<body class="blue-grey lighten-5">
+    
     <div class="navbar-fixed">
-    <nav class="teal darken-2">
+    <nav class="blue-grey">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Profile</a>
         <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
@@ -49,109 +64,18 @@
     </div>
   </nav>
     </div>
-   
-        <div style="width:90%; height:auto;margin:auto;">
-        <div class="card">
-        <div class="card-image">
-            <script>
-                var gender = document.getElementById('g');
-                if (gender == "male"){
-            document.write('<img src="img/avatar/images%20(6).jpg" height="260px" width="100%" id="pc">');
-                }else{
-                    document.write('<img src="img/avatar/images%20(5).jpg" height="260px" width="100%" id="pc">');
-                }
-            </script>
-            </div>
-            <div class="card content">
-                <div style="position:;left:;width:30%;margin:auto;"><span>
-            &#160&#160&#160&#160<script>
-                var gender = document.getElementById('g');
-                if (gender == "male"){
-            document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
-                }else{
-                    document.write('<a href="#!user" style="position:relative; bottom:50px;left:10px;"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
-                }
-            </script>
-                    </span></div>
-                <div style="position:relative;left:;width:40%;margin:auto;font-size:20px;bottom:30px;text-align:center;">
-                <span id="sn"></span>&#160&#160<span id="fn"></span>
-                </div>
-                <div style="position:relative;left:;width:60%;margin:auto;font-size:13px;bottom:20px;text-align:center;">
-                <i class="fa fa-user"></i>&#160&#160<span id="u">&#160&#160Username</span>&#160&#160<i class="fa fa-map-marker"></i>&#160&#160<span id="c">country</span>
-                    
-            </div>
-            </div>
+    
+    
+    <div style="width:90%; height:auto;margin:auto;">
+        <div id="pro"></div>
         
-        </div>
+            
         
-            <ul class="collection">
-                <li class="collection-item modal-trigger p"  href="#modal1"><div>Upload profile picture<a href="#" class="secondary-content"><i class="fa fa-camera"></i></a></div></li>
-                <li class="collection-item modal-trigger c"  href="#modal2"><div>Upload cover picture<a href="#" class="secondary-content"><i class="fa fa-camera-retro"></i></a></div></li>
-               <!-- <a  href="settings.html"><li class="collection-item"><div class="black-text">Settings<a href="settings.html" class="secondary-content"><i class="fa fa-gears"></i></a></div></li></a>-->
-            </ul>
-            
-        <div class="card-panel ">
-        <span style="font-size:20px;" class="teal-text">About</span><span class="right modal-trigger w teal-text"  href="#modal3"><i class="fa fa-pencil"></i></span><br>
-        <span id="abt">Write something nice about your self. you are restricted to 500 words</span>
-        </div>
-            
-            <div class="card-panel" style="width:100%;">
-            <div style="width:50%;margin-left:25%;margin-right:25%;text-align:center;">
-               <span style="font-size:20px;" class="teal-text"><i class="fa fa-users"></i></span>&#160<span style="font-size:20px;" class="teal-text">3</span>
-        </div>
-        </div>
         </div>
        
         
-        <!-- Modal Structure -->
-  <div id="modal1" class="modal" style="width:95%;">
-    <div class="modal-content">
-      <h4>Upload picture</h4>
-       <form method="POST" enctype="multipart/form-data">
-        <div class="file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file" id="image" name="image">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your profile picture">
-                        </div>
-                    </div><br>
-            <button type="button" value="create" class="btn waves-effect waves-light"  id="profile">Upload</button>
-        </form>
-    </div>
-  </div>
-        <div id="modal2" class="modal" style="width:95%;">
-    <div class="modal-content">
-      <h4>Upload cover photo</h4>
-        <form method="post">
-        <div class="file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file" id="photo" name="photo">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your cover photo">
-                        </div>
-                    </div><br>
-            <button type="button" value="create" class="btn waves-effect waves-light"  id="cover">Upload</button>
-        </form>
-    </div>
-  </div>
-        <div id="modal3" class="modal" style="width:95%;">
-    <div class="modal-content">
-      <h4>About you</h4>
-      <form method="post">
-        <textarea class="a" ></textarea><br>
-          <button type="button" value="create" class="btn waves-effect waves-light"  id="about">Send</button>
-        </form>
-    </div>
-  </div>
-        
-        <!--hide retrieved gender-->
-        <div id="g"></div>
-        
-          <ul id="slide-out" class="side-nav">
+    
+    <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
         <script>
@@ -174,40 +98,60 @@
       <a href="#!name"><span class="white-text name" id="u">username</span></a>
       <a href="#!email"><span class="white-text email" id="e">email@email.com</span></a>
     </div></li>
-    <li><a class="waves-effect" href="index.html"><i class="fa fa-home teal-text"></i>Home</a></li>
-    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user teal-text"></i>Account</a></li>
-    <li><a class="waves-effect" href="search.html"><i class="fa fa-search teal-text"></i>Search</a></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home blue-grey-text"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user blue-grey-text"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.html"><i class="fa fa-search blue-grey-text"></i>Search</a></li>
     <li><div class="divider"></div></li>
     <!--<li><a class="subheader">Menu</a></li>-->
-    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil teal-text"></i>create</a></li>
-    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users teal-text"></i>Friends</a></li>
-    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass teal-text"></i>Nearby</a></li>
-    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar teal-text"></i>Schedule</a></li>
-    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears teal-text"></i>Settings</a></li>
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil blue-grey-text"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users blue-grey-text"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass blue-grey-text"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar blue-grey-text"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears blue-grey-text"></i>Settings</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out teal-text"></i>Log Out</a></li>
+    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out blue-grey-text"></i>Log Out</a></li>
         
   </ul>
-        
-        <script src="js/jquery-2.2.3.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script src="tinymce/tinymce.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                tinymce.init({selector:'textarea'});//show the html editor
-                $("#g").hide();
+   
+    
+    <!-- Path to jQuery Library-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Path to Materilize Library (javaScript)-->
+    <script src="js/materialize.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
                 
-    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-                     
-    $('.p').click(function(){
-    $('.modal').modal();
-  });
-    $('.c').click(function(){
-    $('.modal').modal();
-  });$('.w').click(function(){
-    $('.modal').modal();
-  });
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
+                    
                 
+               
+                });
+        $(document).ready(function(){
+       tinymce.init({selector:'textarea'});//show the html editor
+  
             
                 // Initialize collapse button
                 $('.button-collapse').sideNav({
@@ -224,61 +168,29 @@
             $.ajax({
                 
                 type: 'get',
-                //url: 'http://gothere.000webhostapp.com/profile.php.php',
-                url: 'profile.php',
-                dataType: 'json',
+               // url: 'http://gothere.000webhostapp.com/profile.php',
+                url: 'php/profile.php',
+                dataType: 'html',
                 success: function (response) {
                         
-                        $('#fn').html(response.fname);
+                       $('#pro').html(response);
+                       /* $('#fn').html(response.fname);
                         $('#sn').html(response.sname);
                         $('#u').html(response.uname);
                         $('#g').html(response.gender);
                         $('#c').html(response.country);
                         $('#pc').html(response.cover);
                         $('#e').html(response.email);
-                        $('#pp').html(response.pic);
-                        $('#abt').html(response.about);
+                        var pic = response.pic;
+                        $('#pp').html('<img src="' + pic +'" />');
+                        $('#abt').html(response.about);*/
                         
                     }
                 
             });
                 
                 
-                
-                 $("#profile").click(function(){
-                 var image = $("#image").val();
-                   //var formData = new FormData();
-				   //formData.append('image', document.getElementById("image").files[0]);
-                  var formData = new FormData($('form')[0]);
-                     if (image != "" ) {
-                      
-                      $.ajax({
-                          
-                         type: 'post',
-                          //url: 'http://gothere.000webhostapp.com/create.php',
-                         url: 'uploadprofile.php',
-                         data: formData,
-                          contentType: false,
-                          processData: false,
-                          success:function(response) {
-                              $('.modal').modal("close");
-                              Materialize.toast("Picture uploaded", 10000);
-                            /*  if (response == "success") {
-                                  Materialize.toast("Picture uploaded", 10000);
-                              }
-                              else {
-                                   Materialize.toast("Picture not uploaded", 10000);
-                              }*/
-                              
-                          }
-                          
-                      });
-                      
-                }
-                   else {
-                       Materialize.toast("Select a picture", 10000);
-                   }
-                     });
+            
                      
                     $("#cover").click(function(){
                  var photo = $("#photo").val();
@@ -290,8 +202,8 @@
                       $.ajax({
                           
                          type: 'post',
-                          //url: 'http://gothere.000webhostapp.com/create.php',
-                         url: 'uploadcover.php',
+                          url: 'http://gothere.000webhostapp.com/uploadcover.php',
+                         //url: 'uploadcover.php',
                          data: formData,
                           contentType: false,
                           processData: false,
@@ -322,8 +234,8 @@
                       $.ajax({
                           
                          type: 'post',
-                          //url: 'http://gothere.000webhostapp.com/create.php',
-                         url: 'about.php',
+                          url: 'http://gothere.000webhostapp.com/about.php',
+                         //url: 'about.php',
                          data: {about:about},
                           success:function(response) {
                               
@@ -374,6 +286,6 @@ function logout() {
           });
             
         }
-        </script>
+    </script>
     </body>
 </html>

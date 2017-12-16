@@ -37,91 +37,115 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
-    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-    <title>Hello World</title>
-</head>
-<body>
-    <!--<header class="headerCon">
-    <div class="header">
-        <a class="active a-left" style="margin-right:;" href="#"><i class="fa fa-search"></i></a>
-        <a class="center-text">Discover</a>
-        <a class="active a-right" href="#"><i class="fa fa-map"></i></a>
+     
+    <!-- Path to Materialize Library CSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- Path to Font Awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to Login custom's CSS-->
+    <link rel="stylesheet" href="css/">
     
-    </div>
-    </header>-->
-    <div class="navbar-fixed blue-grey">
-    <nav class="">
+    <title>gothere</title>
+    <style>
+       .card {box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+            .card-panel{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+    </style>
+</head>
+
+<body class="blue-grey lighten-5">
+    
+    <div class="navbar-fixed">
+    <nav class="blue-grey">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Nearby</a>
         <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
-      <!--<ul class="left "><a href="#"><i class="fa fa-search"></i></a></ul>-->
                     <ul class="right "><a href="#"><i class="fa fa-bell"></i></a></ul>
       
     </div>
   </nav>
     </div>
     
-
     
-    <ul class="collection">
-    <li class="collection-item avatar">
-      <img src="images/yuna.jpg" alt="" class="circle">
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-  </ul>
+    <div style="width:90%; height:auto;margin:auto;">
+       </div>
     
-      <ul id="slide-out" class="side-nav">
+    <ul id="slide-out" class="side-nav">
     <li><div class="user-view">
       <div class="background">
-        <img src="images/office.jpg">
+        <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<img src="img/avatar/images%20(6).jpg" height="200px" width="100%" id="pc">');
+                }else{
+                    document.write('<img src="img/avatar/images%20(5).jpg" height="200px" width="100%" id="pc">');
+                }
+            </script>
       </div>
-      <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
-      <a href="#!name"><span class="white-text name">John Doe</span></a>
-      <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+        <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
+                }else{
+                document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
+                }
+            </script>
+      <a href="#!name"><span class="white-text name" id="u">username</span></a>
+      <a href="#!email"><span class="white-text email" id="e">email@email.com</span></a>
     </div></li>
-    <li><a class="waves-effect" href="index.html"><i class="fa fa-home"></i>Home</a></li>
-    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user"></i>Account</a></li>
-    <li><a class="waves-effect" href="search.php"><i class="fa fa-search"></i>Search</a></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home blue-grey-text"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user blue-grey-text"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.html"><i class="fa fa-search blue-grey-text"></i>Search</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Menu</a></li>
-    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil"></i>create</a></li>
-    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users"></i>Friends</a></li>
-    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass"></i>Nearby</a></li>
-    <li><a class="waves-effect" href="places.html"><i class="fa fa-building"></i>places</a></li>
-    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar"></i>Schedule</a></li>
-    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears"></i>Settings</a></li>
+    <!--<li><a class="subheader">Menu</a></li>-->
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil blue-grey-text"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users blue-grey-text"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass blue-grey-text"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar blue-grey-text"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears blue-grey-text"></i>Settings</a></li>
     <li><div class="divider"></div></li>
-    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out"></i>Log Out</a></li>
+    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out blue-grey-text"></i>Log Out</a></li>
         
   </ul>
+   
     
-
-    <div class="aid"><a class="btn-floating btn-large swaves-effect waves-light red"><i class="fa fa-filter"></i></a></div>
-    <!--<footer class="footer">
-        
-            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
-            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
-            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
-            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
-            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
-        
-    </footer>-->
-     <script src="js/jquery-3.2.1.min.js"></script>
-     <script src="js/materialize.min.js"></script>
+    <!-- Path to jQuery Library-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Path to Materilize Library (javaScript)-->
+    <script src="js/materialize.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
     <script>
-        
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
+                
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
+                    
+                
+               
+                });
         $(document).ready(function(){
-           
-            
-             // Initialize collapse button
+       
+                // Initialize collapse button
                 $('.button-collapse').sideNav({
       menuWidth: 300, // Default is 300
       edge: 'left', // Choose the horizontal origin
@@ -131,23 +155,35 @@
       onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
     }
   );
-            
-            
-          $.ajax({
                 
-                  type: 'get',
-                  url: 'schedule.php',
-                   dataType: 'html',
-                  success: function (response) {
+                
+           
+        });
+            
+            
+function logout() {
+       $.ajax({
+                
+       type: 'get',
+                url: 'http://gothere.000webhostapp.com/logout.php',
+                //url: 'logout.php',
+                success: function (response) {
                         
-                        $('.collection').html(response);
+                      if (response == "success") {
+                            
+                           window.location.href="login.html";
+                            
+                     }else{
+                            
+                       alert("You were not logged out");
+                            
+                         }
                         
                     }
-                   
-               });
                 
-            });
+          });
             
+        }
     </script>
-</body>
+    </body>
 </html>

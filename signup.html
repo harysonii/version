@@ -1,36 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-        <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-        <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-        <!-- Good default declaration:
-        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-        * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
         * Enable inline JS: add 'unsafe-inline' to default-src
         * Enable eval(): add 'unsafe-eval' to default-src
-        * Create your own at http://cspisawesome.com
-        -->
-        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+     
+    <!-- Path to Materialize Library CSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- Path to Font Awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to Login custom's CSS-->
+    <link rel="stylesheet" href="css/login.css">
+    
+    <title>gothere</title>
+</head>
 
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="css/signup.css"/>
-        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-        <title>Hello World</title>
-    </head>
-    <body class="teal">
-        <div class="logo">
-            <div class="logo2">
-                 <img src="icon.png" width="80px" height="80px"/>
-            </div>
-        </div>
-            <div class="ui form">
-                <form method="post">
+<body class="blue-grey">
+ 
+    <div class="" style="width:90%; height:auto;margin:auto;">
+    
+        <div class="header"><div class="" style="width:20%; height:auto;margin:auto;"><img src="icon.png" width="70px" height="70px"/></div></div>
+        <div>
+         <form method="post">
                     <div class="form2">
                                    <div class="col s6">
                         <div class="row">
@@ -42,14 +66,14 @@
                             </div>
                         </div>
                     </div>
-                                    <input type="text" placeholder="Username" id="username" size="45"><br/>
+                <input type="text" placeholder="Username" id="username" size="45" style="border: 2px solid #e0e0e0;border-radius:5px;" ><br/>
                                     
-                                    <input type="email" placeholder="E-mail" id="unique" size="45"><br/>
+                <input type="email" placeholder="E-mail" style="border: 2px solid #e0e0e0;border-radius:5px;" id="unique" size="45"><br/>
                                     
-                                    <input type="password" placeholder="Password" id="secret" size="45"><br/>
+                <input type="password" style="border: 2px solid #e0e0e0;border-radius:5px;" placeholder="Password" id="secret" size="45"><br/>
                                    
                         <div class="col s6">
-                        <div class="row">
+                        <div class="row blue-grey-text text-lighten-5">
                             <div class="input-field col s6">
                                         <select id="gender">
                                             <option value="" disabled selected>Choose your gender</option>
@@ -69,27 +93,24 @@
                     
                                      <div class="ui checkbox">
       <input type="checkbox" name="chk[]" id="test1">
-      <label for="test1">I agree to the Terms and Conditions</label>
+      <label for="test1" class="blue-grey-text text-lighten-5">I agree to the Terms and Conditions</label>
     </div>
-                        <input type="button" class="waves-effect btn" value="Sign up!" id="signup"/>
+                        <input type="button" class="waves-effect btn blue-grey" value="Sign up!" id="signup"/>
                     </div>
                  </form>
-
-            </div>
-        <div class="signup">
-            
-                    <p style="text-align:center;">Not your first time? <a href="login.html">Sign up</a></p>
-                        
         </div>
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        
-        <script>
-        
-            $(document).ready(function(){
-                $('select').material_select();
-                
-                $("#signup").click(function(){
+        <div class="footer"><p style="text-align:center;">Not your first time? <a href="login.html">Sign up</a></p></div>
+    </div>
+    
+    
+    <!-- Path to jQuery Library-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Path to Materilize Library (javaScript)-->
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+              $('select').material_select();
+             $("#signup").click(function(){
                    
                     var fname = $("#fname").val();
                     var sname = $("#sname").val();
@@ -122,7 +143,6 @@
                          type: 'post',
                           url: 'http://gothere.000webhostapp.com/signup.php',
                          //url: 'signup.php',
-                         url: 'signup.php',
                          data: {
                              
                              fname: fname,
@@ -137,35 +157,33 @@
                           success:function(response) {
                               
                               if (response == "success") {
-                                      
+                                       window.localStorage.setItem("login", 1);
                                   window.location.href="profile.html";
         
                               }
                               else {
-                                  Materialize.toast('Sign up unsuccessful!', 4000);
+                                  Materialize.toast('Sign up unsuccessful!', 10000);
                               }
                               
                           }
                           
                       });
                                   
-                              }else {Materialize.toast('Email already exists!', 4000);}
+                              }else {Materialize.toast('Email already exists!', 10000);}
                               }
                       });
-                              }else {Materialize.toast('Username already exists!', 4000);}
+                              }else {Materialize.toast('Username already exists!', 10000);}
                               }
                       });
                       
-                      }else{Materialize.toast('Input a valid email address!', 4000); }
-                      }else{Materialize.toast('Agree to the Terms and conditions!', 4000); }
-                  }else {Materialize.toast('Fill all fields!', 4000);}
+                      }else{Materialize.toast('Input a valid email address!', 10000); }
+                      }else{Materialize.toast('Agree to the Terms and conditions!', 10000); }
+                  }else {Materialize.toast('Fill all fields!', 10000);}
                     
                     
                 });
                 
-                 });
-        
-        
-        </script>
+            });
+    </script>
     </body>
 </html>

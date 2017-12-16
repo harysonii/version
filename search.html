@@ -37,16 +37,21 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-
-    <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" type="text/css" href="css/profile.css"/>
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-    <title>Hello World</title>
+     
+    <!-- Path to Materialize Library CSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <!-- Path to Font Awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to Login custom's CSS-->
+    <link rel="stylesheet" href="css/">
+    
+    <title>gothere</title>
     <style>
+       .card {box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+            .card-panel{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+        
         .nav-wrapper .input-field input[type=search]{
-            height: 67px;
+            height: 60px;
         }
         .nav-wrapper input[type=search]:focus {
             position: fixed;
@@ -59,16 +64,18 @@
         }
         .nav-wrapper input[type=search]:focus .label-icon.active{
             position: fixed;
-            left: 100%;
+            left: 100%;background-color: none;
         }.nav-wrapper input[type=search]:focus .closed{
             position: fixed;
-            right: 10px;
+            right: 10px;background-color: none;
         }
     </style>
 </head>
-<body id="profile">
+
+<body class="blue-grey lighten-5" id="profile">
+    
     <div class="navbar-fixed">
-    <nav class="nav-extended teal">
+    <nav class="nav-extended blue-grey">
     <div class="nav-wrapper">
         <a href="#" class="brand-logo">Search</a>
         <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
@@ -84,10 +91,11 @@
       </ul>
     </div>
   </nav>
-    </div>
-    <div >
-        <div style="margin-top:20%;margin-bottom:25%;">
-  <div id="test1" class="col s12">
+    </div><br><br><br>
+    
+    
+    <div style="width:95%; height:auto;margin:auto;">
+        <div id="test1" class="col s12">
       <div><form>
             <div class="input-field">
                 <input type="search" name="searchPeople" id="searchPeople">
@@ -108,22 +116,85 @@
   <div id="test3" class="col s12" ></div>
   <div id="test4" class="col s12"></div>
     </div>
-    </div>
+        
     
     
-    <!--<footer class="footer">
+    
+    
+    <ul id="slide-out" class="side-nav">
+    <li><div class="user-view">
+      <div class="background">
+        <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<img src="img/avatar/images%20(6).jpg" height="200px" width="100%" id="pc">');
+                }else{
+                    document.write('<img src="img/avatar/images%20(5).jpg" height="200px" width="100%" id="pc">');
+                }
+            </script>
+      </div>
+        <script>
+                var gender = document.getElementById('g');
+                if (gender == "male"){
+            document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
+                }else{
+                document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
+                }
+            </script>
+      <a href="#!name"><span class="white-text name" id="u">username</span></a>
+      <a href="#!email"><span class="white-text email" id="e">email@email.com</span></a>
+    </div></li>
+    <li><a class="waves-effect" href="index.html"><i class="fa fa-home blue-grey-text"></i>Home</a></li>
+    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user blue-grey-text"></i>Account</a></li>
+    <li><a class="waves-effect" href="search.html"><i class="fa fa-search blue-grey-text"></i>Search</a></li>
+    <li><div class="divider"></div></li>
+    <!--<li><a class="subheader">Menu</a></li>-->
+    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil blue-grey-text"></i>create</a></li>
+    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users blue-grey-text"></i>Friends</a></li>
+    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass blue-grey-text"></i>Nearby</a></li>
+    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar blue-grey-text"></i>Schedule</a></li>
+    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears blue-grey-text"></i>Settings</a></li>
+    <li><div class="divider"></div></li>
+    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out blue-grey-text"></i>Log Out</a></li>
         
-            <a class="active" href="index.html"><i class="fa fa-eye"></i></a>
-            <a class="active" href="schedule.html"><i class="fa fa-calendar"></i></a>
-            <a class="active" href="create.html"><i class="fa fa-plus-square"></i></a>
-            <a class="active" href="notification.html"><i class="fa fa-bell"></i></a>
-            <a class="active" href="profile.html"><i class="fa fa-user"></i></a>
-        
-    </footer>-->
-     <script src="js/jquery-3.2.1.min.js"></script>
-     <script src="js/materialize.min.js"></script>
+  </ul>
+   
+    
+    <!-- Path to jQuery Library-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Path to Materilize Library (javaScript)-->
+    <script src="js/materialize.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
     <script>
-        
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
+                
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
+                    
+                
+               
+                });
         $(document).ready(function(){
             
              // Initialize collapse button
@@ -255,7 +326,6 @@
           });
             
         }
-            
     </script>
-</body>
+    </body>
 </html>

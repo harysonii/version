@@ -1,0 +1,9 @@
+@face-face {
+    font-family: "December%20Sky";
+    src: url("font/december-sky/December%20Sky%20-%20OTF.otf")format("opentype"),
+         url("font/december-sky/December%20Sky%20-%20TTF.ttf")format("truetype");
+}
+
+* {
+    font-family: 'December%20Sky';
+}
