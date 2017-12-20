@@ -52,10 +52,10 @@
     </style>
 </head>
 
-<body class="blue-grey lighten-5">
+<body class="blue-grey lighten-4">
     
     <div class="navbar-fixed">
-    <nav class="blue-grey">
+    <nav class="blue-grey darken-2">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Settings</a>
         <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
@@ -82,8 +82,8 @@
             <ul class="collection with-header">
                 <li class="collection-header"><h5>Others</h5></li>
                 <li class="collection-item"  onclick="faqs()"><div>FAQs<a href="#" class="secondary-content blue-grey-text"><i class="fa fa-bullhorn"></i></a></div></li>
-                <li class="collection-item"  href="#modal2"><div>Privacy Policy<a href="#" class="secondary-content blue-grey-text"><i class="fa fa-warning"></i></a></div></li>
-                <li class="collection-item"  href="#modal2"><div>Terms and Conditions<a href="#" class="secondary-content blue-grey-text"><i class="fa fa-book"></i></a></div></li>
+                <li class="collection-item"  onclick="privacy()"><div>Privacy Policy<a href="#" class="secondary-content blue-grey-text"><i class="fa fa-warning"></i></a></div></li>
+                <li class="collection-item"  onclick="tc()"><div>Terms and Conditions<a href="#" class="secondary-content blue-grey-text"><i class="fa fa-book"></i></a></div></li>
             </ul>
         </div>
         
@@ -181,6 +181,12 @@
         
         function faqs() {
                            window.location.href="faqs.html";
+            
+        }function privacy() {
+                           window.location.href="privacy.html";
+            
+        }function tc() {
+                           window.location.href="t&c.html";
             
         }function edit_profile() {
                            window.location.href="edit_profile.html";

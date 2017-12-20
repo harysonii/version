@@ -27,9 +27,9 @@
         <title>Hello World</title>
 
     </head>
-    <body class="green lighten-5">
+    <body class="blue-grey lighten-5">
         <div class="navbar-fixed">
-    <nav class="teal">
+    <nav class="blue-grey">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Edit Profile</a>
         <ul class="left"><a href="settings.html" data-activates="slide-out" class="button-collapse"><i class="fa fa-angle-left"></i></a></ul>
@@ -45,9 +45,9 @@
             <div style="width:;margin-left:;margin-right:;text-align:;">
                <form method="post" class="white">
                     <div class="input-field" class="white">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px"id="tag" name="type" type="text" placeholder="Edit username">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px" id="uname" type="text" placeholder="Edit username">
                     </div>
-                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Edit</button>
+                    <button type="button" value="create" class="btn waves-effect waves-light blue-grey"  id="a">Edit</button>
                 </form>
         </div>
         </div>
@@ -56,9 +56,9 @@
             <div style="width:;margin-left:;margin-right:;text-align:;">
                <form method="post" class="white">
                     <div class="input-field" class="white">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px"id="tag" name="type" type="text" placeholder="Edit Email">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px"id="email" type="text" placeholder="Edit Email">
                     </div>
-                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Edit</button>
+                    <button type="button" value="create" class="btn waves-effect waves-light blue-grey"  id="b">Edit</button>
                 </form>
         </div>
         </div>
@@ -66,13 +66,14 @@
             <div style="width:;margin-left:;margin-right:;text-align:;">
                <form method="post" class="white">
                     <div class="input-field" class="white">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px"id="tag" name="type" type="text" placeholder="Edit password">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px"id="pword1" type="text" placeholder="Old password">
+                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" style="50px"id="pword2" type="text" placeholder="New password">
                     </div>
-                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Edit</button>
+                    <button type="button" value="create" class="btn waves-effect waves-light blue-grey"  id="c">Edit</button>
                 </form>
         </div>
         </div>
-            <div class="card-panel" style="width:100%;">
+           <!-- <div class="card-panel" style="width:100%;">
             <div style="width:;margin-left:;margin-right:;text-align:;">
                <form method="post" class="white">
                     <div class="input-field col s12">
@@ -81,10 +82,10 @@
                                             <option value="male" >Nigeria</option>
                                         </select>
                                     </div>
-                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Edit</button>
+                    <button type="button" value="create" class="btn waves-effect waves-light blue-grey"  id="d">Edit</button>
                 </form>
         </div>
-        </div>
+        </div>-->
             
         </div>
         
@@ -93,11 +94,154 @@
         <script>
             $(document).ready(function(){
                  $('select').material_select();
+                
+                $("#a").click(function(){
+                 var uname = $("#uname").val();
+                  if (uname != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          url: 'http://gothere.000webhostapp.com/check.php',
+                         //url: 'check.php',
+                         data: {
+                            username: uname,
+                             
+                         },
+                          success:function(response) {
+                              if (response == "success") {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          url: 'http://gothere.000webhostapp.com/update_username.php',
+                         data: {uname:uname},
+                          success:function(response) {
+                              
+                              if (response == "success") {
+                                  Materialize.toast("Profile updated", 10000);
+                              }
+                              else {
+                                   Materialize.toast("Profile not updated", 10000);
+                              }
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Username already exists", 10000);
+                   }
+                          }
+                   
+               });
+                        
+                          
+                       }else {Materialize.toast('Input a username!', 4000);}
+                          
             
+            });
+                
+                $("#b").click(function(){
+                 var email = $("#email").val();
+                  if (email != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          url: 'http://gothere.000webhostapp.com/check_email.php',
+                         //url: 'check.php',
+                         data: {
+                            email: email,
+                             
+                         },
+                          success:function(response) {
+                              if (response == "success") {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          url: 'http://gothere.000webhostapp.com/update_email.php',
+                         data: {uname:uname},
+                          success:function(response) {
+                              
+                              if (response == "success") {
+                                  Materialize.toast("Profile updated", 10000);
+                              }
+                              else {
+                                   Materialize.toast("Profile not updated", 10000);
+                              }
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Email already exists", 10000);
+                   }
+                          }
+                   
+               });
+                        
+                          
+                       }else {Materialize.toast('Input an Email!', 4000);}
+                          
+            
+            });
+                $("#c").click(function(){
+                 var pword1 = $("#pword1").val();
+                 var pword2 = $("#pword2").val();
+                  if (pword1 != "" && pword2 != "" ) {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          url: 'http://gothere.000webhostapp.com/check_oldpassword.php',
+                         data: {
+                            pword1: pword1,
+                             
+                         },
+                          success:function(response) {
+                              if (response == "success") {
+                      
+                      $.ajax({
+                          
+                         type: 'post',
+                          url: 'http://gothere.000webhostapp.com/update_email.php',
+                         data: {pword2:pword2},
+                          success:function(response) {
+                              
+                              if (response == "success") {
+                                  Materialize.toast("Password updated", 10000);
+                              }
+                              else {
+                                   Materialize.toast("Password not updated", 10000);
+                              }
+                              
+                          }
+                          
+                      });
+                      
+                }
+                   else {
+                       Materialize.toast("Old email not the same", 10000);
+                   }
+                          }
+                   
+               });
+                        
+                          
+                       }else {Materialize.toast('Input your old and new passwords!', 4000);}
+                          
+            
+            });
             });
             
             
-        
+        // }else {Materialize.toast('Select a new name!', 4000);}
+          //                }
         </script>
         
  
