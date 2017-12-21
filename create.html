@@ -1,7 +1,28 @@
-<!doctype>
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
-    <head>
-        <meta charset="utf-8" />
+
+<head>
+    <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
@@ -16,295 +37,397 @@
     * Create your own at http://cspisawesome.com
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
-        
-        <link rel="stylesheet" type="text/css" href="css/materialize.min.css"/>
-        <link rel="stylesheet" type="text/css" href="css/main.css"/>
-        <link rel="stylesheet" type="text/css" href="css/create.css"/>
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-        <style>
-            
-input {
-    border: 2px solid #e65100;
-}
-        
-        </style>
-        <title>Hello World</title>
-    </head>
-    <body class="blue-grey lighten-4 ">
-        
-        
-     <div class="navbar-fixed">
-    <nav class="nav-extended blue-grey darken-3">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Create</a>
-        <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
-                    <ul class="right" style="position:relative;top:20px;"><a href="#"><i class="fa fa-bell"></i></a></ul>
-      
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab" id=""><a class="active" href="#test1">Create Event</a></li>
-        <li class="tab" ><a id="a" href="#test2">Create Place</a></li>
-      </ul>
-    </div>
-  </nav>
-    </div>
-        
-        <div id="test1" class="col s12">
-         <div class="" style="width:90%;margin: 15% auto;">
-                <form method="POST" enctype="multipart/form-data">
-                    <label class="form-label">Image</label>
-                    <div class="file-field input-field">
-                        <div class="btn  blue-grey">
-                            <span>File</span>
-                            <input type="file" id="image" name="image">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path Validate" style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Upload your events image">
-                        </div>
-                    </div>
-                    <label class="form-label">Name</label>
-                    <div class="input-field">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" placeholder="Give your event a unique name:" id="ename" name="ename">
-                    </div>
-                    <label class="form-label">About: Tell your guests about your events, what you offer, what to bring or not bring. its your Chance to blow their minds!</label>
-                    <div class="input-field">
-                        <textarea  style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="materialize-textarea" placeholder="The event is about:" id="about" name="about"></textarea>
-                    </div>
-                    <label class="form-label">Location</label>
-                    <div class="input-field">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" id="location" name="location" placeholder="The location of the event is:">
-                    </div>
-                    <label class="form-label">State</label>
-                    <div class="input-field">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" id="state" name="state" placeholder="In which State, Lagos?">
-                    </div>
-                    <label class="form-label">Country</label>
-                    <div class="input-field">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" id="country" name="country" placeholder="In which Country, Nigeria?">
-                    </div>
-                    <label class="form-label">Date</label>
-                    <div class="col s6">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker w" id="dateFrom" placeholder="Date: From" name="dateFrom">
-                            </div>
-                            <div class="input-field col s6">
-                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="datepicker 2" id="dateTo" placeholder="Date: To" name="dateTo">
-                            </div>
-                        </div>
-                    </div>
-                    <label class="form-label">Time</label>
-                    <div class="col s6">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="timepicker" id="timeFrom" placeholder="Time: From" name="timeFrom">
-                            </div>
-                            <div class="input-field col s6">
-                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="timepicker" id="timeTo" placeholder="Time: To" name="timeTo">
-                            </div>
-                        </div>
-                    </div>
-                    <!--<label class="form-label">Fee</label>
-                    <div class="input-field">
-                        <input id="fee" style="border: 2px solid #e0e0e0;border-radius:5px;" type="number"  placeholder="How much? Free (0) 0r 2000" name="fee">
-                    </div>-->
-                    <label class="form-label">Phone Number</label>
-                    <div class="input-field">
-                        <input id="num" name="num" style="border: 2px solid #e0e0e0;border-radius:5px;" type="number"  placeholder="080********">
-                    </div>
-                    <label class="form-label">Type</label>
-                    <div class="input-field col s12">
-                                        <select id="type"  name="type" style="border:none;">
-                                            <option value="" disabled selected>Select your event's type</option>
-                                            <option value="Attraction" >Attraction</option>
-                                            <option value="Charity" >Charity</option>
-                                            <option value="Comedy" >Comedy</option>
-                                            <option value="Concert" >Concert</option>
-                                            <option value="Conference or Convention" >Conference</option>
-                                            <option value="Convention">Convention</option>
-                                            <option value="Dinner or Gala" >Dinner or Gala</option>
-                                            <option value="Fashion show" >Fashion show</option>
-                                            <option value="Festival" >Festival</option>
-                                            <option value="Food" >Food</option>
-                                            <option value="Fundraiser" >Fundraiser</option>
-                                            <option value="Competition" >Competition</option>
-                                            <option value="Lauching" >launching</option>
-                                            <option value="Meetup" >Meetup</option>
-                                            <option value="Party or Club" >Party or Club</option>
-                                            <option value="Theatre" >Theatre</option>
-                                            <option value="Rally" >Rally</option>
-                                            <option value="Seminar or Talks" >Seminar or Talks</option>
-                                            <option value="Screening" >Screening</option>
-                                            <option value="Sports" >Sports</option>
-                                            <option value="Tour" >Tour</option>
-                                            <option value="Trade show or Expo" >Trade show or Expo</option>
-                                            <option value="Wedding" >Wedding</option>
-                                        </select>
-                                    </div>
-                    <label class="form-label">Tags</label>
-                    <div class="input-field">
-                        <input style="border: 2px solid #e0e0e0;border-radius:5px;" id="tag" name="type" type="text" placeholder="Tags">
-                    </div>
-                    <button type="button" value="create" class="btn waves-effect waves-light blue-grey"  id="create">Create</button>
-                    
-                </form>
-        </div>
-        </div>
-  <div id="test2" class="col s12">
-        
-      <div class="" style="width:90%;margin: 15% auto;">
-                <form method="POST" >
-                   <div class="file-field input-field">
-                        <div class="btn">
-                            <span>File</span>
-                            <input type="file" id="image" name="image">
-                        </div>
-                        <div class="file-path-wrapper">
-                            <input class="file-path Validate"  type="text" placeholder="Upload your events image">
-                        </div>
-                    </div>
-                    <div class="input-field">
-                        <input  type="text" placeholder="The name of the event is:" id="name">
-                    </div>
-                    <div class="input-field">
-                        <textarea  type="text" class="materialize-textarea" placeholder="The event is about:" id="description"></textarea>
-                    </div>
-                    <div class="input-field">
-                        <input  type="text" id="location" placeholder="The location of the event is:">
-                    </div>
-                    <div class="input-field">
-                        <input  type="text" id="state" placeholder="In which state, Lagos?">
-                    </div>
-                    <div class="input-field">
-                        <input  type="text" id="state" placeholder="In which country, Nigeria?">
-                    </div>
-                    <div class="col s6">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input type="text" class="datepicker w" id="dateFrom" placeholder="Date: From">
-                            </div>
-                            <div class="input-field col s6">
-                                <input type="text" class="datepicker 2" id="dateTo" placeholder="Date: To">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s6">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input type="text" class="timepicker" id="timeFrom" placeholder="Time: From">
-                            </div>
-                            <div class="input-field col s6">
-                                <input type="text" class="timepicker" id="timeTo" placeholder="Time: To">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input-field">
-                        <input id="fee" type="number"  placeholder="How much? Free (0) 0r 2000">
-                    </div>
-                    <div class="chips chips-autocomplete chips-placeholder">
-                        <!--<input id="type" class="chips chips-autocomplete" type="text" placeholder="Type">-->
-                    </div>
-                    <div class="input-field">
-                        <input id="tag" type="text" placeholder="Tags">
-                    </div>
-                    <button type="button" value="create" class="btn waves-effect waves-light"  id="create">Create</button>
-                </form>
-        </div>
-        
-        </div>
-        
-        <div id="modal1" class="modal"><div class="modal-content"><p>ghghgh</p></div></div>
-        
-         
-    <ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-        <script>
-                var gender = document.getElementById('g');
-                if (gender == "male"){
-            document.write('<img src="img/avatar/images%20(6).jpg" height="200px" width="100%" id="pc">');
-                }else{
-                    document.write('<img src="img/avatar/images%20(5).jpg" height="200px" width="100%" id="pc">');
-                }
-            </script>
+     
+    <!-- Path to Materialize Library CSS-->
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/calendar.min.css">
+    <!-- Path to Login custom's CSS-->
+    <link rel="stylesheet" href="css/">
+    
+    <title>create</title>
+    <style>
+       .hh {background-color:#37474f;}
+    </style>
+</head>
+
+<body style="background-color:#cfd8dc;">
+    <div class="ui left demo vertical inverted sidebar labeled icon menu">
+  <a class="item">
+    <i class="home icon"></i>
+    Home
+  </a>
+  <a class="item">
+    <i class="block layout icon"></i>
+    Account
+  </a>
+    <a class="item">
+    <i class="search icon"></i>
+    Search
+  </a>
+  <a class="item">
+    <i class="smile icon"></i>
+    Create
+  </a>
+        <a class="item">
+    <i class="smile icon"></i>
+    Friends
+  </a>
+        <a class="item">
+    <i class="smile icon"></i>
+    Nearby
+  </a>
+        <a class="item">
+    <i class="smile icon"></i>
+    Schedule
+  </a>
+        <a class="item">
+    <i class="smile icon"></i>
+    Settings
+  </a>
+        <a class="item">
+    <i class="smile icon"></i>
+    Log out
+  </a>
+</div>
+    <div class="ui three item secondary top fixed menu hh" style="background-color:#37474f; height:60px;color:white;">
+  <a class="item" id="h">
+    <i class="align justify icon"></i>
+  </a>
+  <a class=" item" style="font-size:25px; color:white;">
+   Create
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      <i class="alarm icon"></i>
+    </a>
+  </div>
+</div><br><br><br><br>
+<div class="pusher">
+<div class="ui container">
+    <div style="width:100%;height:auto;margin:auto;">
+<form class="ui form">
+  <h4 class="ui dividing header">Event Information</h4>
+  <div class="field">
+  <label for="file" class="ui icon button">
+  <i class="photo icon"></i>Upload Event image</label>
+  <input type="file" id="image" style="display:none;"/>
+  </div>
+  <div class="field">
+    <label>Name</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" id="ename" placeholder="Select a unique event name">
       </div>
-        <script>
-                var gender = document.getElementById('g');
-                if (gender == "male"){
-            document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
-                }else{
-                document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
-                }
-            </script>
-      <a href="#!name"><span class="white-text name" id="u">username</span></a>
-      <a href="#!email"><span class="white-text email" id="e">email@email.com</span></a>
-    </div></li>
-    <li><a class="waves-effect" href="index.html"><i class="fa fa-home blue-grey-text"></i>Home</a></li>
-    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user blue-grey-text"></i>Account</a></li>
-    <li><a class="waves-effect" href="search.html"><i class="fa fa-search blue-grey-text"></i>Search</a></li>
-    <li><div class="divider"></div></li>
-    <!--<li><a class="subheader">Menu</a></li>-->
-    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil blue-grey-text"></i>create</a></li>
-    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users blue-grey-text"></i>Friends</a></li>
-    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass blue-grey-text"></i>Nearby</a></li>
-    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar blue-grey-text"></i>Schedule</a></li>
-    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears blue-grey-text"></i>Settings</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out blue-grey-text"></i>Log Out</a></li>
+    </div>
+  </div>
+  <div class="field">
+    <label>Description</label>
+    <div class="fields">
+      <div class="twelve wide field">
+          <textarea type="text"  id="about"></textarea>
+      </div>
+    </div>
+  </div>
+    <div class="field">
+      <label>Type</label>
+      <div class="ui selection dropdown" tabindex="0">
+          <input type="hidden" name="gender" id="type">
+          <i class="dropdown icon"></i>
+          <div class="default text">Type</div>
+          <div class="menu" tabindex="-1">
+              <div class="item" data-value="Attraction">Attraction</div>
+              <div class="item" data-value="Charity">Charity</div>
+              <div class="item" data-value="Comedy">Comedy</div>
+              <div class="item" data-value="Competition">Competition</div>
+              <div class="item" data-value="Concert">Concert</div>
+              <div class="item" data-value="Conference">Conference</div>
+              <div class="item" data-value="Convention">Convention</div>
+              <div class="item" data-value="Dinner or Gala">Dinner or Gala</div>
+              <div class="item" data-value="Fashion Show">Fashion Show</div>
+              <div class="item" data-value="Festival">Festival</div>
+              <div class="item" data-value="Food">Food</div>
+              <div class="item" data-value="Fundraiser">Fundraiser</div>
+              <div class="item" data-value="Launching">Launching</div>
+              <div class="item" data-value="Meet up">Meet up</div>
+              <div class="item" data-value="Party or club">Party or club</div>
+              <div class="item" data-value="Theatre">Theatre</div>
+              <div class="item" data-value="Rally">Rally</div>
+              <div class="item" data-value="Seminar or Talks">Seminar or Talks</div>
+              <div class="item" data-value="Screening">Screening</div>
+              <div class="item" data-value="Sports">Sports</div>
+              <div class="item" data-value="Tour">Tour</div>
+              <div class="item" data-value="Wedding">Wedding</div>
+          </div>
+      </div>
+  </div>
+    <div class="field">
+    <label>Location</label>
+    <div class="fields">
+      <div class="twelve wide field">
+        <input type="text" id="location" placeholder="No. 433 Otubo drive, kubwa">
+      </div>
+    </div>
+  </div>
+    <div class="field">
+      <label>Country</label>
+      <div class="ui selection dropdown" tabindex="0">
+          <input type="hidden" name="gender" id="country">
+          <i class="dropdown icon"></i>
+          <div class="default text">Country</div>
+          <div class="menu" tabindex="-1">
+              <div class="item" data-value="Nigeria">Nigeria</div>
+          </div>
+      </div>
+  </div>
+    <div class="field">
+      <label>State</label>
+      <div class="ui selection dropdown" tabindex="0">
+          <input type="hidden" name="gender" id="state">
+          <i class="dropdown icon"></i>
+          <div class="default text">State</div>
+          <div class="menu" tabindex="-1">
+              <div class="item" data-value="Abia">Abia</div>
+              <div class="item" data-value="Abuja">Abuja</div>
+              <div class="item" data-value="Adamawa">Adamawa</div>
+              <div class="item" data-value="Akwa Ibom">Akwa Ibom</div>
+              <div class="item" data-value="Anambra">Anambra</div>
+              <div class="item" data-value="Bauch">Bauchi</div>
+              <div class="item" data-value="Bayelsa">Bayelsa</div>
+              <div class="item" data-value="Benue">Benue</div>
+              <div class="item" data-value="Borno">Borno</div>
+              <div class="item" data-value="Cross River">Cross River</div>
+              <div class="item" data-value="Delta">Delta</div>
+              <div class="item" data-value="Ebonyi">Ebonyi</div>
+              <div class="item" data-value="Edo">Edo</div>
+              <div class="item" data-value="Ekiti">Ekiti</div>
+              <div class="item" data-value="Enugu">Enugu</div>
+              <div class="item" data-value="Gombe">Gombe</div>
+              <div class="item" data-value="Imo">Imo</div>
+              <div class="item" data-value="Jigawa">Jigawa</div>
+              <div class="item" data-value="Kaduna">Kaduna</div>
+              <div class="item" data-value="Kano">Kano</div>
+              <div class="item" data-value="Kastina">Kastina</div>
+              <div class="item" data-value="Kebbi">Kebbi</div>
+              <div class="item" data-value="Kogi">Kogi</div>
+              <div class="item" data-value="Kwara">Kwara</div>
+              <div class="item" data-value="Lagos">Lagos</div>
+              <div class="item" data-value="Nassawara">Nassawara</div>
+              <div class="item" data-value="Niger">Niger</div>
+              <div class="item" data-value="Ogun">Ogun</div>
+              <div class="item" data-value="Ondo">Ondo</div>
+              <div class="item" data-value="Osun">Osun</div>
+              <div class="item" data-value="Oyo">Oyo</div>
+              <div class="item" data-value="Plateau">Plateau</div>
+              <div class="item" data-value="Rivers">Rivers</div>
+              <div class="item" data-value="Sokoto">Sokoto</div>
+              <div class="item" data-value="Yobe">Yobe</div>
+              <div class="item" data-value="Zamfara">Zamfara</div>
+          </div>
+      </div>
+  </div>
+    <div class="field">
+    <label>Date</label>
+    <div class=" two fields">
+      <div class="eight wide field">
+      <div class="ui calender" id="rangestart">
+      <div class="ui input left icon" >
+          <i class="calendar icon"></i>
+        <input type="text" id="dateFrom" placeholder="Start">
+      </div>
+      </div>
+      </div>
+        <div class="eight wide field">
+            <div class="ui calender" id="rangeend">
+      <div class="ui input left icon" >
+          <i class="calendar icon"></i>
+
+        <input type="text" id="dateTo" placeholder="End">
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    <div class="field">
+    <label>Time</label>
+    <div class=" two fields">
+      <div class="eight wide field">
+      <div class="ui calender" id="timestart">
+      <div class="ui input left icon" >
+          <i class="time icon"></i>
+        <input type="text" id="timeFrom" placeholder="Start">
+      </div>
+      </div>
+      </div>
+        <div class="eight wide field">
+            <div class="ui calender" id="timeend">
+      <div class="ui input left icon" >
+          <i class="time icon"></i>
+
+        <input type="text" id="timeTo" placeholder="End">
+      </div>
+      </div>
+    </div>
+    </div>
+  </div>
+     <div class="field">
+    <label>Email</label>
+    <div class=" two fields">
+      <div class="four wide field">
+        <input type="text" name="shipping[address]" placeholder="Email Address">
+      </div>
+    </div>
+  </div>
+     <div class="field">
+    <label>Phone number</label>
+    <div class=" two fields">
+      <div class="four wide field">
+        <input type="email" id="email" placeholder="(+234) 7055555555">
+      </div>
+    </div>
+  </div>
+    <div class="field">
+    <label>Website</label>
+    <div class=" two fields">
+      <div class="four wide field">
+        <input type="text" id="web" placeholder="Web address">
+      </div>
+    </div>
+  </div>
+     <div class="field">
+    <label>Tags</label>
+    <div class=" two fields">
+      <div class="four wide field">
+        <input type="text" id="tags" placeholder="Outdoor, Pool, fun, All night">
+      </div>
+    </div>
+  </div>
+    <div class="ui segment">
+    <div class="field">
+      <div class="ui toggle checkbox">
+        <input type="checkbox" name="gift" tabindex="0" class="hidden" id="checked">
+        <label>Do you want to sell tickets on this paltform?</label>
+      </div>
+    </div>
+  </div>
+  <div class="ui button" tabindex="0" id="continue">Continue</div>
+  </form><br><br>
         
-  </ul>
-        
-        
-        
-        
-        <script src="js/jquery-3.2.1.min.js"></script>
-        <script src="tinymce/tinymce.min.js"></script>
-        <script src="js/materialize.min.js"></script>
-        <script>
-            $(document).ready(function(){
+        <form class="ui form" id="form-two">
+            <div class="ui message">
+  <div class="header">
+    Charging Policy
+  </div>
+  <p>Please note that when costing your event on this platform, your buyers pay 1.5% transactional fees + 100 naira on amounts greater than 2500. These charges on any amount would not exceed 2000 naira</p>
+</div>
+            <h4 class="ui dividing header">Ticket Information</h4>
+        <div class="field">
+      <label>Type</label>
+      <div class="ui selection dropdown" tabindex="0">
+          <input type="hidden" name="gender">
+          <i class="dropdown icon"></i>
+          <div class="default text">Type</div>
+          <div class="menu" tabindex="-1">
+              <div class="item" data-value="1">Kids</div>
+              <div class="item" data-value="0">Regular</div>
+              <div class="item" data-value="0">VIP</div>
+              <div class="item" data-value="0">VIP+</div>
+              <div class="item" data-value="0">Table of four</div>
+              <div class="item" data-value="0">Table of six</div>
+          </div>
+      </div>
+  </div>
+            <div class="field">
+    <label>Quantity</label>
+    <div class=" fields">
+      <div class="twelve wide field">
+        <input type="number" name="shipping[address]" placeholder="Ticket quantity">
+      </div>
+    </div>
+  </div>
+            <div class="field">
+    <label>Cost</label>
+    <div class=" fields">
+      <div class="twelve wide field">
+        <input type="number" name="shipping[address]" placeholder="Ticket Cost">
+      </div>
+    </div>
+  </div>
+            <div class="ui button" tabindex="0" id="Submit" onclick="payWithPaystack()">Submit</div>
+        </form><br><br>
+</div>
+</div>
+</div>
+   
+
+    <!-- Path to jQuery Library-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Path to semantic Library (javaScript)-->
+    <script src="js/semantic.min.js"></script>
+    <script src="js/calendar.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script>
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
                 
-                $('select').material_select();//dropdown
-                tinymce.init({selector:'textarea'});//show the html editor
-                
-                
-                $('.w').click(function(){
-                $('.datepicker').pickadate({
-    selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15, // Creates a dropdown of 15 years to control year,
-    today: 'Today',
-    clear: 'Clear',
-    close: 'Ok',
-    closeOnSelect: false // Close upon selecting a date,
-  }); 
-            });
-                
-                 $('.timepicker').pickatime({
-    default: 'now', // Set default time: 'now', '1:30AM', '16:30'
-    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
-    twelvehour: false, // Use AM/PM or 24-hour format
-    donetext: 'OK', // text for done-button
-    cleartext: 'Clear', // text for clear-button
-    canceltext: 'Cancel', // Text for cancel-button
-    autoclose: false, // automatic close timepicker
-    ampmclickable: true, // make AM PM clickable
-    aftershow: function(){} //Function for after opening timepicker
-  });
-       
-                
-                
-                 // Initialize collapse button
-                $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true, // Choose whether you can drag to open on touch screens,
-      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
-      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
-    });
-                
-                 $("#create").click(function(){
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
                     
+                
+               
+                });
+        $(document).ready(function(){
+            tinymce.init({selector:'textarea'});//show the html editor
+		   $("#h").click(function(){
+		   $('.ui.labeled.icon.sidebar').sidebar('toggle');
+		   });
+            
+            $("#timestart").calendar({
+		   type:'time'
+		   });$("#timeend").calendar({
+		   type:'time'
+		   });
+            $("#rangestart").calendar({
+		   type:'date',
+                endCalendar:$('#rangeend')
+		   });
+            
+            $("#rangeend").calendar({
+		   type:'date',
+                endCalendar:$('#rangestart')
+		   });
+            
+            $('.selection.dropdown').dropdown();
+            $('#form-two').hide();
+            $('.ui.checkbox').checkbox();
+            
+            $("#continue").click(function(){
+               var chk = $("#checked:checked").length > 0; 
+                
+                if(chk > 0){
+                    $('#continue').hide();
+                    $('#form-two').show();
+                }else {
                     
                 tinyMCE.triggerSave();// save the data to the assigned ID of the textarea field
                    
@@ -312,18 +435,19 @@ input {
                  var ename = $("#ename").val();
                  var about =$("#about").val();
                 var location = $("#location").val();
-                 var state = $("#state").val();
                 var country = $("#country").val();
+                var state = $("#state").val();
                 var dateFrom = $("#dateFrom").val();
                 var dateTo = $("#dateTo").val();
                 var timeFrom = $("#timeFrom").val();
                 var timeTo = $("#timeTo").val();
-                var fee = $("#fee").val();
+                var email = $("#email").val();
                 var num = $("#num").val();
+                var web = $("#web").val();
                 var type = $("#type").val();
                 var tag = $("#tag").val();
                     //formData.append('fee', $('#fee').val());
-                    
+                    alert(type);
                    var formData = new FormData();
 				   formData.append('image', document.getElementById("image").files[0]);
 				   formData.append('ename', $('#ename').val());
@@ -380,24 +504,20 @@ input {
                       });
                           
                         }else {Materialize.toast('Fill all required fields!', 4000);}
-                   
-                     
-            });
+          
+                }
             });
             
-            
-            function ticket() {
+		});
        
-                           window.location.href="ticket.html";
-                            
             
-        }
-            function logout() {
+            
+function logout() {
        $.ajax({
                 
        type: 'get',
-                //url: 'http://gothere.000webhostapp.com/logout.php',
-                url: 'logout.php',
+                url: 'http://gothere.000webhostapp.com/logout.php',
+                //url: 'logout.php',
                 success: function (response) {
                         
                       if (response == "success") {
@@ -415,9 +535,31 @@ input {
           });
             
         }
-            
-            
-           // window.location.href="index.html";
-        </script>
+        
+        function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_7467642a935f642b8bb6c060112aada9ea933e2b',
+      email: 'haryson.onuoha@gmail.com',
+      amount: 10000,
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          alert('success. transaction ref is ' + response.reference);
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
+    </script>
     </body>
 </html>
