@@ -39,46 +39,88 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
      
     <!-- Path to Materialize Library CSS-->
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <!-- Path to Font Awesome icons-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/semantic.min.css">
     <!-- Path to Login custom's CSS-->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/">
     
-    <title>gothere</title>
+    <title>create</title>
+    <style>
+       
+    </style>
 </head>
 
-<body class="blue-grey">
- 
-    <div class="" style="width:90%; height:auto;margin:auto;">
+<body style="background-color:#25373D;overflow:hidden;">
+   
+        <div class="" style="text-align:center;color:white;font-size:35px;margin-top:30%;">gothere</div>
     
-        <div class="header"><div class="" style="width:20%; height:auto;margin:auto;"><img src="icon.png" width="70px" height="70px"/></div></div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="form">
-        <div style="position:relative;top:4%;height:auto;margin:auto;">
-        <form method="post" >
-            <input type="email" placeholder="somebody@email.com" size="45" id="unique" style="border: 2px solid #e0e0e0;border-radius:5px;"/><br/><br/>
-            <input type="password" placeholder="******" size="45" id="secret" style="border: 2px solid #e0e0e0;border-radius:5px;"/><br/><br/>
-            <span><a href="reset_pass.html" class="blue-grey-text text-lighten-5">Forgot password?</a></span><br/><br/>
-  
-            <input type="button" class="waves-effect btn blue-grey" value="log in!" id="login"/>
-        </form>
-        </div>
-        </div>
-        <div class="footer"><p class="blue-grey-text text-lighten-5">Your first time? <a href="signup.html" class="blue-grey-text text-lighten-5">Sign up!</a></p></div>
+    <div class="ui fluid centered card" style="margin-top:10%;height:90%;border:1px;-webkit-border-radius:30px 30px 4px 4px;-moz-border-radius:30px 30px 4px 4px;border-radius:30px 30px 4px 4px;">
+  <div class="content">
+      <form class="ui form" method="post" ><br>
+        <div class="required field">
+    <label style="font-size:17px;">Email</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="user icon"></i>
+        <input type="email" id="unique" placeholder="someone@email.com">
+      </div>
+      </div>
     </div>
+  </div>
+     <div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div>
+          <a class="ui item" href="#" style="font-size:18px;">forgot password?</a><br><br><br>
+          <div class="ui teal button" tabindex="0" id="login">Log in</div>
+      </form>
     
-    
+
+  </div>
+</div>
     <!-- Path to jQuery Library-->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Path to Materilize Library (javaScript)-->
-    <script src="js/materialize.min.js"></script>
+    <!-- Path to semantic Library (javaScript)-->
+    <script src="js/semantic.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
+                
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
+                    
+                
+               
+                });
+         $(document).ready(function(){
                 $("#login").click(function(){
                     
                     var email = $("#unique").val();
@@ -88,8 +130,8 @@
                          $.ajax({
                           
                           type: 'post',
-                          url: 'http://gothere.000webhostapp.com/login.php',
-                          //url: 'login.php',
+                          //url: 'http://gothere.000webhostapp.com/login.php',
+                          url: 'php/login.php',
                           //datatype:JSON,
                           data: {
                            
@@ -104,16 +146,17 @@
                              window.location.href="index.html";
                           }
                           else {
-                              Materialize.toast("Wrong details", 10000);
+                              alert("Wrong details");
                           }
                       }
                           
                       });
                     }else{
-                        Materialize.toast("FIll all fields!", 10000);
+                        alert("FIll all fields!");
                     }
                 });
             });
+
     </script>
     </body>
 </html>

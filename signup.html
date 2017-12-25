@@ -39,151 +39,174 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
      
     <!-- Path to Materialize Library CSS-->
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <!-- Path to Font Awesome icons-->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/semantic.min.css">
     <!-- Path to Login custom's CSS-->
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/">
     
-    <title>gothere</title>
+    <title>create</title>
+    <style>
+       
+    </style>
 </head>
 
-<body class="blue-grey">
- 
-    <div class="" style="width:90%; height:auto;margin:auto;">
+<body style="background-color:#25373D;overflow:hidden;">
+   
+        <div class="" style="text-align:center;color:white;font-size:35px;margin-top:20%;">gothere</div>
     
-        <div class="header"><div class="" style="width:20%; height:auto;margin:auto;"><img src="icon.png" width="70px" height="70px"/></div></div>
-        <div>
-         <form method="post">
-                    <div class="form2">
-                                   <div class="col s6">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="fname" placeholder="Firstname" name="">
-                            </div>
-                            <div class="input-field col s6">
-                                <input style="border: 2px solid #e0e0e0;border-radius:5px;" type="text" class="" id="sname" placeholder="Surname" name="">
-                            </div>
-                        </div>
-                    </div>
-                <input type="text" placeholder="Username" id="username" size="45" style="border: 2px solid #e0e0e0;border-radius:5px;" ><br/>
-                                    
-                <input type="email" placeholder="E-mail" style="border: 2px solid #e0e0e0;border-radius:5px;" id="unique" size="45"><br/>
-                                    
-                <input type="password" style="border: 2px solid #e0e0e0;border-radius:5px;" placeholder="Password" id="secret" size="45"><br/>
-                                   
-                        <div class="col s6">
-                        <div class="row blue-grey-text text-lighten-5">
-                            <div class="input-field col s6">
-                                        <select id="gender">
-                                            <option value="" disabled selected>Choose your gender</option>
-                                            <option value="male" >Male</option>
-                                            <option value="female" >Female</option>
-                                        </select>
-                                    </div><div class="input-field col s6">
-                                        <select id="country">
-                                            <option value="" disabled selected>Choose your gender</option>
-                                            <option value="Nigeria" >Nigeria</option>
-                                        </select>
-                                    </div>
+    <div class="ui fluid centered card" style="margin-top:10%;height:90%;border:1px;-webkit-border-radius:30px 30px 4px 4px;-moz-border-radius:30px 30px 4px 4px;border-radius:30px 30px 4px 4px;">
+  <div class="content">
+      <form class="ui form" method="post" ><br>
+        <div class="required field">
+    <label style="font-size:17px;">Email</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="user icon"></i>
+        <input type="email" id="unique" placeholder="someone@email.com">
+      </div>
+      </div>
+    </div>
+  </div>
+     <div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div><div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div><div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div><div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div><div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div><div class="required field">
+    <label style="font-size:17px;">Password</label>
+    <div class=" two fields">
+      <div class="four wide field">
+          <div class="ui large input left icon" >
+          <i class="key icon"></i>
+        <input type="text" id="secret" placeholder="********">
+      </div>
+      </div>
+    </div>
+  </div>
+          <a class="ui item" href="#" style="font-size:18px;">forgot password?</a><br><br><br>
+          <div class="ui teal button" tabindex="0" id="login">Log in</div>
+      </form>
+    
 
-                        </div>
-                    </div>
-            
-                    
-                                     <div class="ui checkbox">
-      <input type="checkbox" name="chk[]" id="test1">
-      <label for="test1" class="blue-grey-text text-lighten-5">I agree to the Terms and Conditions</label>
-    </div>
-                        <input type="button" class="waves-effect btn blue-grey" value="Sign up!" id="signup"/>
-                    </div>
-                 </form>
-        </div>
-        <div class="footer"><p style="text-align:center;">Not your first time? <a href="login.html">Sign up</a></p></div>
-    </div>
-    
-    
+  </div>
+</div>
     <!-- Path to jQuery Library-->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Path to Materilize Library (javaScript)-->
-    <script src="js/materialize.min.js"></script>
+    <!-- Path to semantic Library (javaScript)-->
+    <script src="js/semantic.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
     <script>
-        $(document).ready(function(){
-              $('select').material_select();
-             $("#signup").click(function(){
-                   
-                    var fname = $("#fname").val();
-                    var sname = $("#sname").val();
-                  var username = $("#username").val();
-                  var email = $("#unique").val();
-                  var password = $("#secret").val();
-                  var gender = $("#gender").val();
-                  var country = $("#country").val();
-                  var chk = $("#test1:checked").length > 0;
-                  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-                    if (fname != "" && sname != "" && username != "" && email != "" && password != "" && gender != "" && country != "") {
-                  if (chk > 0) {
-                  if (email.match(re)) {
-                      $.ajax({
-                          
-                         type: 'post',
-                          url: 'http://gothere.000webhostapp.com/check.php',
-                        // url: 'check.php',
-                         data: {username: username},
-                          success:function(response) {
-                              if (response == "success"){ 
-                                $.ajax({
-                         type: 'post',
-                          url: 'http://gothere.000webhostapp.com/check_email.php',
-                        // url: 'check_email.php',
-                         data: {email: email },
-                          success:function(response) {
-                              if (response == "email") {
-                                  $.ajax({
-                         type: 'post',
-                          url: 'http://gothere.000webhostapp.com/signup.php',
-                         //url: 'signup.php',
-                         data: {
-                             
-                             fname: fname,
-                             sname: sname,
-                             username: username,
-                             email: email,
-                             password: password,
-                             gender: gender,
-                             country: country
-                             
-                         },
-                          success:function(response) {
-                              
-                              if (response == "success") {
-                                       window.localStorage.setItem("login", 1);
-                                  window.location.href="profile.html";
-        
-                              }
-                              else {
-                                  Materialize.toast('Sign up unsuccessful!', 10000);
-                              }
-                              
-                          }
-                          
-                      });
-                                  
-                              }else {Materialize.toast('Email already exists!', 10000);}
-                              }
-                      });
-                              }else {Materialize.toast('Username already exists!', 10000);}
-                              }
-                      });
-                      
-                      }else{Materialize.toast('Input a valid email address!', 10000); }
-                      }else{Materialize.toast('Agree to the Terms and conditions!', 10000); }
-                  }else {Materialize.toast('Fill all fields!', 10000);}
-                    
-                    
-                });
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
                 
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
+                    
+                
+               
+                });
+         $(document).ready(function(){
+                $("#login").click(function(){
+                    
+                    var email = $("#unique").val();
+                    var password = $("#secret").val();
+                    
+                    if (email != "" && password != "") {
+                         $.ajax({
+                          
+                          type: 'post',
+                          //url: 'http://gothere.000webhostapp.com/login.php',
+                          url: 'php/login.php',
+                          //datatype:JSON,
+                          data: {
+                           
+                            email: email,
+                            password: password
+                                    
+                            },
+                           success:function(response) {
+                          if(response == "success"){
+                              
+                             window.localStorage.setItem("login", 1);
+                             window.location.href="index.html";
+                          }
+                          else {
+                              alert("Wrong details");
+                          }
+                      }
+                          
+                      });
+                    }else{
+                        alert("FIll all fields!");
+                    }
+                });
             });
+
     </script>
     </body>
 </html>

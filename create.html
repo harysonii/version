@@ -51,13 +51,13 @@
 </head>
 
 <body style="background-color:#cfd8dc;">
-    <div class="ui left demo vertical inverted sidebar labeled icon menu">
+    <div class="ui left vertical sidebar labeled icon menu">
   <a class="item">
     <i class="home icon"></i>
     Home
   </a>
   <a class="item">
-    <i class="block layout icon"></i>
+    <i class="user icon"></i>
     Account
   </a>
     <a class="item">
@@ -65,32 +65,32 @@
     Search
   </a>
   <a class="item">
-    <i class="smile icon"></i>
+    <i class="write icon"></i>
     Create
   </a>
         <a class="item">
-    <i class="smile icon"></i>
+    <i class="users icon"></i>
     Friends
   </a>
         <a class="item">
-    <i class="smile icon"></i>
+    <i class="compass icon"></i>
     Nearby
   </a>
         <a class="item">
-    <i class="smile icon"></i>
+    <i class="calendar checked icon"></i>
     Schedule
   </a>
         <a class="item">
-    <i class="smile icon"></i>
+    <i class="configure icon"></i>
     Settings
   </a>
         <a class="item">
-    <i class="smile icon"></i>
+    <i class="sign out icon"></i>
     Log out
   </a>
 </div>
     <div class="ui three item secondary top fixed menu hh" style="background-color:#37474f; height:60px;color:white;">
-  <a class="item" id="h">
+  <a class="item" id="h" style="position:relative;right:25px;">
     <i class="align justify icon"></i>
   </a>
   <a class=" item" style="font-size:25px; color:white;">
@@ -110,7 +110,7 @@
   <div class="field">
   <label for="file" class="ui icon button">
   <i class="photo icon"></i>Upload Event image</label>
-  <input type="file" id="image" style="display:none;"/>
+  <input type="file" id="file" class="image" style="display:none;"/>
   </div>
   <div class="field">
     <label>Name</label>
@@ -399,7 +399,7 @@
         $(document).ready(function(){
             tinymce.init({selector:'textarea'});//show the html editor
 		   $("#h").click(function(){
-		   $('.ui.labeled.icon.sidebar').sidebar('toggle');
+		   $('.ui.vertical.sidebar').sidebar('toggle');
 		   });
             
             $("#timestart").calendar({
@@ -409,7 +409,7 @@
 		   });
             $("#rangestart").calendar({
 		   type:'date',
-                endCalendar:$('#rangeend')
+               // endCalendar:$('#')
 		   });
             
             $("#rangeend").calendar({
@@ -431,7 +431,7 @@
                     
                 tinyMCE.triggerSave();// save the data to the assigned ID of the textarea field
                    
-                 var image = $("#image").val();
+                 var image = $(".image").val();
                  var ename = $("#ename").val();
                  var about =$("#about").val();
                 var location = $("#location").val();
@@ -449,7 +449,7 @@
                     //formData.append('fee', $('#fee').val());
                     alert(type);
                    var formData = new FormData();
-				   formData.append('image', document.getElementById("image").files[0]);
+				   formData.append('image', document.getElementsByClassName("image").files[0]);
 				   formData.append('ename', $('#ename').val());
 				   formData.append('about', $('#about').val());
 				   formData.append('location', $('#location').val());

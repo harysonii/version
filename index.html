@@ -41,79 +41,93 @@
     <!-- Path to Materialize Library CSS-->
     <link rel="stylesheet" href="css/semantic.min.css">
     <!-- Path to Login custom's CSS-->
-    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="css/main.css">
     
     <title>create</title>
     <style>
-       .hh {background-color:#37474f;}
+       .hh {background-color:#25373D;}
     </style>
 </head>
 
-<body style="background-color:#cfd8dc;">
-    <div class="ui left demo vertical inverted sidebar labeled icon menu">
-  <a class="item">
-    <i class="home icon"></i>
+<body style="background-color:#F2F8EA;">
+    <div class="ui left vertical sidebar labeled icon menu sbar" style="background-color:#F2F8EA;">
+  <a class="item" href="index.html">
+    <i class="home icon s"></i>
     Home
   </a>
-  <a class="item">
-    <i class="block layout icon"></i>
+  <a class="item" href="profile.html">
+    <i class="user icon s"></i>
     Account
   </a>
-    <a class="item">
-    <i class="search icon"></i>
+    <a class="item" href="search.html">
+    <i class="search icon s"></i>
     Search
   </a>
   <a class="item" href="create.html">
-    <i class="smile icon"></i>
+    <i class="write icon s"></i>
     Create
   </a>
-        <a class="item">
-    <i class="smile icon"></i>
+        <a class="item" href="friends.html">
+    <i class="users icon s"></i>
     Friends
   </a>
-        <a class="item">
-    <i class="smile icon"></i>
+        <a class="item" href="nearby.html">
+    <i class="compass icon s"></i>
     Nearby
   </a>
-        <a class="item">
-    <i class="smile icon"></i>
+        <a class="item" href="schedule.html">
+    <i class="calendar checked icon s"></i>
     Schedule
   </a>
-        <a class="item">
-    <i class="smile icon"></i>
+        <a class="item" href="settings.html">
+    <i class="configure icon s"></i>
     Settings
   </a>
-        <a class="item">
-    <i class="smile icon"></i>
+        <a class="item" onclick="logout()">
+    <i class="sign out icon s"></i>
     Log out
   </a>
 </div>
-    <div class="ui three item secondary top fixed menu hh" style="background-color:#37474f; height:60px;color:white;">
-  <a class="item" id="h">
-    <i class="menu icon"></i>
-  </a>
+    <div class="ui two item secondary top fixed menu hh" style="background-color:#25373D; height:60px;color:white;box-shadow:0 8px 6px -8px black;-webkit-box-shadow:0 8px 6px -8px black;-mox-box-shadow:0 8px 6px -8px black;">
+        &#160&#160&#160&#160&#160
+  <div class="left menu">
+        <a class=" item" id="h" style="font-size:; color:white;">
+    <i class="align justify  icon"></i>
+      </a></div>
   <a class=" item" style="font-size:25px; color:white;">
     Discover
   </a>
   <div class="right menu">
-    <a class="ui item">
-      Logout
+    <a class="ui item" style="font-size:; color:white;">
+        <i class="alarm icon"></i>
     </a>
-  </div>
+  </div>&#160&#160
 </div>
 <div class="pusher">
-<div class="ui container">
-
+<div class="ui container"><br><br><br><br>
+    <div id="list"></div>
 </div>
 </div>
    
 
+    <!--CSS Spinner-->
+<div class="spinner-wrapper">
+<div class="spinner">
+    <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+    </div>
+</div>
+    
     <!-- Path to jQuery Library-->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Path to semantic Library (javaScript)-->
     <script src="js/semantic.min.js"></script>
     <!-- Path to Tinymce Editor Library -->
     <script src="tinymce/tinymce.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
         $(window).on("load",function(){
                
@@ -139,16 +153,30 @@
                       
                    
                });  */
-                    
+       
                 
                
                 });
         $(document).ready(function(){
 		   $("#h").click(function(){
-		   $('.ui.labeled.icon.sidebar')
-  .sidebar('toggle')
-;
+		      $('.ui.labeled.icon.sidebar').sidebar('toggle');
 		   });
+            
+            // $("#a").click(function(){
+                   $.ajax({
+                
+                  type: 'get',
+                  url: 'php/get-all-events.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        $('#list').html(response);
+                        
+                    }
+                   
+               });
+            //}); 
+   
 		});
        
             
