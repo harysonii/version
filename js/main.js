@@ -22,7 +22,7 @@ $(window).on("load",function (){
                       
                    
                });  */
-                     preloaderFadeOutTime = 1500;
+                     preloaderFadeOutTime = 2500;
         function hidePreloader() {
             var preloader = $('.spinner-wrapper');
             preloader.fadeOut(preloaderFadeOutTime);
