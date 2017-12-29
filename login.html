@@ -89,6 +89,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Path to semantic Library (javaScript)-->
     <script src="js/semantic.min.js"></script>
+	    <script src="js/main.js"></script>
     <!-- Path to Tinymce Editor Library -->
     <script src="tinymce/tinymce.min.js"></script>
     <script>
@@ -122,13 +123,13 @@
                 });
          $(document).ready(function(){
                 $("#login").click(function(){
-                    
+                    hidePreloader() ;
                     var email = $("#unique").val();
                     var password = $("#secret").val();
                     
                     if (email != "" && password != "") {
                          $.ajax({
-                          
+                         
                           type: 'post',
                           url: 'http://gothere.000webhostapp.com/login.php',
                          // url: 'php/login.php',
@@ -141,7 +142,7 @@
                             },
                            success:function(response) {
                           if(response == "success"){
-                             hidePreloader() ;
+                             
                              window.localStorage.setItem("login", 1);
                              window.location.href="index.html";
                           }
