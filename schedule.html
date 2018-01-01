@@ -39,7 +39,7 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
      
     <!-- Path to Materialize Library CSS-->
-    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/semantic.min.css">
     <!-- Path to Font Awesome icons-->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- Path to Login custom's CSS-->
@@ -52,68 +52,85 @@
     </style>
 </head>
 
-<body class="blue-grey lighten-4">
-    
-    <div class="navbar-fixed">
-    <nav class="blue-grey darken-3">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Schedule</a>
-        <ul class="left"><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a></ul>
-                    <ul class="right "><a href="#"><i class="fa fa-bell"></i></a></ul>
-      
-    </div>
-  </nav>
-    </div>
-    
-    
-    <div style="width:90%; height:auto;margin:auto;">
-       </div>
-    
-    <ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-        <script>
-                var gender = document.getElementById('g');
-                if (gender == "male"){
-            document.write('<img src="img/avatar/images%20(6).jpg" height="200px" width="100%" id="pc">');
-                }else{
-                    document.write('<img src="img/avatar/images%20(5).jpg" height="200px" width="100%" id="pc">');
-                }
-            </script>
-      </div>
-        <script>
-                var gender = document.getElementById('g');
-                if (gender == "male"){
-            document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(8).jpg" height="70px" width="auto" id="pp"></a>');
-                }else{
-                document.write('<a href="#!user"><img class="circle" src="img/avatar/images%20(7).jpg" height="70px" width="auto" id="pp"></a>');
-                }
-            </script>
-      <a href="#!name"><span class="white-text name" id="u">username</span></a>
-      <a href="#!email"><span class="white-text email" id="e">email@email.com</span></a>
-    </div></li>
-    <li><a class="waves-effect" href="index.html"><i class="fa fa-home blue-grey-text"></i>Home</a></li>
-    <li><a class="waves-effect" href="profile.html"><i class="fa fa-user blue-grey-text"></i>Account</a></li>
-    <li><a class="waves-effect" href="search.html"><i class="fa fa-search blue-grey-text"></i>Search</a></li>
-    <li><div class="divider"></div></li>
-    <!--<li><a class="subheader">Menu</a></li>-->
-    <li><a class="waves-effect" href="create.html"><i class="fa fa-pencil blue-grey-text"></i>create</a></li>
-    <li><a class="waves-effect" href="friends.html"><i class="fa fa-users blue-grey-text"></i>Friends</a></li>
-    <li><a class="waves-effect" href="nearby.html"><i class="fa fa-compass blue-grey-text"></i>Nearby</a></li>
-    <li><a class="waves-effect" href="schedule.html"><i class="fa fa-calendar blue-grey-text"></i>Schedule</a></li>
-    <li><a class="waves-effect" href="settings.html"><i class="fa fa-gears blue-grey-text"></i>Settings</a></li>
-    <li><div class="divider"></div></li>
-    <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out blue-grey-text"></i>Log Out</a></li>
-        
-  </ul>
+<body style="background-color:#F2F8EA;">
+    <div class="ui left vertical sidebar labeled icon menu sbar" style="background-color:#F2F8EA;">
+  <a class="item" href="index.html">
+    <i class="home icon s"></i>
+    Home
+  </a>
+  <a class="item" href="profile.html">
+    <i class="user icon s"></i>
+    Account
+  </a>
+    <a class="item" href="search.html">
+    <i class="search icon s"></i>
+    Search
+  </a>
+  <a class="item" href="create.html">
+    <i class="write icon s"></i>
+    Create
+  </a>
+        <a class="item" href="friends.html">
+    <i class="users icon s"></i>
+    Friends
+  </a>
+        <a class="item" href="nearby.html">
+    <i class="compass icon s"></i>
+    Nearby
+  </a>
+        <a class="item" href="schedule.html">
+    <i class="calendar checked icon s"></i>
+    Schedule
+  </a>
+        <a class="item" href="settings.html">
+    <i class="configure icon s"></i>
+    Settings
+  </a>
+        <a class="item" onclick="logout()">
+    <i class="sign out icon s"></i>
+    Log out
+  </a>
+</div>
+    <div class="ui two item secondary top fixed menu hh" style="background-color:#25373D; height:60px;color:white;box-shadow:0 8px 6px -8px black;-webkit-box-shadow:0 8px 6px -8px black;-mox-box-shadow:0 8px 6px -8px black;">
+        &#160&#160&#160&#160&#160
+  <div class="left menu">
+        <a class=" item" id="h" style="font-size:; color:white;">
+    <i class="align justify  icon"></i>
+      </a></div>
+  <a class=" item" style="font-size:25px; color:white;">
+    Discover
+  </a>
+  <div class="right menu">
+    <a class="ui item" style="font-size:; color:white;">
+        <i class="alarm icon"></i>
+    </a>
+  </div>&#160&#160
+</div>
+<div class="pusher">
+<div class="ui container"><br><br><br><br>
+    <div id="list"></div>
+</div>
+</div>
    
+
+    <!--CSS Spinner-->
+<div class="spinner-wrapper">
+<div class="spinner">
+    <div class="rect1"></div>
+  <div class="rect2"></div>
+  <div class="rect3"></div>
+  <div class="rect4"></div>
+  <div class="rect5"></div>
+    </div>
+</div>
     
     <!-- Path to jQuery Library-->
     <script src="js/jquery-3.2.1.min.js"></script>
-    <!-- Path to Materilize Library (javaScript)-->
-    <script src="js/materialize.min.js"></script>
+    <!-- Path to semantic Library (javaScript)-->
+    <script src="js/semantic.min.js"></script>
     <!-- Path to Tinymce Editor Library -->
     <script src="tinymce/tinymce.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
         $(window).on("load",function(){
                
@@ -145,16 +162,7 @@
                 });
         $(document).ready(function(){
        
-                // Initialize collapse button
-                $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 300
-      edge: 'left', // Choose the horizontal origin
-      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      draggable: true, // Choose whether you can drag to open on touch screens,
-      onOpen: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is opened
-      onClose: function(el) { /* Do Stuff*/ }, // A function to be called when sideNav is closed
-    }
-  );
+        
                 
                 
            
