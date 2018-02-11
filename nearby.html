@@ -49,6 +49,13 @@
     <style>
        .card {box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
             .card-panel{box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+	    
+	    /* The navigation bar */
+.navbar {
+    position: fixed; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the bottom of the page */
+    width: 100%; /* Full width */
+}
     </style>
 </head>
 
@@ -106,8 +113,30 @@
     <li><a class="waves-effect" onclick="logout()" href="#"><i class="fa fa-sign-out blue-grey-text"></i>Log Out</a></li>
         
   </ul>
-   
-    
+
+    <div class="navbar"> 
+	    <div class="ui labeled icon menu">
+  <a class="item">
+    <i class="gamepad icon"></i>
+    Games
+  </a>
+  <a class="item">
+    <i class="video camera icon"></i>
+    Channels
+  </a>
+  <a class="item">
+    <i class="video play icon"></i>
+    Videos
+  </a>
+		    <a class="item">
+    <i class="video play icon"></i>
+    Videos
+  </a><a class="item">
+    <i class="video play icon"></i>
+    Videos
+  </a>
+</div>
+	    <\div>
     <!-- Path to jQuery Library-->
     <script src="js/jquery-3.2.1.min.js"></script>
     <!-- Path to Materilize Library (javaScript)-->
